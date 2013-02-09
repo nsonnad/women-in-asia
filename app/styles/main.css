@@ -1,0 +1,12 @@
+body { background-color: hsl(122,50%,97%); font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif; }
+
+body, html {width: 100%; margin:0; padding: 0;}
+#container { margin: 0 auto; width: 100%;}
+
+div.sections { width: 620px; margin: 0 auto;}
+.sections p { padding: 0px 8px; color: #2B2D31; font-size: 1.2em;}
+
+#map { height:550px; width: auto; margin: 16px 0;}
+
+div.images { width: auto;}
+img.wide { margin: 16px 0; max-width: 100%;}

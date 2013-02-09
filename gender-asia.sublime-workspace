@@ -1,0 +1,576 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<!DOCTYPE html>\n<!--[if lt IE 7]>      <html class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->\n<!--[if IE 7]>         <html class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->\n<!--[if IE 8]>         <html class=\"no-js lt-ie9\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\"> <!--<![endif]-->\n	<head>\n		<meta charset=\"utf-8\">\n		<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n		<title></title>\n		<meta name=\"description\" content=\"\">\n		<meta name=\"viewport\" content=\"width=device-width\">\n\n		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->\n\n		\n		<link rel=\"stylesheet\" href=\"styles/main.css\">\n		<link rel=\"stylesheet\" href=\"/components/leaflet/dist/leaflet.css\">\n		<script src=\"scripts/vendor/modernizr.min.js\"></script>\n	</head>\n	<body>\n	<div class=\"container\">\n		<div class=\"text\">asdf</div>\n		<div id=\"map\"></div>\n	</div>\n\n		<!--[if lt IE 7]>\n			<p class=\"chromeframe\">You are using an outdated browser. <a href=\"http://browsehappy.com/\">Upgrade your browser today</a> or <a href=\"http://www.google.com/chromeframe/?redirect=true\">install Google Chrome Frame</a> to better experience this site.</p>\n		<![endif]-->\n\n		<!-- Add your site or application content here -->\n\n<!--        <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js\"></script> \n		<script>window.jQuery || document.write('<script src=\"scripts/vendor/jquery.min.js\"><\\/script>')</script>-->\n		\n		\n\n		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->\n		<script>\n			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];\n			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];\n			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';\n			s.parentNode.insertBefore(g,s)}(document,'script'));\n		</script>\n	\n	<!-- build:js scripts/amd-app.js -->\n	<script data-main=\"scripts/main\" src=\"scripts/vendor/require.js\"></script>\n	<!-- endbuild -->\n</body>\n</html>\n",
+			"file": "app/index.html",
+			"file_size": 1930,
+			"file_write_time": 1360330084000000,
+			"settings":
+			{
+				"buffer_size": 1945,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "require.config({\n  shim: {\n\n  },\n\n  paths: {\n    stamen: 'vendor/tile.stamen',\n    jquery: 'vendor/jquery.min',\n    d3: '/components/d3/d3.min',\n    leaflet: '/components/leaflet/dist/leaflet',\n    mustache: '/components/mustache/mustache'\n  }\n});\n\nvar scripts = ['map', 'app'];\n\nrequire(scripts, function(map, app) {\n  // use app here\n  map;\n  app;\n  \n});",
+			"file": "app/scripts/main.js",
+			"file_size": 357,
+			"file_write_time": 1360330364000000,
+			"settings":
+			{
+				"buffer_size": 356,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/app.js",
+			"settings":
+			{
+				"buffer_size": 84,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/map.js",
+			"settings":
+			{
+				"buffer_size": 276,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/main.css",
+			"settings":
+			{
+				"buffer_size": 34,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/components/mustache/mustache.js",
+			"settings":
+			{
+				"buffer_size": 15663,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 348.0,
+		"selected_items":
+		[
+			[
+				"gist",
+				"Gist: Open Gist"
+			],
+			[
+				"copy",
+				"File: Copy Path From Project"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"color",
+				"Color Picker: Insert Color"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"pick",
+				"Color picker"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"commen",
+				"Toggle Block Comment"
+			],
+			[
+				"new",
+				"File: New View into File"
+			],
+			[
+				"projec",
+				"File: Copy Path From Project"
+			],
+			[
+				"prefe",
+				"Preferences: Settings - User"
+			],
+			[
+				"root",
+				"File: Copy Path From Project"
+			],
+			[
+				"pref",
+				"Preferences: Settings - Default"
+			],
+			[
+				"prefere",
+				"Preferences: Settings - User"
+			],
+			[
+				"proj",
+				"Project: Save As"
+			],
+			[
+				"path",
+				"File: Copy Path From Project"
+			],
+			[
+				"url",
+				"File: Copy URL"
+			],
+			[
+				"defaul",
+				"Preferences: Settings - Default"
+			],
+			[
+				"open",
+				"Gist: Open Gist"
+			],
+			[
+				"comm",
+				"Toggle Comment"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/var/www/leaflet/millionaires/millionaires.html",
+		"/home/nikhil/.config/sublime-text-2/Packages/ColorPicker/sublimecp.py",
+		"/home/nikhil/.config/sublime-text-2/Packages/ColorPicker/sublimecp.pyc",
+		"/home/nikhil/.config/sublime-text-2/Packages/ColorPicker/lib/linux_colorpicker.py",
+		"/home/nikhil/.config/sublime-text-2/Packages/ColorPicker/README.md",
+		"/var/www/gender-asia/app/styles/main.css",
+		"/var/www/gender-asia/app/styles/bootstrap.css",
+		"/var/www/gender-asia/app/index.html",
+		"/var/www/gender-asia/components/leaflet/debug/css/mobile.css",
+		"/var/www/leaflet/millionaires/style.css",
+		"/var/www/gender-asia/app/scripts/vendor/tile.stamen.js",
+		"/var/www/gender-asia/app/scripts/test.js",
+		"/var/www/gender-asia/app/scripts/app.js",
+		"/var/www/gender-asia/app/scripts/vendor/require.js",
+		"/var/www/gender-asia/components/leaflet/dist/leaflet.css",
+		"/home/nikhil/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/var/www/gender-asia/components/leaflet/dist/leaflet.js",
+		"/var/www/gender-asia/components/d3/d3.min.js",
+		"/var/www/gender-asia/index.html",
+		"/var/www/gender-asia/js/main.js",
+		"/var/www/gender-asia/gender-asia.sublime-project",
+		"/home/nikhil/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/var/www/gender-asia/gender-asia.sublime-workspace",
+		"/var/www/gender-asia/css/leaflet.css",
+		"/home/nikhil/Documents/backbone-fundamentals/backbone-fundamentals.md",
+		"/home/nikhil/Documents/backbone-fundamentals/backbone-fundamentals.rtf",
+		"/home/nikhil/dev/millionaires/app/scripts/main.js",
+		"/home/nikhil/dev/millionaires/app/index.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"python",
+			".css",
+			"href",
+			"rel",
+			"tab",
+			"indent",
+			"	<",
+			"are",
+			"li",
+			"h1",
+			"ul",
+			"Boilerplate",
+			"h1",
+			">\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/index.html",
+					"settings":
+					{
+						"buffer_size": 1945,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1208,
+								1208
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 544.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/scripts/main.js",
+					"settings":
+					{
+						"buffer_size": 356,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								76,
+								76
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/scripts/app.js",
+					"settings":
+					{
+						"buffer_size": 84,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								69,
+								69
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/scripts/map.js",
+					"settings":
+					{
+						"buffer_size": 276,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								276,
+								276
+							]
+						],
+						"settings":
+						{
+							"gist_description": "Bring mapbox tiles into leaflet",
+							"gist_filename": "map.js",
+							"gist_html_url": "https://gist.github.com/978ff9afdc9f242f07b5",
+							"gist_url": "https://api.github.com/gists/978ff9afdc9f242f07b5",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2
+						},
+						"translation.x": 24.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/styles/main.css",
+					"settings":
+					{
+						"buffer_size": 34,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17,
+								17
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/components/mustache/mustache.js",
+					"settings":
+					{
+						"buffer_size": 15663,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"musta",
+				"app/components/mustache/mustache.js"
+			],
+			[
+				"main.c",
+				"app/styles/main.css"
+			],
+			[
+				"inde",
+				"app/index.html"
+			],
+			[
+				".css",
+				"app/styles/bootstrap.css"
+			],
+			[
+				"main",
+				"app/styles/main.css"
+			],
+			[
+				"stamen",
+				"app/scripts/vendor/tile.stamen.js"
+			],
+			[
+				"map",
+				"app/scripts/map.js"
+			],
+			[
+				"app",
+				"app/scripts/app.js"
+			],
+			[
+				"requir",
+				"app/scripts/vendor/require.js"
+			],
+			[
+				"leaflecss",
+				"components/leaflet/dist/leaflet.css"
+			],
+			[
+				"leaflet",
+				"components/leaflet/dist/leaflet.js"
+			],
+			[
+				"d3",
+				"components/d3/d3.min.js"
+			],
+			[
+				"main.",
+				"app/scripts/main.js"
+			],
+			[
+				"gende",
+				"gender-asia.sublime-project"
+			],
+			[
+				"proj",
+				"gender-asia.sublime-project"
+			],
+			[
+				".md",
+				"backbone-fundamentals.md"
+			],
+			[
+				"main.j",
+				"app/scripts/main.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 192.0,
+	"status_bar_visible": true
+}
