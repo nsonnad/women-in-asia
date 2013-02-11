@@ -1,9 +1,7 @@
-define(['jquery', 'waypoints'], function() {
+require(['jquery', 'waypoints'], function() {
 
 	$('#map').waypoint(function() {
-		$(window).mousewheel(function(event) {
-        event.preventDefault();
+		// $(this).fadeTo('slow', '1')
+		// $('.sections').fadeTo('slow', '.2');
     });
-	});
-
 });

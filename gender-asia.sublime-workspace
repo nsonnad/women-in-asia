@@ -3,71 +3,29 @@
 	{
 		"selected_items":
 		[
+			[
+				"back",
+				"background-color"
+			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"contents": "<!DOCTYPE html>\n<!--[if lt IE 7]>      <html class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->\n<!--[if IE 7]>         <html class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->\n<!--[if IE 8]>         <html class=\"no-js lt-ie9\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\"> <!--<![endif]-->\n	<head>\n		<meta charset=\"utf-8\">\n		<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n		<title></title>\n		<meta name=\"description\" content=\"\">\n		<meta name=\"viewport\" content=\"width=device-width\">\n\n		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->\n\n		\n		<link rel=\"stylesheet\" href=\"styles/main.css\">\n		<link rel=\"stylesheet\" href=\"/components/leaflet/dist/leaflet.css\">\n		<script src=\"scripts/vendor/modernizr.min.js\"></script>\n	</head>\n	<body>\n	<div class=\"container\">\n		<div class=\"text\">asdf</div>\n		<div id=\"map\"></div>\n	</div>\n\n		<!--[if lt IE 7]>\n			<p class=\"chromeframe\">You are using an outdated browser. <a href=\"http://browsehappy.com/\">Upgrade your browser today</a> or <a href=\"http://www.google.com/chromeframe/?redirect=true\">install Google Chrome Frame</a> to better experience this site.</p>\n		<![endif]-->\n\n		<!-- Add your site or application content here -->\n\n<!--        <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js\"></script> \n		<script>window.jQuery || document.write('<script src=\"scripts/vendor/jquery.min.js\"><\\/script>')</script>-->\n		\n		\n\n		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->\n		<script>\n			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];\n			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];\n			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';\n			s.parentNode.insertBefore(g,s)}(document,'script'));\n		</script>\n	\n	<!-- build:js scripts/amd-app.js -->\n	<script data-main=\"scripts/main\" src=\"scripts/vendor/require.js\"></script>\n	<!-- endbuild -->\n</body>\n</html>\n",
-			"file": "app/index.html",
-			"file_size": 1930,
-			"file_write_time": 1360330084000000,
-			"settings":
-			{
-				"buffer_size": 1945,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "require.config({\n  shim: {\n\n  },\n\n  paths: {\n    stamen: 'vendor/tile.stamen',\n    jquery: 'vendor/jquery.min',\n    d3: '/components/d3/d3.min',\n    leaflet: '/components/leaflet/dist/leaflet',\n    mustache: '/components/mustache/mustache'\n  }\n});\n\nvar scripts = ['map', 'app'];\n\nrequire(scripts, function(map, app) {\n  // use app here\n  map;\n  app;\n  \n});",
-			"file": "app/scripts/main.js",
-			"file_size": 357,
-			"file_write_time": 1360330364000000,
-			"settings":
-			{
-				"buffer_size": 356,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/scripts/app.js",
-			"settings":
-			{
-				"buffer_size": 84,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/scripts/map.js",
-			"settings":
-			{
-				"buffer_size": 276,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/styles/main.css",
-			"settings":
-			{
-				"buffer_size": 34,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/components/mustache/mustache.js",
-			"settings":
-			{
-				"buffer_size": 15663,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 348.0,
+		"height": 75.0,
 		"selected_items":
 		[
+			[
+				"color",
+				"Color picker"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
 			[
 				"gist",
 				"Gist: Open Gist"
@@ -81,20 +39,12 @@
 				"Package Control: Install Package"
 			],
 			[
-				"instal",
-				"Package Control: Install Package"
-			],
-			[
 				"inst",
 				"Package Control: Install Package"
 			],
 			[
 				"remov",
 				"Package Control: Remove Package"
-			],
-			[
-				"color",
-				"Color Picker: Insert Color"
 			],
 			[
 				"remove",
@@ -198,6 +148,21 @@
 	},
 	"file_history":
 	[
+		"/home/nikhil/projects/gender-asia/app/scripts/app.js",
+		"/home/nikhil/projects/gender-asia/app/scripts/main.js",
+		"/home/nikhil/projects/gender-asia/app/styles/main.css",
+		"/home/nikhil/projects/gender-asia/app/scripts/map.js",
+		"/home/nikhil/projects/gender-asia/app/scripts/waypoint.js",
+		"/home/nikhil/projects/gender-asia/app/index.html",
+		"/home/nikhil/projects/gender-asia/README.md",
+		"/var/www/gender-asia/components/leaflet/dist/leaflet.css",
+		"/var/www/gender-asia/app/scripts/map.js",
+		"/var/www/gender-asia/app/scripts/waypoints.js",
+		"/var/www/gender-asia/app/scripts/plugins.js",
+		"/var/www/gender-asia/app/scripts/template.js",
+		"/var/www/gender-asia/app/scripts/test.html",
+		"/var/www/gender-asia/test.html",
+		"/var/www/gender-asia/app/components/mustache/mustache.js",
 		"/var/www/leaflet/millionaires/millionaires.html",
 		"/home/nikhil/.config/sublime-text-2/Packages/ColorPicker/sublimecp.py",
 		"/home/nikhil/.config/sublime-text-2/Packages/ColorPicker/sublimecp.pyc",
@@ -212,7 +177,6 @@
 		"/var/www/gender-asia/app/scripts/test.js",
 		"/var/www/gender-asia/app/scripts/app.js",
 		"/var/www/gender-asia/app/scripts/vendor/require.js",
-		"/var/www/gender-asia/components/leaflet/dist/leaflet.css",
 		"/home/nikhil/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 		"/var/www/gender-asia/components/leaflet/dist/leaflet.js",
 		"/var/www/gender-asia/components/d3/d3.min.js",
@@ -243,6 +207,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			" }",
 			"python",
 			".css",
 			"href",
@@ -274,176 +239,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/index.html",
-					"settings":
-					{
-						"buffer_size": 1945,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1208,
-								1208
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 544.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/scripts/main.js",
-					"settings":
-					{
-						"buffer_size": 356,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								76,
-								76
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/scripts/app.js",
-					"settings":
-					{
-						"buffer_size": 84,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								69,
-								69
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/scripts/map.js",
-					"settings":
-					{
-						"buffer_size": 276,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								276,
-								276
-							]
-						],
-						"settings":
-						{
-							"gist_description": "Bring mapbox tiles into leaflet",
-							"gist_filename": "map.js",
-							"gist_html_url": "https://gist.github.com/978ff9afdc9f242f07b5",
-							"gist_url": "https://api.github.com/gists/978ff9afdc9f242f07b5",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2
-						},
-						"translation.x": 24.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/styles/main.css",
-					"settings":
-					{
-						"buffer_size": 34,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								17,
-								17
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/components/mustache/mustache.js",
-					"settings":
-					{
-						"buffer_size": 15663,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -489,6 +286,34 @@
 		"selected_items":
 		[
 			[
+				"leafl",
+				"components/leaflet/dist/leaflet.css"
+			],
+			[
+				"map",
+				"app/scripts/map.js"
+			],
+			[
+				"waypoin",
+				"app/scripts/waypoint.js"
+			],
+			[
+				"plug",
+				"app/scripts/plugins.js"
+			],
+			[
+				"wayp",
+				"app/scripts/waypoints.js"
+			],
+			[
+				"templa",
+				"app/scripts/template.js"
+			],
+			[
+				"test.",
+				"app/scripts/test.html"
+			],
+			[
 				"musta",
 				"app/components/mustache/mustache.js"
 			],
@@ -511,10 +336,6 @@
 			[
 				"stamen",
 				"app/scripts/vendor/tile.stamen.js"
-			],
-			[
-				"map",
-				"app/scripts/map.js"
 			],
 			[
 				"app",

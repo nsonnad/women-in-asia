@@ -9,17 +9,19 @@ require.config({
   },
 
   shim: {
-    'waypoints': ['jquery']
+    'waypoints': ['jquery'],
+    'scroll': ['jquery']
   }
 
 });
 
-var scripts = ['map', 'app', 'waypoint'];
+var scripts = ['drawMap', 'app', 'waypoint', 'scroll'];
 
-require(scripts, function(map, app, waypoint) {
+require(scripts, function(drawMap, app, waypoint, scroll) {
   // use app here
-  map;
+  drawMap;
   app;
   waypoint;
+  scroll;
 
 });

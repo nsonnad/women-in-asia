@@ -6,7 +6,7 @@ body, html {width: 100%; margin:0; padding: 0;}
 div.sections { width: 620px; margin: 0 auto;}
 .sections p { padding: 0px 8px; color: #2B2D31; font-size: 1.2em;}
 
-#map { height:550px; width: auto; margin: 16px 0;}
+#map { opacity:1; height:550px; width: auto; margin: 16px 0;}
 
 div.images { width: auto;}
 img.wide { margin: 16px 0; max-width: 100%;}
