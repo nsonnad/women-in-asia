@@ -10,3 +10,13 @@ div.sections { width: 620px; margin: 0 auto;}
 
 div.images { width: auto;}
 img.wide { margin: 16px 0; max-width: 100%;}
+
+.infobox { 
+	position:absolute;
+	float:none;
+	margin: 0;
+	background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    padding: 6px 8px;
+	width: 300px;}
