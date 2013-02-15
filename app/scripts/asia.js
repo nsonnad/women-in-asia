@@ -70,7 +70,7 @@ var locales =
       "lat" : 0.306,
       "lon" : 173.664834025,
       "totalPop" : 99546,
-      "femalePop" : "null",
+      "femalePop" : "N/A",
       "area" : 810,
       "gdppc" : 2280
     },
@@ -80,7 +80,7 @@ var locales =
       "totalPop" : 24346229,
       "femalePop" : 51,
       "area" : 120540,
-      "gdppc" : "null"
+      "gdppc" : "N/A"
     },
 "South Korea": {
       "lat" : 35.3985008,
@@ -136,7 +136,7 @@ var locales =
       "totalPop" : 47963012,
       "femalePop" : 51,
       "area" : 676590,
-      "gdppc" : "null"
+      "gdppc" : "N/A"
     },
 "New Zealand": {
       "lat" : -41.3116998,
@@ -150,7 +150,7 @@ var locales =
       "lat" : 6.0973669,
       "lon" : 133.3136306,
       "totalPop" : 20472,
-      "femalePop" : "null",
+      "femalePop" : "N/A",
       "area" : 460,
       "gdppc" : 12805
     },

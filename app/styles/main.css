@@ -1,22 +1,62 @@
-body { background-color: hsl(122,50%,97%); font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif; }
+body { 
+	background-color: hsl(122,50%,97%);
+	font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
 
-body, html {width: 100%; margin:0; padding: 0;}
+body, html { width: 100%; margin:0; padding: 0; }
 #container { margin: 0 auto; width: 100%;}
 
+a { color:#B83834; text-decoration: none; }
+a:hover { text-decoration: underline;}
+
 div.sections { width: 620px; margin: 0 auto;}
-.sections p { padding: 0px 8px; color: #2B2D31; font-size: 1.2em;}
+.sections p { padding: 0px 8px; color: #2B2D31; font-size: 1.1em;}
 
-#map { opacity:1; height:550px; width: auto; margin: 16px 0;}
+div#map { opacity:1; height:550px; width: auto; margin: 16px 0; position:relative;}
 
-div.images { width: auto;}
+div.images { 
+	width: auto; 
+	background-repeat:no-repeat;
+	background-attachment: fixed; 
+	height:700px;
+	background-size: 100%;
+	position:relative;
+}
+
+div.images h1 {
+		position:absolute; top:50%; left:25%; right:15%; 
+		text-shadow: 2px 1px #2B2D31;
+		font-size:2.3em; font-style: italic;
+		color:hsl(122,50%,97%);
+	}
+
+div#image1 { background-image:url('../images/women-vietnam.jpg'); }
+
 img.wide { margin: 16px 0; max-width: 100%;}
 
-.infobox { 
+.infobox, #return { 
 	position:absolute;
 	float:none;
 	margin: 0;
 	background: white;
-    background: rgba(255,255,255,0.8);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    padding: 6px 8px;
-	width: 300px;}
+   background: rgba(255,255,255,.9);
+   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.infobox { padding: 6px 20px; width: 300px; line-height:1em; }
+
+div.infobox h3 { display:inline; }
+div.infobox sup { vertical-align: top; position: relative; top: -0.3em; font-size: 0.7em; }
+
+div#return { 
+	width:auto;
+	text-align:center;
+	bottom:-4px;
+	width: 20%;
+	left: 50%;
+	margin: 0 0 0 -10%;
+}
+div.chart { width:620px; margin: 0 auto;}
+
+ .axis path,
+ .axis line { fill: none; stroke: #7B7B7B; shape-rendering: crispEdges;}

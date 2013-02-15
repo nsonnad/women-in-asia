@@ -4,8 +4,40 @@
 		"selected_items":
 		[
 			[
+				"format",
+				"formatTime"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
 				"back",
+				"background-size"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"backg",
 				"background-color"
+			],
+			[
+				"feature",
+				"featureCollection"
+			],
+			[
+				"countrie",
+				"countriesLayer"
+			],
+			[
+				"coun",
+				"countriesTopo"
+			],
+			[
+				"countr",
+				"countriesLayer"
 			]
 		]
 	},
@@ -15,42 +47,29 @@
 			"file": "app/scripts/main.js",
 			"settings":
 			{
-				"buffer_size": 490,
+				"buffer_size": 506,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/scripts/waypoint.js",
+			"contents": "require(['d3'], function() {\n\nvar margin = {t:20, r:20, b:20, l:30 },\n		w = 620 - margin.l - margin.r,\n		h = 450 - margin.t - margin.b,\n		x = d3.scale.ordinal().range([0,w]),\n		y = d3.scale.linear().range([0,h]);\n\nvar eduChart = d3.select('#education').append('svg')\n	.attr('width', w)\n	.attr('height', h)\n.append(\"g\")\n	.attr({\n		transform: \"translate(\"+[0,0]+\")\",\n		class: \"eduGroup\"\n	});\n\nd3.json('../data/education-ratios.json', function(json) {\n\n	console.log(json)\n\n\n})\n})",
+			"file": "app/scripts/education.js",
+			"file_size": 478,
+			"file_write_time": 1360920934000000,
 			"settings":
 			{
-				"buffer_size": 166,
+				"buffer_size": 476,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "require(['drawMap'], function(drawMap) {\n\n  $('a[href^=#]').click(function(e){\n\n    var name = $(this).attr('href').substr(1);\n    var pos = $('[id='+name+']').offset();\n    var center = ($(window).height() - $('[id='+name+']').height()) / 2\n\n    $('body').animate({ scrollTop: pos.top - center });\n    e.preventDefault();\n// console.log((\"\\\"\" + $(this).html()+ \"\\\"\"))\n    drawMap.panMap($(this).html())\n	\n	});\n});",
-			"file": "app/scripts/scroll.js",
-			"file_size": 427,
-			"file_write_time": 1360578266000000,
+			"contents": "To succeed in western business or politics today, one need only mention the word \"Asia\" as frequently as possible. If unsure what to say about the region, an otherwise confident upstart can cope simply by accusing rivals of being too slow to adapt to a world in which Asia will hold many more cards than it used to.\n\nEconomic figures seem to legitimate the obsession with Asia. China is poised to [overtake the US](http://www.bloomberg.com/news/2012-02-21/china-to-overtake-u-s-as-largest-trading-nation-hsbc-says.html) as the world's largest trading nation in 2016. Asian countries sit atop rankings of everything from [consumer confidence](http://www.nielsen.com/us/en/insights/reports-downloads/2012/global-consumer-confidence-q2-2012.html) to [educational performance](http://www.oecd.org/pisa/46643496.pdf) (PDF).\n\nYet even as Asian countries catch up to the dominant powers of yesterday across a host of national-level statistics, internally one group of people has been left behind. Making up at least half the population, this group is, needless to say, women.\n\nWhat follows is an in-depth look at the status of women across Asia, with an emphasis on looking at important statistics. The map below serves as a quick reference for readers. Throughout the article, clicking on the name of a country (like South Korea) will bring you back to the map, giving you a nation's location and essential figures.\n\n<!-- map -->\n\n",
+			"file": "text.md",
+			"file_size": 1405,
+			"file_write_time": 1360911833000000,
 			"settings":
 			{
-				"buffer_size": 414,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/scripts/drawMap.js",
-			"settings":
-			{
-				"buffer_size": 574,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/index.html",
-			"settings":
-			{
-				"buffer_size": 6790,
+				"buffer_size": 1425,
 				"line_ending": "Unix"
 			}
 		},
@@ -63,35 +82,51 @@
 			}
 		},
 		{
-			"file": "app/styles/main.css",
+			"file": "app/index.html",
 			"settings":
 			{
-				"buffer_size": 487,
+				"buffer_size": 7191,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/scripts/asia.js",
+			"file": "app/styles/main.css",
 			"settings":
 			{
-				"buffer_size": 6529,
+				"buffer_size": 1432,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/data/education-ratios.json",
+			"settings":
+			{
+				"buffer_size": 10311,
+				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 75.0,
+		"height": 306.0,
 		"selected_items":
 		[
 			[
-				"color",
-				"Color picker"
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"proj",
+				"File: Copy Path From Project"
 			],
 			[
 				"instal",
 				"Package Control: Install Package"
+			],
+			[
+				"color",
+				"Color picker"
 			],
 			[
 				"gist",
@@ -103,10 +138,6 @@
 			],
 			[
 				"insta",
-				"Package Control: Install Package"
-			],
-			[
-				"inst",
 				"Package Control: Install Package"
 			],
 			[
@@ -156,10 +187,6 @@
 			[
 				"prefere",
 				"Preferences: Settings - User"
-			],
-			[
-				"proj",
-				"Project: Save As"
 			],
 			[
 				"path",
@@ -215,14 +242,28 @@
 	},
 	"file_history":
 	[
-		"/home/nikhil/projects/gender-asia/app/scripts/scroll.js",
 		"/home/nikhil/projects/gender-asia/app/scripts/drawMap.js",
+		"/var/www/d3-datavis/us-energy-use/us-historical-energy.html",
+		"/home/nikhil/projects/gender-asia/app/data/education-ratios.json",
+		"/home/nikhil/projects/gender-asia/app/data/education.html",
+		"/home/nikhil/projects/gender-asia/app/scripts/asia.js",
+		"/home/nikhil/projects/gender-asia/app/components/leaflet/dist/leaflet.css",
+		"/home/nikhil/projects/gender-asia/components/leaflet/dist/leaflet.css",
+		"/home/nikhil/projects/gender-asia/app/scripts/waypoint.js",
+		"/home/nikhil/projects/gender-asia/app/data/asia-topo.json",
+		"/home/nikhil/projects/gender-asia/app/data/countries.json",
+		"/home/nikhil/projects/gender-asia/app/data/asia.json",
+		"/home/nikhil/projects/gender-asia/app/data/combined.json",
+		"/home/nikhil/projects/gender-asia/app/index.html",
+		"/home/nikhil/projects/gender-asia/app/styles/main.css",
+		"/home/nikhil/projects/gender-asia/app/data/asia-info.json",
+		"/home/nikhil/projects/gender-asia/app/data/asian-countries.json",
+		"/home/nikhil/projects/gender-asia/app/data/asia-data.json",
+		"/home/nikhil/projects/gender-asia/app/data/ne_10m_admin_0_countries.shp",
+		"/home/nikhil/projects/gender-asia/app/scripts/scroll.js",
 		"/home/nikhil/projects/gender-asia/app/scripts/map.js",
 		"/home/nikhil/projects/gender-asia/app/scripts/app.js",
 		"/home/nikhil/projects/gender-asia/app/scripts/main.js",
-		"/home/nikhil/projects/gender-asia/app/styles/main.css",
-		"/home/nikhil/projects/gender-asia/app/scripts/waypoint.js",
-		"/home/nikhil/projects/gender-asia/app/index.html",
 		"/home/nikhil/projects/gender-asia/README.md",
 		"/var/www/gender-asia/components/leaflet/dist/leaflet.css",
 		"/var/www/gender-asia/app/scripts/map.js",
@@ -276,6 +317,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"=#'",
+			"n/a",
+			"N/a",
+			"null",
+			"h4",
+			"span",
+			"korea",
+			"iso",
+			"China",
+			"'\n",
+			"AUS",
+			"AUS\nBRN\nKHM\nCHN\nFJI\nHKG\nIDN\nJPN\nKIR\nPRK\nKOR\nLAO\nMAC\nMYS\nFSM\nMNG\nMMR\nNZL\nPLW\nPNG\nPHL\nWSM\nSGP\nSLB\nTHA\nTLS\nTON\nVUT\nVNM\nAFG\nBGD\nBTN\nIND\nMDV\nNPL\nPAK\nLKA\nTWN",
 			"indo",
 			" }",
 			"python",
@@ -299,6 +352,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"N/A",
+			"h3",
+			"p"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -309,7 +365,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -317,15 +373,15 @@
 					"file": "app/scripts/main.js",
 					"settings":
 					{
-						"buffer_size": 490,
+						"buffer_size": 506,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								364,
-								364
+								501,
+								501
 							]
 						],
 						"settings":
@@ -342,23 +398,24 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/scripts/waypoint.js",
+					"file": "app/scripts/education.js",
 					"settings":
 					{
-						"buffer_size": 166,
+						"buffer_size": 476,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7,
-								7
+								384,
+								384
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 3
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -368,25 +425,24 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/scripts/scroll.js",
+					"file": "text.md",
 					"settings":
 					{
-						"buffer_size": 414,
+						"buffer_size": 1425,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								402,
-								402
+								1425,
+								1425
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"spell_check": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -396,61 +452,6 @@
 				},
 				{
 					"buffer": 3,
-					"file": "app/scripts/drawMap.js",
-					"settings":
-					{
-						"buffer_size": 574,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								439,
-								439
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/index.html",
-					"settings":
-					{
-						"buffer_size": 6790,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4450,
-								4450
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1074.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "app/scripts/app.js",
 					"settings":
 					{
@@ -476,50 +477,82 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "app/styles/main.css",
+					"buffer": 4,
+					"file": "app/index.html",
 					"settings":
 					{
-						"buffer_size": 487,
+						"buffer_size": 7191,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								384,
-								384
+								6390,
+								6390
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1890.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "app/scripts/asia.js",
+					"buffer": 5,
+					"file": "app/styles/main.css",
 					"settings":
 					{
-						"buffer_size": 6529,
+						"buffer_size": 1432,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6494,
-								6494
+								844,
+								844
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 216.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/data/education-ratios.json",
+					"settings":
+					{
+						"buffer_size": 10311,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -563,7 +596,7 @@
 	"menu_visible": true,
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -572,16 +605,64 @@
 		"selected_items":
 		[
 			[
+				"draw",
+				"app/scripts/drawMap.js"
+			],
+			[
+				"edu",
+				"app/data/education-ratios.json"
+			],
+			[
+				"educ",
+				"app/data/education-ratios.json"
+			],
+			[
+				"dra",
+				"app/scripts/drawMap.js"
+			],
+			[
+				"asi",
+				"app/scripts/asia.js"
+			],
+			[
 				"asia",
 				"app/scripts/asia.js"
 			],
 			[
-				"main.c",
+				"leaflet",
+				"app/components/leaflet/dist/leaflet.css"
+			],
+			[
+				"leaf",
+				"components/leaflet/dist/leaflet.css"
+			],
+			[
+				"asia-t",
+				"app/data/asia-topo.json"
+			],
+			[
+				"main.cs",
 				"app/styles/main.css"
 			],
 			[
 				"leafl",
 				"components/leaflet/dist/leaflet.css"
+			],
+			[
+				"asian-",
+				"app/data/asian-countries.json"
+			],
+			[
+				"json",
+				"app/data/asia-data.json"
+			],
+			[
+				"asia.json",
+				"app/data/asia.json"
+			],
+			[
+				"main.c",
+				"app/styles/main.css"
 			],
 			[
 				"map",
@@ -638,10 +719,6 @@
 			[
 				"leaflecss",
 				"components/leaflet/dist/leaflet.css"
-			],
-			[
-				"leaflet",
-				"components/leaflet/dist/leaflet.js"
 			],
 			[
 				"d3",

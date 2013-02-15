@@ -1,0 +1,557 @@
+[
+    {
+     "country" : "Afghanistan", 
+      "Primary" : {
+         "ratio" : 0.69,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 0.51,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 0.24,
+         "year" : 2009
+       }
+    },
+    {
+     "country" : "Australia", 
+      "Primary" : {
+         "ratio" : 0.99,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 0.95,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 1.35,
+         "year" : 2010
+       }
+    },
+    {
+     "country" : "Bangladesh", 
+      "Primary" : {
+         "ratio" : 1.04,
+         "year" : 2009
+       },
+      "Secondary" : {
+         "ratio" : 1.13,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 0.61,
+         "year" : 2009
+       }
+    },
+    {
+     "country" : "Bhutan", 
+      "Primary" : {
+         "ratio" : 1.01,
+         "year" : 2011
+       },
+      "Secondary" : {
+         "ratio" : 1.04,
+         "year" : 2011
+       },
+      "Tertiary" : {
+         "ratio" : 0.68,
+         "year" : 2011
+       }
+    },
+    {
+     "country" : "Brunei Darussalamc", 
+      "Primary" : {
+         "ratio" : 1.01,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 1.03,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 1.79,
+         "year" : 2010
+       }
+    },
+    {
+     "country" : "Cambodia", 
+      "Primary" : {
+         "ratio" : 0.95,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 0.9,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 0.53,
+         "year" : 2008
+       }
+    },
+    {
+     "country" : "China", 
+      "Primary" : {
+         "ratio" : 1.03,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 1.04,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 1.1,
+         "year" : 2010
+       }
+    },
+    {
+     "country" : "Fiji", 
+      "Primary" : {
+         "ratio" : 0.98,
+         "year" : 2009
+       },
+      "Secondary" : {
+         "ratio" : 1.09,
+         "year" : 2009
+       },
+      "Tertiary" : {
+         "ratio" : 1.19,
+         "year" : 2005
+       }
+    },
+    {
+     "country" : "Hong Kong", 
+      "Primary" : {
+         "ratio" : 1.02,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 1.02,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 1.04,
+         "year" : 2010
+       }
+    },
+    {
+     "country" : "India", 
+      "Primary" : {
+         "ratio" : 1,
+         "year" : 2008
+       },
+      "Secondary" : {
+         "ratio" : 0.92,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 0.73,
+         "year" : 2010
+       }
+    },
+    {
+     "country" : "Indonesia", 
+      "Primary" : {
+         "ratio" : 1.02,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 1,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 0.89,
+         "year" : null
+       }
+    },
+    {
+     "country" : "Japan", 
+      "Primary" : {
+         "ratio" : 1,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 1,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 0.89,
+         "year" : 2010
+       }
+    },
+    {
+     "country" : "Kiribati", 
+      "Primary" : {
+         "ratio" : 1.04,
+         "year" : 2009
+       },
+      "Secondary" : {
+         "ratio" : 1.11,
+         "year" : 2008
+       },
+      "Tertiary" : {
+         "ratio" : "...",
+         "year" : 2010
+       }
+    },
+    {
+     "country" : "Laos", 
+      "Primary" : {
+         "ratio" : 0.93,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 0.83,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 0.77,
+         "year" : null
+       }
+    },
+    {
+     "country" : "Malaysia", 
+      "Primary" : {
+         "ratio" : 0.99,
+         "year" : 2008
+       },
+      "Secondary" : {
+         "ratio" : 1.07,
+         "year" : 2009
+       },
+      "Tertiary" : {
+         "ratio" : 1.29,
+         "year" : 2009
+       }
+    },
+    {
+     "country" : "Maldives", 
+      "Primary" : {
+         "ratio" : 0.96,
+         "year" : 2011
+       },
+      "Secondary" : {
+         "ratio" : 1.13,
+         "year" : 2004
+       },
+      "Tertiary" : {
+         "ratio" : 1.08,
+         "year" : 2008
+       }
+    },
+    {
+     "country" : "Micronesia", 
+      "Primary" : {
+         "ratio" : 1.01,
+         "year" : 2007
+       },
+      "Secondary" : {
+         "ratio" : 1.08,
+         "year" : 2005
+       },
+      "Tertiary" : {
+         "ratio" : "...",
+         "year" : 2010
+       }
+    },
+    {
+     "country" : "Mongolia", 
+      "Primary" : {
+         "ratio" : 0.98,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 1.07,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 1.53,
+         "year" : 2010
+       }
+    },
+    {
+     "country" : "Myanmar", 
+      "Primary" : {
+         "ratio" : 1,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 1.06,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 1.38,
+         "year" : 2007
+       }
+    },
+    {
+     "country" : "Nepal", 
+      "Primary" : {
+         "ratio" : 0.86,
+         "year" : 2002
+       },
+      "Secondary" : {
+         "ratio" : 0.89,
+         "year" : 2006
+       },
+      "Tertiary" : {
+         "ratio" : 0.4,
+         "year" : 2004
+       }
+    },
+    {
+     "country" : "New Zealand", 
+      "Primary" : {
+         "ratio" : 1,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 1.05,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 1.46,
+         "year" : 2010
+       }
+    },
+    {
+     "country" : "Pakistan", 
+      "Primary" : {
+         "ratio" : 0.82,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 0.76,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 0.83,
+         "year" : 2008
+       }
+    },
+    {
+     "country" : "Palau", 
+      "Primary" : {
+         "ratio" : 1.03,
+         "year" : 2007
+       },
+      "Secondary" : {
+         "ratio" : 1.02,
+         "year" : 2004
+       },
+      "Tertiary" : {
+         "ratio" : 2.04,
+         "year" : 2002
+       }
+    },
+    {
+     "country" : "Papua New Guinea", 
+      "Primary" : {
+         "ratio" : 0.89,
+         "year" : 2008
+       },
+      "Secondary" : {
+         "ratio" : 0.79,
+         "year" : 2003
+       },
+      "Tertiary" : {
+         "ratio" : 0.57,
+         "year" : 1999
+       }
+    },
+    {
+     "country" : "Philippines", 
+      "Primary" : {
+         "ratio" : 0.98,
+         "year" : 2009
+       },
+      "Secondary" : {
+         "ratio" : 1.08,
+         "year" : 2009
+       },
+      "Tertiary" : {
+         "ratio" : 1.25,
+         "year" : 2008
+       }
+    },
+    {
+     "country" : "Samoa", 
+      "Primary" : {
+         "ratio" : 1.02,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 1.14,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 0.92,
+         "year" : 2001
+       }
+    },
+    {
+     "country" : "Singapore", 
+      "Primary" : {
+         "ratio" : 0.97,
+         "year" : 1991
+       },
+      "Secondary" : {
+         "ratio" : "...",
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : "...",
+         "year" : 2010
+       }
+    },
+    {
+     "country" : "Solomon Islands", 
+      "Primary" : {
+         "ratio" : 0.97,
+         "year" : 2007
+       },
+      "Secondary" : {
+         "ratio" : 0.84,
+         "year" : 2007
+       },
+      "Tertiary" : {
+         "ratio" : "...",
+         "year" : 2010
+       }
+    },
+    {
+     "country" : "South Korea", 
+      "Primary" : {
+         "ratio" : 0.99,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 0.99,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 0.72,
+         "year" : 2010
+       }
+    },
+    {
+     "country" : "Sri Lanka", 
+      "Primary" : {
+         "ratio" : 1,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 1.01,
+         "year" : 2004
+       },
+      "Tertiary" : {
+         "ratio" : 1.92,
+         "year" : 2010
+       }
+    },
+    {
+     "country" : "Taiwan", 
+      "Primary" : {
+         "ratio" : 1.01,
+         "year" : 2011
+       },
+      "Secondary" : {
+         "ratio" : 1.01,
+         "year" : 2011
+       },
+      "Tertiary" : {
+         "ratio" : 1.08,
+         "year" : 2011
+       }
+    },
+    {
+     "country" : "Thailand", 
+      "Primary" : {
+         "ratio" : 0.99,
+         "year" : 2009
+       },
+      "Secondary" : {
+         "ratio" : 1.08,
+         "year" : 2011
+       },
+      "Tertiary" : {
+         "ratio" : 1.31,
+         "year" : 2011
+       }
+    },
+    {
+     "country" : "TimorLeste", 
+      "Primary" : {
+         "ratio" : 0.96,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 1.01,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 0.7,
+         "year" : 2009
+       }
+    },
+    {
+     "country" : "Tonga", 
+      "Primary" : {
+         "ratio" : 0.96,
+         "year" : 2007
+       },
+      "Secondary" : {
+         "ratio" : 1,
+         "year" : 2006
+       },
+      "Tertiary" : {
+         "ratio" : 1.6,
+         "year" : 2004
+       }
+    },
+    {
+     "country" : "Tuvalu", 
+      "Primary" : {
+         "ratio" : 0.95,
+         "year" : 2006
+       },
+      "Secondary" : {
+         "ratio" : 1.1,
+         "year" : 2001
+       },
+      "Tertiary" : {
+         "ratio" : "...",
+         "year" : 2010
+       }
+    },
+    {
+     "country" : "Vanuatu", 
+      "Primary" : {
+         "ratio" : 0.95,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 1.02,
+         "year" : null
+       },
+      "Tertiary" : {
+         "ratio" : 0.6,
+         "year" : 2004
+       }
+    },
+    {
+     "country" : "Vietnam", 
+      "Primary" : {
+         "ratio" : 0.94,
+         "year" : 2010
+       },
+      "Secondary" : {
+         "ratio" : 1.09,
+         "year" : 2010
+       },
+      "Tertiary" : {
+         "ratio" : 1,
+         "year" : 2010
+       }
+    }
+  ]
