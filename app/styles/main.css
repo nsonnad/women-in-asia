@@ -10,7 +10,7 @@ a { color:#B83834; text-decoration: none; }
 a:hover { text-decoration: underline;}
 
 div.sections { width: 620px; margin: 0 auto;}
-.sections p { padding: 0px 8px; color: #2B2D31; font-size: 1.1em;}
+.sections p { padding: 0px 8px; color: #2B2D31; font-size: 1.2em;}
 
 div#map { opacity:1; height:550px; width: auto; margin: 16px 0; position:relative;}
 
@@ -56,7 +56,5 @@ div#return {
 	left: 50%;
 	margin: 0 0 0 -10%;
 }
-div.chart { width:620px; margin: 0 auto;}
 
- .axis path,
- .axis line { fill: none; stroke: #7B7B7B; shape-rendering: crispEdges;}
+div#education { margin-top: 15px; }

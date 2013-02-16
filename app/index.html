@@ -16,6 +16,7 @@
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		
 		<link rel="stylesheet" href="styles/main.css">
+		<link rel="stylesheet" href="styles/charts.css">
 		<link rel="stylesheet" href="/components/leaflet/dist/leaflet.css">
 		<script src="scripts/vendor/modernizr.min.js"></script>
 	</head>
@@ -52,7 +53,15 @@
 			
 		</div>
 
-		<div class="chart"><div id="education"></div></div>
+		<div class="chart">
+		 <div id="education">
+			<div id="eduControls">
+			<span>Select education level:</span>
+			<a><span id="default" class="eduControl">Primary</span></a>
+			<a><span class="eduControl">Secondary</span></a>
+			<a><span class="eduControl">Tertiary</span></a>
+			</div>
+		</div>
 	</div>
 
 		<!-- Add your site or application content here -->

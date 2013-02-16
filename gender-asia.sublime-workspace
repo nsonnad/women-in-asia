@@ -52,14 +52,35 @@
 			}
 		},
 		{
-			"contents": "require(['d3'], function() {\n\nvar margin = {t:20, r:20, b:20, l:30 },\n		w = 620 - margin.l - margin.r,\n		h = 450 - margin.t - margin.b,\n		x = d3.scale.ordinal().range([0,w]),\n		y = d3.scale.linear().range([0,h]);\n\nvar eduChart = d3.select('#education').append('svg')\n	.attr('width', w)\n	.attr('height', h)\n.append(\"g\")\n	.attr({\n		transform: \"translate(\"+[0,0]+\")\",\n		class: \"eduGroup\"\n	});\n\nd3.json('../data/education-ratios.json', function(json) {\n\n	console.log(json)\n\n\n})\n})",
 			"file": "app/scripts/education.js",
-			"file_size": 478,
-			"file_write_time": 1360920934000000,
 			"settings":
 			{
-				"buffer_size": 476,
+				"buffer_size": 1376,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/d3-datavis/aid-transparency/aid-transparency.html",
+			"settings":
+			{
+				"buffer_size": 12426,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/d3-datavis/newsroom-diversity/newsroom-diversity.html",
+			"settings":
+			{
+				"buffer_size": 10115,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/data/education-ratios.json",
+			"settings":
+			{
+				"buffer_size": 10310,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -85,7 +106,7 @@
 			"file": "app/index.html",
 			"settings":
 			{
-				"buffer_size": 7191,
+				"buffer_size": 7216,
 				"line_ending": "Unix"
 			}
 		},
@@ -93,16 +114,8 @@
 			"file": "app/styles/main.css",
 			"settings":
 			{
-				"buffer_size": 1432,
+				"buffer_size": 1560,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/data/education-ratios.json",
-			"settings":
-			{
-				"buffer_size": 10311,
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -242,8 +255,8 @@
 	},
 	"file_history":
 	[
-		"/home/nikhil/projects/gender-asia/app/scripts/drawMap.js",
 		"/var/www/d3-datavis/us-energy-use/us-historical-energy.html",
+		"/home/nikhil/projects/gender-asia/app/scripts/drawMap.js",
 		"/home/nikhil/projects/gender-asia/app/data/education-ratios.json",
 		"/home/nikhil/projects/gender-asia/app/data/education.html",
 		"/home/nikhil/projects/gender-asia/app/scripts/asia.js",
@@ -317,6 +330,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"...",
+			"null",
 			"=#'",
 			"n/a",
 			"N/a",
@@ -365,7 +380,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -401,21 +416,78 @@
 					"file": "app/scripts/education.js",
 					"settings":
 					{
-						"buffer_size": 476,
+						"buffer_size": 1376,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								384,
-								384
+								1304,
+								1304
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 3
+							"tab_size": 3,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 32.0,
+						"translation.y": 702.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/var/www/d3-datavis/aid-transparency/aid-transparency.html",
+					"settings":
+					{
+						"buffer_size": 12426,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								834,
+								834
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2446.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/var/www/d3-datavis/newsroom-diversity/newsroom-diversity.html",
+					"settings":
+					{
+						"buffer_size": 10115,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								519,
+								519
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -424,7 +496,35 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 4,
+					"file": "app/data/education-ratios.json",
+					"settings":
+					{
+						"buffer_size": 10310,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7346,
+								7346
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6952.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "text.md",
 					"settings":
 					{
@@ -451,7 +551,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 6,
 					"file": "app/scripts/app.js",
 					"settings":
 					{
@@ -477,19 +577,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 7,
 					"file": "app/index.html",
 					"settings":
 					{
-						"buffer_size": 7191,
+						"buffer_size": 7216,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6390,
-								6390
+								6415,
+								6415
 							]
 						],
 						"settings":
@@ -499,25 +599,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1890.0,
+						"translation.y": 2016.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 8,
 					"file": "app/styles/main.css",
 					"settings":
 					{
-						"buffer_size": 1432,
+						"buffer_size": 1560,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								844,
-								844
+								1474,
+								1474
 							]
 						],
 						"settings":
@@ -527,35 +627,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 216.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/data/education-ratios.json",
-					"settings":
-					{
-						"buffer_size": 10311,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 810.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

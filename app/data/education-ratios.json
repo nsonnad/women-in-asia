@@ -190,7 +190,7 @@
          "year" : 2008
        },
       "Tertiary" : {
-         "ratio" : "...",
+         "ratio" : null,
          "year" : 2010
        }
     },
@@ -250,7 +250,7 @@
          "year" : 2005
        },
       "Tertiary" : {
-         "ratio" : "...",
+         "ratio" : null,
          "year" : 2010
        }
     },
@@ -396,11 +396,11 @@
          "year" : 1991
        },
       "Secondary" : {
-         "ratio" : "...",
+         "ratio" : null,
          "year" : 2010
        },
       "Tertiary" : {
-         "ratio" : "...",
+         "ratio" : null,
          "year" : 2010
        }
     },
@@ -415,7 +415,7 @@
          "year" : 2007
        },
       "Tertiary" : {
-         "ratio" : "...",
+         "ratio" : null,
          "year" : 2010
        }
     },
@@ -520,7 +520,7 @@
          "year" : 2001
        },
       "Tertiary" : {
-         "ratio" : "...",
+         "ratio" : null,
          "year" : 2010
        }
     },
