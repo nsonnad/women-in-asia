@@ -1,0 +1,26 @@
+div.chart { width:960px; margin: 0 auto; font-size: 12px;}
+
+.axis path,
+.axis line { fill: none; stroke: #7B7B7B; shape-rendering: crispEdges;}
+.oecd line { fill: none; stroke: #7B7B7B; stroke-dasharray: 7,2; shape-rendering: crispEdges;}
+.label {font-size:14px;}
+
+/*education chart*/
+div#education { width:620px; margin: 35px auto; }
+div#eduControls {
+	text-align: center;
+	font-size: 22px;
+	margin-bottom: 20px;
+	}
+
+div#eduControls span { margin-right: 16px; }
+
+span.eduControl { cursor: pointer; }
+span.active { color:orange;}
+
+.oecdLabel { font-size:16px; }
+
+div#education .xLabels { font-style: italic;}
+
+/*survey chart*/
+div#survey { width:auto;}

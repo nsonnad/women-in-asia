@@ -11,7 +11,7 @@ define(['leaflet', 'jquery', 'topojson'], function() {
 	});
 
 	L.tileLayer('http://d.tiles.mapbox.com/v3/nikhils.map-rrpbmuxw/{z}/{x}/{y}.png', {
-    attribution: 'Map by <a href="http://mapbox.com/">MapBox</a>'
+    attribution: 'Map by <a href="http://mapbox.com/">MapBox</a>; data from the World Bank'
 }).addTo(map);
 
 // map info box

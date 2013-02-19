@@ -1,0 +1,577 @@
+{ 
+  "women-politics" : [
+    {
+      "Country" : "Argentina",
+      "region" : "South America",
+      "Men generally make better political leaders than women" : 17,
+      "Women generally make better political leaders than men" : 10,
+      "In general, women and men make equally good political leaders" : 68,
+      "DK/Refused" : 6
+    },
+    {
+      "Country" : "Brazil",
+      "region" : "South America",
+      "Men generally make better political leaders than women" : 10,
+      "Women generally make better political leaders than men" : 15,
+      "In general, women and men make equally good political leaders" : 73,
+      "DK/Refused" : 3
+    },
+    {
+      "Country" : "Britain",
+      "region" : "Europe",
+      "Men generally make better political leaders than women" : 9,
+      "Women generally make better political leaders than men" : 6,
+      "In general, women and men make equally good political leaders" : 83,
+      "DK/Refused" : 2
+    },
+    {
+      "Country" : "China*",
+      "region" : "Asia",
+      "Men generally make better political leaders than women" : 28,
+      "Women generally make better political leaders than men" : 4,
+      "In general, women and men make equally good political leaders" : 64,
+      "DK/Refused" : 4
+    },
+    {
+      "Country" : "Egypt",
+      "region" : "Middle East",
+      "Men generally make better political leaders than women" : 38,
+      "Women generally make better political leaders than men" : 15,
+      "In general, women and men make equally good political leaders" : 43,
+      "DK/Refused" : 5
+    },
+    {
+      "Country" : "France",
+      "region" : "Europe",
+      "Men generally make better political leaders than women" : 15,
+      "Women generally make better political leaders than men" : 4,
+      "In general, women and men make equally good political leaders" : 81,
+      "DK/Refused" : 0
+    },
+    {
+      "Country" : "Germany",
+      "region" : "Europe",
+      "Men generally make better political leaders than women" : 11,
+      "Women generally make better political leaders than men" : 8,
+      "In general, women and men make equally good political leaders" : 80,
+      "DK/Refused" : 1
+    },
+    {
+      "Country" : "India*",
+      "region" : "Asia",
+      "Men generally make better political leaders than women" : 19,
+      "Women generally make better political leaders than men" : 17,
+      "In general, women and men make equally good political leaders" : 62,
+      "DK/Refused" : 2
+    },
+    {
+      "Country" : "Indonesia",
+      "region" : "Asia",
+      "Men generally make better political leaders than women" : 43,
+      "Women generally make better political leaders than men" : 3,
+      "In general, women and men make equally good political leaders" : 52,
+      "DK/Refused" : 2
+    },
+    {
+      "Country" : "Japan",
+      "region" : "Asia",
+      "Men generally make better political leaders than women" : 16,
+      "Women generally make better political leaders than men" : 4,
+      "In general, women and men make equally good political leaders" : 77,
+      "DK/Refused" : 3
+    },
+    {
+      "Country" : "Jordan",
+      "region" : "Middle East",
+      "Men generally make better political leaders than women" : 49,
+      "Women generally make better political leaders than men" : 6,
+      "In general, women and men make equally good political leaders" : 42,
+      "DK/Refused" : 4
+    },
+    {
+      "Country" : "Kenya",
+      "region" : "Africa",
+      "Men generally make better political leaders than women" : 27,
+      "Women generally make better political leaders than men" : 10,
+      "In general, women and men make equally good political leaders" : 62,
+      "DK/Refused" : 0
+    },
+    {
+      "Country" : "Mexico",
+      "region" : "North America",
+      "Men generally make better political leaders than women" : 12,
+      "Women generally make better political leaders than men" : 9,
+      "In general, women and men make equally good political leaders" : 76,
+      "DK/Refused" : 3
+    },
+    {
+      "Country" : "Nigeria",
+      "region" : "Africa",
+      "Men generally make better political leaders than women" : 48,
+      "Women generally make better political leaders than men" : 6,
+      "In general, women and men make equally good political leaders" : 45,
+      "DK/Refused" : 1
+    },
+    {
+      "Country" : "Pakistan",
+      "region" : "Asia",
+      "Men generally make better political leaders than women" : 54,
+      "Women generally make better political leaders than men" : 8,
+      "In general, women and men make equally good political leaders" : 32,
+      "DK/Refused" : 6
+    },
+    {
+      "Country" : "Poland",
+      "region" : "Europe",
+      "Men generally make better political leaders than women" : 23,
+      "Women generally make better political leaders than men" : 10,
+      "In general, women and men make equally good political leaders" : 65,
+      "DK/Refused" : 3
+    },
+    {
+      "Country" : "Russia",
+      "region" : "Europe",
+      "Men generally make better political leaders than women" : 40,
+      "Women generally make better political leaders than men" : 7,
+      "In general, women and men make equally good political leaders" : 44,
+      "DK/Refused" : 9
+    },
+    {
+      "Country" : "S. Korea",
+      "region" : "Asia",
+      "Men generally make better political leaders than women" : 25,
+      "Women generally make better political leaders than men" : 5,
+      "In general, women and men make equally good political leaders" : 68,
+      "DK/Refused" : 2
+    },
+    {
+      "Country" : "Tunisia",
+      "region" : "Middle East",
+      "Men generally make better political leaders than women" : 75,
+      "Women generally make better political leaders than men" : 4,
+      "In general, women and men make equally good political leaders" : 20,
+      "DK/Refused" : 2
+    },
+    {
+      "Country" : "Turkey",
+      "region" : "Europe",
+      "Men generally make better political leaders than women" : 34,
+      "Women generally make better political leaders than men" : 10,
+      "In general, women and men make equally good political leaders" : 51,
+      "DK/Refused" : 4
+    },
+    {
+      "Country" : "USA",
+      "region" : "North America",
+      "Men generally make better political leaders than women" : 16,
+      "Women generally make better political leaders than men" : 6,
+      "In general, women and men make equally good political leaders" : 75,
+      "DK/Refused" : 4
+    }
+  ],
+
+ "outside-home" : [
+    {
+      "Country" : "Argentina",
+      "region" : "South America",
+      "Completely agree" : 66,
+      "Mostly agree" : 21,
+      "Mostly disagree" : 5,
+      "Completely disagree" : 5,
+      "DK/Refused" : 1
+    },
+    {
+      "Country" : "Brazil",
+      "region" : "South America",
+      "Completely agree" : 88,
+      "Mostly agree" : 8,
+      "Mostly disagree" : 2,
+      "Completely disagree" : 3,
+      "DK/Refused" : 0
+    },
+    {
+      "Country" : "Britain",
+      "region" : "Europe",
+      "Completely agree" : 84,
+      "Mostly agree" : 13,
+      "Mostly disagree" : 1,
+      "Completely disagree" : 1,
+      "DK/Refused" : 1
+    },
+    {
+      "Country" : "China*",
+      "region" : "Asia",
+      "Completely agree" : 42,
+      "Mostly agree" : 55,
+      "Mostly disagree" : 2,
+      "Completely disagree" : 1,
+      "DK/Refused" : 0
+    },
+    {
+      "Country" : "Egypt",
+      "region" : "Middle East",
+      "Completely agree" : 23,
+      "Mostly agree" : 38,
+      "Mostly disagree" : 25,
+      "Completely disagree" : 13,
+      "DK/Refused" : 0
+    },
+    {
+      "Country" : "France",
+      "region" : "Europe",
+      "Completely agree" : 72,
+      "Mostly agree" : 25,
+      "Mostly disagree" : 1,
+      "Completely disagree" : 2,
+      "DK/Refused" : 0
+    },
+    {
+      "Country" : "Germany",
+      "region" : "Europe",
+      "Completely agree" : 79,
+      "Mostly agree" : 18,
+      "Mostly disagree" : 2,
+      "Completely disagree" : 1,
+      "DK/Refused" : 0
+    },
+    {
+      "Country" : "India*",
+      "region" : "Asia",
+      "Completely agree" : 72,
+      "Mostly agree" : 23,
+      "Mostly disagree" : 2,
+      "Completely disagree" : 2,
+      "DK/Refused" : 0
+    },
+    {
+      "Country" : "Indonesia",
+      "region" : "Asia",
+      "Completely agree" : 21,
+      "Mostly agree" : 67,
+      "Mostly disagree" : 12,
+      "Completely disagree" : 0,
+      "DK/Refused" : 0
+    },
+    {
+      "Country" : "Japan",
+      "region" : "Asia",
+      "Completely agree" : 64,
+      "Mostly agree" : 30,
+      "Mostly disagree" : 5,
+      "Completely disagree" : 0,
+      "DK/Refused" : 1
+    },
+    {
+      "Country" : "Jordan",
+      "region" : "Middle East",
+      "Completely agree" : 22,
+      "Mostly agree" : 36,
+      "Mostly disagree" : 27,
+      "Completely disagree" : 13,
+      "DK/Refused" : 2
+    },
+    {
+      "Country" : "Kenya",
+      "region" : "Africa",
+      "Completely agree" : 66,
+      "Mostly agree" : 21,
+      "Mostly disagree" : 6,
+      "Completely disagree" : 6,
+      "DK/Refused" : 0
+    },
+    {
+      "Country" : "Mexico",
+      "region" : "North America",
+      "Completely agree" : 64,
+      "Mostly agree" : 26,
+      "Mostly disagree" : 4,
+      "Completely disagree" : 4,
+      "DK/Refused" : 1
+    },
+    {
+      "Country" : "Nigeria",
+      "region" : "Africa",
+      "Completely agree" : 59,
+      "Mostly agree" : 25,
+      "Mostly disagree" : 9,
+      "Completely disagree" : 7,
+      "DK/Refused" : 1
+    },
+    {
+      "Country" : "Pakistan",
+      "region" : "Asia",
+      "Completely agree" : 47,
+      "Mostly agree" : 22,
+      "Mostly disagree" : 10,
+      "Completely disagree" : 19,
+      "DK/Refused" : 2
+    },
+    {
+      "Country" : "Poland",
+      "region" : "Europe",
+      "Completely agree" : 54,
+      "Mostly agree" : 38,
+      "Mostly disagree" : 5,
+      "Completely disagree" : 2,
+      "DK/Refused" : 1
+    },
+    {
+      "Country" : "Russia",
+      "region" : "Europe",
+      "Completely agree" : 67,
+      "Mostly agree" : 28,
+      "Mostly disagree" : 3,
+      "Completely disagree" : 1,
+      "DK/Refused" : 1
+    },
+    {
+      "Country" : "S. Korea",
+      "region" : "Asia",
+      "Completely agree" : 65,
+      "Mostly agree" : 31,
+      "Mostly disagree" : 3,
+      "Completely disagree" : 0,
+      "DK/Refused" : 0
+    },
+    {
+      "Country" : "Tunisia",
+      "region" : "Middle East",
+      "Completely agree" : 73,
+      "Mostly agree" : 17,
+      "Mostly disagree" : 5,
+      "Completely disagree" : 5,
+      "DK/Refused" : 0
+    },
+    {
+      "Country" : "Turkey",
+      "region" : "Europe",
+      "Completely agree" : 68,
+      "Mostly agree" : 27,
+      "Mostly disagree" : 3,
+      "Completely disagree" : 1,
+      "DK/Refused" : 1
+    },
+    {
+      "Country" : "USA",
+      "region" : "North America",
+      "Completely agree" : 81,
+      "Mostly agree" : 16,
+      "Mostly disagree" : 1,
+      "Completely disagree" : 1,
+      "DK/Refused" : 0
+    }
+  ],
+
+  "jobs" : [
+    {
+
+      "Country" : "Argentina",
+      "region" : "South America",
+      "Completely agree" : 25,
+      "Mostly agree" : 18,
+      "Mostly disagree" : 21,
+      "Completely disagree" : 35,
+      "DK/Refused" : 2
+      },
+    {
+
+      "Country" : "Brazil",
+      "region" : "South America",
+      "Completely agree" : 23,
+      "Mostly agree" : 14,
+      "Mostly disagree" : 11,
+      "Completely disagree" : 52,
+      "DK/Refused" : 0
+      },
+    {
+
+      "Country" : "Britain",
+      "region" : "Europe",
+      "Completely agree" : 4,
+      "Mostly agree" : 8,
+      "Mostly disagree" : 16,
+      "Completely disagree" : 69,
+      "DK/Refused" : 3
+      },
+    {
+
+      "Country" : "China*",
+      "region" : "Asia",
+      "Completely agree" : 28,
+      "Mostly agree" : 45,
+      "Mostly disagree" : 20,
+      "Completely disagree" : 6,
+      "DK/Refused" : 1
+      },
+    {
+
+      "Country" : "Egypt",
+      "region" : "Middle East",
+      "Completely agree" : 43,
+      "Mostly agree" : 32,
+      "Mostly disagree" : 11,
+      "Completely disagree" : 9,
+      "DK/Refused" : 5
+      },
+    {
+
+      "Country" : "France",
+      "region" : "Europe",
+      "Completely agree" : 8,
+      "Mostly agree" : 12,
+      "Mostly disagree" : 16,
+      "Completely disagree" : 64,
+      "DK/Refused" : 0
+      },
+    {
+
+      "Country" : "Germany",
+      "region" : "Europe",
+      "Completely agree" : 4,
+      "Mostly agree" : 15,
+      "Mostly disagree" : 19,
+      "Completely disagree" : 61,
+      "DK/Refused" : 1
+      },
+    {
+
+      "Country" : "India*",
+      "region" : "Asia",
+      "Completely agree" : 52,
+      "Mostly agree" : 32,
+      "Mostly disagree" : 10,
+      "Completely disagree" : 6,
+      "DK/Refused" : 0
+      },
+    {
+
+      "Country" : "Indonesia",
+      "region" : "Asia",
+      "Completely agree" : 23,
+      "Mostly agree" : 51,
+      "Mostly disagree" : 24,
+      "Completely disagree" : 3,
+      "DK/Refused" : 0
+      },
+    {
+
+      "Country" : "Japan",
+      "region" : "Asia",
+      "Completely agree" : 12,
+      "Mostly agree" : 29,
+      "Mostly disagree" : 36,
+      "Completely disagree" : 22,
+      "DK/Refused" : 1
+      },
+    {
+
+      "Country" : "Jordan",
+      "region" : "Middle East",
+      "Completely agree" : 33,
+      "Mostly agree" : 35,
+      "Mostly disagree" : 19,
+      "Completely disagree" : 11,
+      "DK/Refused" : 3
+      },
+    {
+
+      "Country" : "Kenya",
+      "region" : "Africa",
+      "Completely agree" : 25,
+      "Mostly agree" : 21,
+      "Mostly disagree" : 18,
+      "Completely disagree" : 35,
+      "DK/Refused" : 1
+      },
+    {
+
+      "Country" : "Mexico",
+      "region" : "North America",
+      "Completely agree" : 14,
+      "Mostly agree" : 14,
+      "Mostly disagree" : 23,
+      "Completely disagree" : 46,
+      "DK/Refused" : 4
+      },
+    {
+
+      "Country" : "Nigeria",
+      "region" : "Africa",
+      "Completely agree" : 52,
+      "Mostly agree" : 25,
+      "Mostly disagree" : 10,
+      "Completely disagree" : 10,
+      "DK/Refused" : 3
+      },
+    {
+
+      "Country" : "Pakistan",
+      "region" : "Asia",
+      "Completely agree" : 59,
+      "Mostly agree" : 23,
+      "Mostly disagree" : 7,
+      "Completely disagree" : 7,
+      "DK/Refused" : 4
+      },
+    {
+
+      "Country" : "Poland",
+      "region" : "Europe",
+      "Completely agree" : 16,
+      "Mostly agree" : 28,
+      "Mostly disagree" : 27,
+      "Completely disagree" : 24,
+      "DK/Refused" : 4
+      },
+    {
+
+      "Country" : "Russia",
+      "region" : "Europe",
+      "Completely agree" : 25,
+      "Mostly agree" : 22,
+      "Mostly disagree" : 21,
+      "Completely disagree" : 28,
+      "DK/Refused" : 3
+      },
+    {
+
+      "Country" : "S. Korea",
+      "region" : "Asia",
+      "Completely agree" : 25,
+      "Mostly agree" : 35,
+      "Mostly disagree" : 27,
+      "Completely disagree" : 12,
+      "DK/Refused" : 1
+      },
+    {
+
+      "Country" : "Tunisia",
+      "region" : "Middle East",
+      "Completely agree" : 72,
+      "Mostly agree" : 14,
+      "Mostly disagree" : 7,
+      "Completely disagree" : 7,
+      "DK/Refused" : 0
+      },
+    {
+
+      "Country" : "Turkey",
+      "region" : "Europe",
+      "Completely agree" : 38,
+      "Mostly agree" : 29,
+      "Mostly disagree" : 18,
+      "Completely disagree" : 12,
+      "DK/Refused" : 3
+      },
+    {
+
+      "Country" : "USA",
+      "region" : "North America",
+      "Completely agree" : 4,
+      "Mostly agree" : 10,
+      "Mostly disagree" : 21,
+      "Completely disagree" : 64,
+      "DK/Refused" : 2
+      }
+  ]
+}

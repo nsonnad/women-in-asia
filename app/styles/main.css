@@ -12,25 +12,26 @@ a:hover { text-decoration: underline;}
 div.sections { width: 620px; margin: 0 auto;}
 .sections p { padding: 0px 8px; color: #2B2D31; font-size: 1.2em;}
 
-div#map { opacity:1; height:550px; width: auto; margin: 16px 0; position:relative;}
+div#map { opacity:1; height:550px; width: auto; margin:0; position:relative;}
 
 div.images { 
 	width: auto; 
 	background-repeat:no-repeat;
 	background-attachment: fixed; 
 	height:700px;
-	background-size: 100%;
+	background-size: cover;
 	position:relative;
 }
 
 div.images h1 {
-		position:absolute; top:50%; left:25%; right:15%; 
+		position:absolute; top:20%; left:25%; right:15%; 
 		text-shadow: 2px 1px #2B2D31;
-		font-size:2.3em; font-style: italic;
+		font-size:8em; font-style: italic;
 		color:hsl(122,50%,97%);
 	}
 
-div#image1 { background-image:url('../images/women-vietnam.jpg'); }
+div#image1 { background-image:url('../images/girls-in-school.jpg'); }
+div#image2 { background-image:url('../images/women-vietnam.jpg'); }
 
 img.wide { margin: 16px 0; max-width: 100%;}
 
@@ -56,5 +57,3 @@ div#return {
 	left: 50%;
 	margin: 0 0 0 -10%;
 }
-
-div#education { margin-top: 15px; }

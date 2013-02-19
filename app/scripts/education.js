@@ -7,11 +7,11 @@ var margin = {t:20, r:40, b:20, l:130 },
 		y = d3.scale.ordinal().rangeRoundBands([0, h], 0.5),
 		color = d3.scale.category20c();
 		var colorScale = d3.scale.linear()
-        .domain([0.3, 1.7]).interpolate(d3.interpolateHsl)
-    		.range(["#EDC5C4", "#A8322E"]);
+        .domain([0.3, 2]).interpolate(d3.interpolateHsl)
+    		.range(["#A8322E", "#EDC5C4"]);
 
 var oecd = [{"Primary": 0.99, "Secondary": 1.01, "Tertiary": 1.29}];
-console.log("LOG:",oecd);
+
 var eduData;
 
 var eduChart = d3.select('#education').append('svg')
