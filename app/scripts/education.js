@@ -153,7 +153,6 @@ rectUpdate.selectAll('.oecdLine')
 rectUpdate.selectAll(".oecdLabel")
 	.attr("x", function(d) { return x(d[dataset]) + 10; })
 
-rect.exit().remove()
 }
 
 d3.selectAll('.eduControl').on("click", function() {
@@ -163,5 +162,5 @@ d3.selectAll('.eduControl').on("click", function() {
 		updateEdu(text);
 	})
 
-d3.select('#default').style('color', '#E5ABA9')
+d3.select('#eduDefault').style('color', '#E5ABA9')
 })

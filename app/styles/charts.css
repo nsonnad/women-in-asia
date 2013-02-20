@@ -23,4 +23,19 @@ span.active { color:orange;}
 div#education .xLabels { font-style: italic;}
 
 /*survey chart*/
-div#survey { width:auto;}
+div#surveys { width:auto; margin:35px auto; }
+
+.surveyRectGroup text { 
+		font-size: 12px; 
+		font-weight: bold; 
+		fill:white; 
+		font-family: Arial;
+		text-shadow: 1px 1px gray;}
+
+div#surveyControls {
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 20px;
+	}
+
+div#surveyControls span { margin-right: 16px;}

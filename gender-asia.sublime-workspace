@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"color",
+				"colorBlends"
+			],
+			[
+				"surv",
+				"surveyChart"
+			],
+			[
+				"fu",
+				"fun	Function"
+			],
+			[
+				"response",
+				"responseNames"
+			],
+			[
+				"respon",
+				"responseNames"
+			],
+			[
+				"survey",
+				"surveyData"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
 				"text",
 				"text	text"
 			],
@@ -79,47 +107,15 @@
 			"file": "app/scripts/main.js",
 			"settings":
 			{
-				"buffer_size": 506,
+				"buffer_size": 484,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/scripts/education.js",
+			"file": "app/scripts/surveys.js",
 			"settings":
 			{
-				"buffer_size": 4287,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/index.html",
-			"settings":
-			{
-				"buffer_size": 7460,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "text.md",
-			"settings":
-			{
-				"buffer_size": 4503,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/styles/main.css",
-			"settings":
-			{
-				"buffer_size": 1424,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/styles/charts.css",
-			"settings":
-			{
-				"buffer_size": 574,
+				"buffer_size": 2535,
 				"line_ending": "Unix"
 			}
 		},
@@ -132,18 +128,42 @@
 			}
 		},
 		{
-			"file": "app/data/education-ratios.json",
+			"file": "app/data/asia-surveys-master.json",
 			"settings":
 			{
-				"buffer_size": 10304,
-				"line_ending": "Windows"
+				"buffer_size": 13419,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/scripts/drawMap.js",
+			"file": "app/index.html",
 			"settings":
 			{
-				"buffer_size": 3729,
+				"buffer_size": 8567,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "text.md",
+			"settings":
+			{
+				"buffer_size": 4556,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/main.css",
+			"settings":
+			{
+				"buffer_size": 1494,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/charts.css",
+			"settings":
+			{
+				"buffer_size": 652,
 				"line_ending": "Unix"
 			}
 		}
@@ -151,9 +171,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 159.0,
+		"height": 222.0,
 		"selected_items":
 		[
+			[
+				"copy	",
+				"File: Copy Name"
+			],
 			[
 				"proj",
 				"File: Copy Path From Project"
@@ -284,14 +308,19 @@
 	},
 	"file_history":
 	[
+		"/home/nikhil/projects/gender-asia/app/scripts/education.js",
+		"/home/nikhil/projects/gender-asia/app/data/asia-surveys-master.json",
+		"/home/nikhil/projects/gender-asia/app/styles/charts.css",
+		"/var/www/d3-datavis/newsroom-diversity/newsroom-diversity.html",
+		"/home/nikhil/projects/gender-asia/app/data/education-ratios.json",
+		"/home/nikhil/projects/gender-asia/app/scripts/drawMap.js",
+		"/home/nikhil/projects/gender-asia/app/data/asia-surveys-politics.json",
+		"/home/nikhil/projects/gender-asia/app/data/asia-surveys-jobs.json",
+		"/home/nikhil/projects/gender-asia/app/data/asia-surveys-outside-home.json",
 		"/home/nikhil/projects/gender-asia/app/data/sex-ratios.csv",
 		"/var/www/d3-datavis/aid-transparency/aid-transparency.html",
 		"/home/nikhil/projects/gender-asia/app/scripts/app.js",
-		"/home/nikhil/projects/gender-asia/app/data/education-ratios.json",
-		"/var/www/d3-datavis/newsroom-diversity/newsroom-diversity.html",
-		"/home/nikhil/projects/gender-asia/app/scripts/education.js",
 		"/var/www/d3-datavis/us-energy-use/us-historical-energy.html",
-		"/home/nikhil/projects/gender-asia/app/scripts/drawMap.js",
 		"/home/nikhil/projects/gender-asia/app/data/education.html",
 		"/home/nikhil/projects/gender-asia/app/scripts/asia.js",
 		"/home/nikhil/projects/gender-asia/app/components/leaflet/dist/leaflet.css",
@@ -363,6 +392,28 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"In general, women and men are equally good",
+			"Women and men are generally equally good",
+			"In general, women and men make equally good political leaders",
+			"Women generally make better political leaders than men",
+			"Men generally make better political leaders than women",
+			"Mexico",
+			"\"Country\" : \"Mexico\",\n      \"region\" : \"South America\",",
+			"\"Latin America\"",
+			"\"na\"",
+			"United States",
+			" (Non-national sample)",
+			"africa",
+			"\"la\"",
+			"asia",
+			"europe",
+			"Mid-east",
+			"Completely disagree 2",
+			"Mostly disagree 2",
+			"Mostly agree 2",
+			"Completely agree 2",
+			"DK/Refused3",
+			"DK/Refused2",
 			"style",
 			"\"null\"",
 			"\"null",
@@ -405,6 +456,28 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Women and men equally good",
+			"In general, women and men are equally good",
+			"Women and men are generally equally good",
+			"Women generally better",
+			"Men generally better",
+			"Men generally better\n      \"region\" : \"North America\",",
+			"\"Country\" : \"Mexico\",\n      \"region\" : \"North America\",",
+			"\"South America\"",
+			"\"North America\"",
+			"USA",
+			"*",
+			"Africa",
+			"\"Latin America\"",
+			"\"Latin America",
+			"Asia",
+			"Europe",
+			"Middle East",
+			"Completely disagree",
+			"Mostly disagree",
+			"Mostly agree",
+			"Completely agree",
+			"DK/Refused",
 			"null",
 			"N/A",
 			"h3",
@@ -419,7 +492,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -427,15 +500,15 @@
 					"file": "app/scripts/main.js",
 					"settings":
 					{
-						"buffer_size": 506,
+						"buffer_size": 484,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								501,
-								501
+								344,
+								344
 							]
 						],
 						"settings":
@@ -452,175 +525,38 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/scripts/education.js",
+					"file": "app/scripts/surveys.js",
 					"settings":
 					{
-						"buffer_size": 4287,
+						"buffer_size": 2535,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								341,
-								341
+								1137,
+								1137
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 3,
-							"word_wrap": true
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 270.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/index.html",
-					"settings":
-					{
-						"buffer_size": 7460,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5729,
-								5729
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1962.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "text.md",
-					"settings":
-					{
-						"buffer_size": 4503,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1944,
-								1944
-							]
-						],
-						"settings":
-						{
-							"spell_check": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/styles/main.css",
-					"settings":
-					{
-						"buffer_size": 1424,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								497,
-								497
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 108.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/styles/charts.css",
-					"settings":
-					{
-						"buffer_size": 574,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								184,
-								184
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
 					"file": "/var/www/d3-datavis/newsroom-diversity/newsroom-diversity.html",
 					"settings":
 					{
 						"buffer_size": 10115,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3598,
-								3598
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 256.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/data/education-ratios.json",
-					"settings":
-					{
-						"buffer_size": 10304,
 						"regions":
 						{
 						},
@@ -633,9 +569,120 @@
 						],
 						"settings":
 						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4948.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/data/asia-surveys-master.json",
+					"settings":
+					{
+						"buffer_size": 13419,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3747,
+								3747
+							]
+						],
+						"settings":
+						{
 							"syntax": "Packages/JavaScript/JSON.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2303.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/index.html",
+					"settings":
+					{
+						"buffer_size": 8567,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7328,
+								7328
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2492.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "text.md",
+					"settings":
+					{
+						"buffer_size": 4556,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4556,
+								4556
+							]
+						],
+						"settings":
+						{
+							"spell_check": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 972.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/styles/main.css",
+					"settings":
+					{
+						"buffer_size": 1494,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								718,
+								718
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -644,27 +691,27 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "app/scripts/drawMap.js",
+					"buffer": 7,
+					"file": "app/styles/charts.css",
 					"settings":
 					{
-						"buffer_size": 3729,
+						"buffer_size": 652,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								431,
-								431
+								650,
+								650
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
-						"translation.x": 157.0,
-						"translation.y": 648.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -674,7 +721,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 35.0
+		"height": 39.0
 	},
 	"input":
 	{
@@ -713,6 +760,18 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"chart",
+				"app/styles/charts.css"
+			],
+			[
+				"mast",
+				"app/data/asia-surveys-master.json"
+			],
+			[
+				"master",
+				"app/data/asia-surveys-master.json"
+			],
 			[
 				"draw",
 				"app/scripts/drawMap.js"
