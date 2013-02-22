@@ -147,7 +147,7 @@
 			"file": "app/scripts/surveys.js",
 			"settings":
 			{
-				"buffer_size": 6009,
+				"buffer_size": 6303,
 				"line_ending": "Unix"
 			}
 		},
@@ -156,6 +156,14 @@
 			"settings":
 			{
 				"buffer_size": 13419,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/charts.css",
+			"settings":
+			{
+				"buffer_size": 1173,
 				"line_ending": "Unix"
 			}
 		}
@@ -300,9 +308,9 @@
 	},
 	"file_history":
 	[
-		"/var/www/d3-datavis/newsroom-diversity/newsroom-diversity.html",
 		"/home/nikhil/projects/gender-asia/app/index.html",
 		"/home/nikhil/projects/gender-asia/app/styles/charts.css",
+		"/var/www/d3-datavis/newsroom-diversity/newsroom-diversity.html",
 		"/home/nikhil/projects/gender-asia/text.md",
 		"/home/nikhil/projects/gender-asia/app/styles/main.css",
 		"/var/www/d3-datavis/seasia-migrants/seasia-migrants.html",
@@ -529,15 +537,15 @@
 					"file": "app/scripts/surveys.js",
 					"settings":
 					{
-						"buffer_size": 6009,
+						"buffer_size": 6303,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3598,
-								3598
+								5375,
+								5375
 							]
 						],
 						"settings":
@@ -547,8 +555,8 @@
 							"translate_tabs_to_spaces": true,
 							"word_wrap": false
 						},
-						"translation.x": 198.0,
-						"translation.y": 1452.0,
+						"translation.x": 0.0,
+						"translation.y": 1884.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -577,6 +585,33 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 2921.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/styles/charts.css",
+					"settings":
+					{
+						"buffer_size": 1173,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1173,
+								1173
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 486.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -626,16 +661,24 @@
 		"selected_items":
 		[
 			[
+				"charts",
+				"styles/charts.css"
+			],
+			[
+				"index",
+				"app/index.html"
+			],
+			[
+				"chart",
+				"app/styles/charts.css"
+			],
+			[
 				"surveys",
 				"app/scripts/surveys.js"
 			],
 			[
 				"educ",
 				"app/scripts/education.js"
-			],
-			[
-				"chart",
-				"app/styles/charts.css"
 			],
 			[
 				"mast",

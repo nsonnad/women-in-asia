@@ -40,7 +40,7 @@ div#surveyControls {
 
 div#surveyControls span { margin-right: 16px; }
 span.surveyControl { cursor: pointer;}
-div#surveyQuest { margin: 0 auto; text-align: center; width:700px; font-size: 16px; }
+div#surveyQuest { margin: 0 auto; height:60px; width:750px; font-size: 16px; }
 .legendText { font: 10px sans-serif;}
 .legend line {
   stroke: #000;

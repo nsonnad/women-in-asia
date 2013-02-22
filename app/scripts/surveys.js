@@ -1,7 +1,7 @@
 require(['d3'], function() {
 
-var margin = {t:20, r:90, b:40, l:40 },
-		w = 900 - margin.l - margin.r,
+var margin = {t:20, r:110, b:40, l:40 },
+		w = 960 - margin.l - margin.r,
 		h = 520 - margin.t - margin.b,
 		x = d3.scale.ordinal().rangeRoundBands([0, w], .07),
 		y = d3.scale.linear().rangeRound([h, 0]),
@@ -48,7 +48,7 @@ surveyChart.append("g")
 d3.json('../data/asia-surveys-master.json', function(error, json) {
 	surveyData = json;
 
-  d3.select('#surveyQuest').text(questions['jobs'])
+  d3.select('#questText').text(questions['jobs'])
 
   x.domain(json['jobs'].map(function(d) { return d.Country }));
 
@@ -60,7 +60,7 @@ d3.json('../data/asia-surveys-master.json', function(error, json) {
   d3.selectAll('#surveys .x.axis text')
     .attr("transform", "translate(" + x.rangeBand()/2 + ",15) rotate(45)")
 
-  setData('women-politics')
+  setData('jobs')
 });
 
 function setData(dataset) {
@@ -92,7 +92,7 @@ function drawData (filtered) {
   bars.exit().transition()
     .style('opacity', '1e-6').remove()
 
-  var barEnter = bars.enter().append("g")
+  bars.enter().append("g")
     .attr('class', 'surveyRectGroup')
 
   var barRect = bars.selectAll("rect")
@@ -113,18 +113,11 @@ function drawData (filtered) {
 
   var legend = bars.selectAll('.legend')
     .data(function(d) { return d.filter(function(c) { return c.x === 'USA'; }); })
-  .enter().append('g')
-    .attr('class', 'legend')
-    .attr("transform", function(d) { return "translate(" + (x(d.x) + x.rangeBand()) + "," + (y(d.y0 + d.y) + (y(d.y0) - y(d.y0 + d.y))/2) + ")";} );
   
-  console.log(legend)
-
-  legend.append("line")
-      .attr("x2", 10);
-
-  legend.append('text')
-    .attr("class",'legendText')
-    .attr("x", 13)
+  legend.enter().append('text')
+    .attr('class', 'legend')
+    .attr("transform", function(d) { return "translate(" + (x(d.x) + x.rangeBand()) + "," + (y(d.y0 + d.y) + (y(d.y0) - y(d.y0 + d.y))/2) + ")";} )
+    .attr("x", 5)
     .attr("dy", ".35em")
     .text(function(d) { return d.name; });
 
@@ -151,10 +144,27 @@ function drawData (filtered) {
     });
 
   bars.selectAll('.legend').transition()
-    .attr("transform", function(d) { return "translate(" + (x(d.x) + x.rangeBand()) + "," + (y(d.y0 + d.y) + (y(d.y0) - y(d.y0 + d.y))/2) + ")";} );
-
-  bars.selectAll('.legendText').transition()
+    .attr("transform", function(d) { return "translate(" + (x(d.x) + x.rangeBand()) + "," + (y(d.y0 + d.y) + (y(d.y0) - y(d.y0 + d.y))/2) + ")";} )
     .text(function(d) { return d.name; });
+
+  var alpha = 1.5;
+  var spacing = 12;
+  function relax(thing) {
+    var again = false;
+    thing.forEach(function(a,i) {
+      thing.slice(i+1).forEach(function(b) {
+        var dy = a.y - b.y;
+        if (Math.abs(dy) < spacing) {
+          again = true;
+          var sign = dy > 0 ? 1 : -1;
+          a.y += sign*alpha;
+          b.y -= sign*alpha;
+        }
+      });
+    });
+  };
+
+relax(d3.selectAll('.label'));
 
 d3.selectAll(".surveyRectGroup rect").on("mouseover", mouseOn);
 d3.selectAll(".surveyRectGroup rect").on("mouseout", mouseOff);
@@ -181,6 +191,6 @@ function mouseOff() {
 d3.selectAll('.surveyControl').on("click", function() {
     var updateVal = d3.select(this).property('id');
     setData(updateVal);
-    d3.select('#surveyQuest').text(questions[updateVal]);
+    d3.select('#questText').text(questions[updateVal]);
   })
 })
