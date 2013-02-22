@@ -1,7 +1,7 @@
 require(['d3'], function() {
 
-var margin = {t:20, r:20, b:40, l:40 },
-		w = 930 - margin.l - margin.r,
+var margin = {t:20, r:90, b:40, l:40 },
+		w = 900 - margin.l - margin.r,
 		h = 520 - margin.t - margin.b,
 		x = d3.scale.ordinal().rangeRoundBands([0, w], .07),
 		y = d3.scale.linear().rangeRound([h, 0]),
@@ -60,7 +60,7 @@ d3.json('../data/asia-surveys-master.json', function(error, json) {
   d3.selectAll('#surveys .x.axis text')
     .attr("transform", "translate(" + x.rangeBand()/2 + ",15) rotate(45)")
 
-  setData('jobs')
+  setData('women-politics')
 });
 
 function setData(dataset) {
@@ -103,20 +103,6 @@ function drawData (filtered) {
     .attr("y", function(d) { return y(d.y0 + d.y); })
     .attr("height", 0);
 
-  var groupSel = d3.selectAll('.surveyRectGroup').each(function() { return d3.select(this)[20].pop(); })
-  console.log("LOG:",groupSel);
-
-   var legend = groupSel.selectAll(".legend")
-    .data(function(d) { return d; })
-  .enter().append("g")
-    .attr("class", "legend")
-    .attr("transform", function(d) { return "translate(" + w + "," + y(d.y0 + d.y) + (y(d.y0) - y(d.y0 + d.y))/2 + ")"; });
-
-  legend.append("text")
-      .attr("x", 13)
-      .attr("dy", ".35em")
-      .text(function(d) { return d.name; });
-
   var barText = bars.selectAll('.barText')
     .data(function(d) { return d; })
   .enter().append('text')
@@ -125,6 +111,24 @@ function drawData (filtered) {
     .style('visibility', 'hidden')
     .text(function(d) { return formatPercent(d.y); });
 
+  var legend = bars.selectAll('.legend')
+    .data(function(d) { return d.filter(function(c) { return c.x === 'USA'; }); })
+  .enter().append('g')
+    .attr('class', 'legend')
+    .attr("transform", function(d) { return "translate(" + (x(d.x) + x.rangeBand()) + "," + (y(d.y0 + d.y) + (y(d.y0) - y(d.y0 + d.y))/2) + ")";} );
+  
+  console.log(legend)
+
+  legend.append("line")
+      .attr("x2", 10);
+
+  legend.append('text')
+    .attr("class",'legendText')
+    .attr("x", 13)
+    .attr("dy", ".35em")
+    .text(function(d) { return d.name; });
+
+// transitions
   bars.selectAll('rect').transition()
     .attr("y", function(d) { return y(d.y0 + d.y); })
     .attr("height", function(d) { return y(d.y0) - y(d.y0 + d.y); })
@@ -145,6 +149,12 @@ function drawData (filtered) {
     .each("end", function() {
       d3.select(this).attr("class", function(d) { return cleanClass(d.name) + " barText" ; });
     });
+
+  bars.selectAll('.legend').transition()
+    .attr("transform", function(d) { return "translate(" + (x(d.x) + x.rangeBand()) + "," + (y(d.y0 + d.y) + (y(d.y0) - y(d.y0 + d.y))/2) + ")";} );
+
+  bars.selectAll('.legendText').transition()
+    .text(function(d) { return d.name; });
 
 d3.selectAll(".surveyRectGroup rect").on("mouseover", mouseOn);
 d3.selectAll(".surveyRectGroup rect").on("mouseout", mouseOff);
@@ -170,7 +180,6 @@ function mouseOff() {
 
 d3.selectAll('.surveyControl').on("click", function() {
     var updateVal = d3.select(this).property('id');
-
     setData(updateVal);
     d3.select('#surveyQuest').text(questions[updateVal]);
   })

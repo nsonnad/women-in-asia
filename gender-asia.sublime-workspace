@@ -147,15 +147,7 @@
 			"file": "app/scripts/surveys.js",
 			"settings":
 			{
-				"buffer_size": 5740,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/var/www/d3-datavis/newsroom-diversity/newsroom-diversity.html",
-			"settings":
-			{
-				"buffer_size": 10150,
+				"buffer_size": 6009,
 				"line_ending": "Unix"
 			}
 		},
@@ -308,13 +300,13 @@
 	},
 	"file_history":
 	[
+		"/var/www/d3-datavis/newsroom-diversity/newsroom-diversity.html",
 		"/home/nikhil/projects/gender-asia/app/index.html",
 		"/home/nikhil/projects/gender-asia/app/styles/charts.css",
 		"/home/nikhil/projects/gender-asia/text.md",
 		"/home/nikhil/projects/gender-asia/app/styles/main.css",
 		"/var/www/d3-datavis/seasia-migrants/seasia-migrants.html",
 		"/var/www/d3-datavis/brics-mist/brics-mist.html",
-		"/var/www/d3-datavis/newsroom-diversity/newsroom-diversity.html",
 		"/home/nikhil/projects/gender-asia/app/scripts/survey.js",
 		"/home/nikhil/projects/gender-asia/app/scripts/surveys.js",
 		"/var/www/d3-datavis/us-energy-use/us-historical-energy.html",
@@ -537,15 +529,15 @@
 					"file": "app/scripts/surveys.js",
 					"settings":
 					{
-						"buffer_size": 5740,
+						"buffer_size": 6009,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1964,
-								1964
+								3598,
+								3598
 							]
 						],
 						"settings":
@@ -555,42 +547,14 @@
 							"translate_tabs_to_spaces": true,
 							"word_wrap": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 804.0,
+						"translation.x": 198.0,
+						"translation.y": 1452.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "/var/www/d3-datavis/newsroom-diversity/newsroom-diversity.html",
-					"settings":
-					{
-						"buffer_size": 10150,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8128,
-								8128
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3456.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "app/data/asia-surveys-master.json",
 					"settings":
 					{
