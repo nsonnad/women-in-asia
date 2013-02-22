@@ -4,12 +4,48 @@
 		"selected_items":
 		[
 			[
-				"color",
-				"colorBlends"
+				"filt",
+				"filtObj"
 			],
 			[
 				"surv",
-				"surveyChart"
+				"survRect"
+			],
+			[
+				"outsi",
+				"outside-home"
+			],
+			[
+				"bar",
+				"barEnter"
+			],
+			[
+				"sur",
+				"surveyData"
+			],
+			[
+				"curr",
+				"currYear"
+			],
+			[
+				"women",
+				"women-politics"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"this",
+				"thisClass"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"color",
+				"colorBlends"
 			],
 			[
 				"fu",
@@ -42,10 +78,6 @@
 			[
 				"edu",
 				"eduControls"
-			],
-			[
-				"font",
-				"font-size"
 			],
 			[
 				"oe",
@@ -107,7 +139,7 @@
 			"file": "app/scripts/main.js",
 			"settings":
 			{
-				"buffer_size": 484,
+				"buffer_size": 480,
 				"line_ending": "Unix"
 			}
 		},
@@ -115,7 +147,7 @@
 			"file": "app/scripts/surveys.js",
 			"settings":
 			{
-				"buffer_size": 2535,
+				"buffer_size": 5740,
 				"line_ending": "Unix"
 			}
 		},
@@ -123,7 +155,7 @@
 			"file": "/var/www/d3-datavis/newsroom-diversity/newsroom-diversity.html",
 			"settings":
 			{
-				"buffer_size": 10115,
+				"buffer_size": 10150,
 				"line_ending": "Unix"
 			}
 		},
@@ -132,38 +164,6 @@
 			"settings":
 			{
 				"buffer_size": 13419,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/index.html",
-			"settings":
-			{
-				"buffer_size": 8567,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "text.md",
-			"settings":
-			{
-				"buffer_size": 4556,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/styles/main.css",
-			"settings":
-			{
-				"buffer_size": 1494,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/styles/charts.css",
-			"settings":
-			{
-				"buffer_size": 652,
 				"line_ending": "Unix"
 			}
 		}
@@ -308,10 +308,18 @@
 	},
 	"file_history":
 	[
+		"/home/nikhil/projects/gender-asia/app/index.html",
+		"/home/nikhil/projects/gender-asia/app/styles/charts.css",
+		"/home/nikhil/projects/gender-asia/text.md",
+		"/home/nikhil/projects/gender-asia/app/styles/main.css",
+		"/var/www/d3-datavis/seasia-migrants/seasia-migrants.html",
+		"/var/www/d3-datavis/brics-mist/brics-mist.html",
+		"/var/www/d3-datavis/newsroom-diversity/newsroom-diversity.html",
+		"/home/nikhil/projects/gender-asia/app/scripts/survey.js",
+		"/home/nikhil/projects/gender-asia/app/scripts/surveys.js",
+		"/var/www/d3-datavis/us-energy-use/us-historical-energy.html",
 		"/home/nikhil/projects/gender-asia/app/scripts/education.js",
 		"/home/nikhil/projects/gender-asia/app/data/asia-surveys-master.json",
-		"/home/nikhil/projects/gender-asia/app/styles/charts.css",
-		"/var/www/d3-datavis/newsroom-diversity/newsroom-diversity.html",
 		"/home/nikhil/projects/gender-asia/app/data/education-ratios.json",
 		"/home/nikhil/projects/gender-asia/app/scripts/drawMap.js",
 		"/home/nikhil/projects/gender-asia/app/data/asia-surveys-politics.json",
@@ -320,7 +328,6 @@
 		"/home/nikhil/projects/gender-asia/app/data/sex-ratios.csv",
 		"/var/www/d3-datavis/aid-transparency/aid-transparency.html",
 		"/home/nikhil/projects/gender-asia/app/scripts/app.js",
-		"/var/www/d3-datavis/us-energy-use/us-historical-energy.html",
 		"/home/nikhil/projects/gender-asia/app/data/education.html",
 		"/home/nikhil/projects/gender-asia/app/scripts/asia.js",
 		"/home/nikhil/projects/gender-asia/app/components/leaflet/dist/leaflet.css",
@@ -330,8 +337,6 @@
 		"/home/nikhil/projects/gender-asia/app/data/countries.json",
 		"/home/nikhil/projects/gender-asia/app/data/asia.json",
 		"/home/nikhil/projects/gender-asia/app/data/combined.json",
-		"/home/nikhil/projects/gender-asia/app/index.html",
-		"/home/nikhil/projects/gender-asia/app/styles/main.css",
 		"/home/nikhil/projects/gender-asia/app/data/asia-info.json",
 		"/home/nikhil/projects/gender-asia/app/data/asian-countries.json",
 		"/home/nikhil/projects/gender-asia/app/data/asia-data.json",
@@ -392,6 +397,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"kenya",
+			"y1",
+			"y0",
 			"In general, women and men are equally good",
 			"Women and men are generally equally good",
 			"In general, women and men make equally good political leaders",
@@ -456,6 +464,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"y",
 			"Women and men equally good",
 			"In general, women and men are equally good",
 			"Women and men are generally equally good",
@@ -492,7 +501,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -500,15 +509,15 @@
 					"file": "app/scripts/main.js",
 					"settings":
 					{
-						"buffer_size": 484,
+						"buffer_size": 480,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								344,
-								344
+								475,
+								475
 							]
 						],
 						"settings":
@@ -528,25 +537,26 @@
 					"file": "app/scripts/surveys.js",
 					"settings":
 					{
-						"buffer_size": 2535,
+						"buffer_size": 5740,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1137,
-								1137
+								1964,
+								1964
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 270.0,
+						"translation.y": 804.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -556,15 +566,15 @@
 					"file": "/var/www/d3-datavis/newsroom-diversity/newsroom-diversity.html",
 					"settings":
 					{
-						"buffer_size": 10115,
+						"buffer_size": 10150,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								8128,
+								8128
 							]
 						],
 						"settings":
@@ -574,7 +584,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4948.0,
+						"translation.y": 3456.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -591,8 +601,8 @@
 						"selection":
 						[
 							[
-								3747,
-								3747
+								2314,
+								2314
 							]
 						],
 						"settings":
@@ -602,116 +612,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2303.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/index.html",
-					"settings":
-					{
-						"buffer_size": 8567,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7328,
-								7328
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2492.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "text.md",
-					"settings":
-					{
-						"buffer_size": 4556,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4556,
-								4556
-							]
-						],
-						"settings":
-						{
-							"spell_check": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 972.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/styles/main.css",
-					"settings":
-					{
-						"buffer_size": 1494,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								718,
-								718
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/styles/charts.css",
-					"settings":
-					{
-						"buffer_size": 652,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								650,
-								650
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2921.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -761,6 +662,14 @@
 		"selected_items":
 		[
 			[
+				"surveys",
+				"app/scripts/surveys.js"
+			],
+			[
+				"educ",
+				"app/scripts/education.js"
+			],
+			[
 				"chart",
 				"app/styles/charts.css"
 			],
@@ -775,10 +684,6 @@
 			[
 				"draw",
 				"app/scripts/drawMap.js"
-			],
-			[
-				"educ",
-				"app/data/education-ratios.json"
 			],
 			[
 				"edu",

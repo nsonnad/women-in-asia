@@ -3,10 +3,11 @@ require(['d3'], function() {
 var margin = {t:20, r:20, b:40, l:40 },
 		w = 930 - margin.l - margin.r,
 		h = 520 - margin.t - margin.b,
-		x = d3.scale.ordinal().rangeRoundBands([0, w], .1),
+		x = d3.scale.ordinal().rangeRoundBands([0, w], .07),
 		y = d3.scale.linear().rangeRound([h, 0]),
-		color = d3.scale.ordinal()
-    formatPercent = formatPercent = d3.format(".0%");;
+		color = d3.scale.ordinal(),
+    stack = d3.layout.stack();
+    formatPercent = formatPercent = d3.format(".0%");
 
 var colorBlends = {
 	    	"blue": ["#ADCDE1","#96BFD9","#6baed6","#3182bd","#08519c"],
@@ -46,92 +47,120 @@ surveyChart.append("g")
 
 d3.json('../data/asia-surveys-master.json', function(error, json) {
 	surveyData = json;
-	setData('jobs');
-  d3.select('#surveyQuest').html(questions['women-politics'])
+
+  d3.select('#surveyQuest').text(questions['jobs'])
+
+  x.domain(json['jobs'].map(function(d) { return d.Country }));
+
+  surveyChart.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + h + ")")
+    .call(xAxis);
+
+  d3.selectAll('#surveys .x.axis text')
+    .attr("transform", "translate(" + x.rangeBand()/2 + ",15) rotate(45)")
+
+  setData('jobs')
 });
 
 function setData(dataset) {
   
   data = surveyData[dataset];
 
-	x.domain(data.map(function(d) { return d.Country }));
-
-	surveyChart.append("g")
-    .attr("class", "x axis")
-    .attr("transform", "translate(0," + h + ")")
-    .call(xAxis);
-
-   d3.selectAll('#surveys .x.axis text')
-   	.attr("transform", "translate(" + x.rangeBand()/2 + ",15) rotate(45)")
-
 	responseNames = d3.keys(data[0]).filter(function(key) { 
     return key !== "Country" && key !== "region" && key !== "responses"})
 
-	data.forEach(function(d) {
-		var y0 = 0;
-		d.responses = responseNames.map(function(name) { 
-      return {name: name, region: d.region, y0: y0, y1: y0 += +d[name]}; });
-	   d.responses.forEach(function(d) { d.y0 /= y0; d.y1 /= y0; });
-	});
+var stackData =
+    stack(responseNames.map(function(name) {
+      return data.map(function(d, i) {
+        return {name: name, region: d.region, x: d.Country, y: d[name] / 100 };
+      })
+  }));
 
-  drawData(data)
+yMax = d3.max(stackData, function(layer) { return d3.max(layer, function(d) { return d.y0 + d.y; }); });
+y.domain([0, yMax])
+drawData(stackData)
 };
 
 function drawData (filtered) {
-console.log(filtered)
-d3.transition().ease("elastic").duration(750).each(function() {
 
+ d3.transition().duration(750).each(function() {
 
-	var barGroup = surveyChart.selectAll(".surveyRectGroup")
+	var bars = surveyChart.selectAll(".surveyRectGroup")
     .data(filtered)
-  .enter().append("g")
+
+  bars.exit().transition()
+    .style('opacity', '1e-6').remove()
+
+  var barEnter = bars.enter().append("g")
     .attr('class', 'surveyRectGroup')
-    .attr("transform", function(d) { 
-      return "translate(" + x(d.Country) + ",0)"; });
 
-  var barRect = barGroup.selectAll("rect")
-    .data(function(d) { return d.responses; })
-   .enter().append("rect")
-    .attr("class", function(d) { return d.name.replace(/\s/g, '').replace('/', ''); })
+  var barRect = bars.selectAll("rect")
+    .data(function(d) { return d; })
+  .enter().append('rect')
     .attr("width", x.rangeBand())
-    .attr("y", function(d) { return y(d.y1); })
-    .attr("height", function(d) { return y(d.y0) - y(d.y1); })
-    .style("fill", function(d) { d.region === "Asia" ? 
-    									color.range(colorBlends["red"]) 
-    									: color.range(colorBlends["blue"]);
-    										return color(d.name)});
+    .attr('x', function(d) { return x(d.x); })
+    .attr("y", function(d) { return y(d.y0 + d.y); })
+    .attr("height", 0);
 
-  var barText = barGroup.selectAll('text')
-     .data(function(d) { return d.responses; })
-   .enter().append('text')
-    .attr("class", function(d) { return d.name.replace(/\s/g, '').replace('/', ''); })
-    .attr("y", function(d) { return (y(d.y1) + y(d.y0)) / 2; })
-    .attr("x",x.rangeBand()/2)
-    .attr("dy", function(d) { return (d.y1-d.y0) < .025 ? '.5em' : '.35em' })
+  var groupSel = d3.selectAll('.surveyRectGroup').each(function() { return d3.select(this)[20]; })
+  console.log("LOG:",groupSel);
+
+   var legend = groupSel.selectAll(".legend")
+    .data(function(d) { return d; })
+  .enter().append("g")
+    .attr("class", "legend")
+    .attr("transform", function(d) { return "translate(" + w + "," + y(d.y0 + d.y) + (y(d.y0) - y(d.y0 + d.y))/2 + ")"; });
+
+  legend.append("text")
+      .attr("x", 13)
+      .attr("dy", ".35em")
+      .text(function(d) { return d.name; });
+
+  var barText = bars.selectAll('.barText')
+    .data(function(d) { return d; })
+  .enter().append('text')
+    .attr("class", 'barText')
     .style('text-anchor', 'middle')
     .style('visibility', 'hidden')
-    .style('opacity', function(d) { return (d.y1-d.y0) === 0 ? 1e-6 : 1 })
-    .text(function(d) { return formatPercent(d.y1 - d.y0); });
+    .text(function(d) { return formatPercent(d.y); });
 
+  bars.selectAll('rect').transition()
+    .attr("y", function(d) { return y(d.y0 + d.y); })
+    .attr("height", function(d) { return y(d.y0) - y(d.y0 + d.y); })
+    .style("fill", function(d) { d.region === "Asia" ? 
+                      color.range(colorBlends["red"]) 
+                      : color.range(colorBlends["blue"]);
+                        return color(d.name)})
+    .each("end", function() {
+      d3.select(this).attr("class", function(d) { return cleanClass(d.name); });
+    });
 
-
-  // barUpdate.select('text').transition()
-  //   .attr("y", function(d) { return (y(d.y1) + y(d.y0)) / 2; })
-  //   .style('opacity', function(d) { return (d.y1-d.y0) === 0 ? 1e-6 : 1 })
-  //   .text(function(d) { return formatPercent(d.y1 - d.y0); });
-
+  bars.selectAll('.barText').transition()
+    .attr("y", function(d) { return y(d.y0 + d.y) + (y(d.y0) - y(d.y0 + d.y))/2; })
+    .attr("x", function(d) { return x(d.x) + x.rangeBand() / 2; })
+    .attr("dy", function(d) { return (d.y) < .025 ? '.5em' : '.35em' })
+    .style('opacity', function(d) { return (d.y) === 0 ? 1e-6 : 1 })
+    .text(function(d) { return formatPercent(d.y); })
+    .each("end", function() {
+      d3.select(this).attr("class", function(d) { return cleanClass(d.name) + " barText" ; });
+    });
 
 d3.selectAll(".surveyRectGroup rect").on("mouseover", mouseOn);
 d3.selectAll(".surveyRectGroup rect").on("mouseout", mouseOff);
-d3.selectAll(".surveyRectGroup text").on("mouseover", mouseOn);
-d3.selectAll(".surveyRectGroup text").on("mouseout", mouseOff);
-});
+d3.selectAll(".barText").on("mouseover", mouseOn);
+d3.selectAll(".barText").on("mouseout", mouseOff);
+ });
 };
 
+function cleanClass (name) {
+  return name.replace(/\s/g, '').replace('/', '');
+}
 
 function mouseOn() {
   var thisClass = d3.select(this).attr('class')
   d3.selectAll("text." + thisClass).style('visibility', 'visible')
+  d3.select(this).style('visibility', 'visible')
   };
   
 function mouseOff() {
@@ -140,12 +169,9 @@ function mouseOff() {
   };
 
 d3.selectAll('.surveyControl').on("click", function() {
-    var updateVal = d3.select(this).property('id')
-    // d3.selectAll('.eduControl').style('color', null)
-    // d3.select(this).style('color', '#E5ABA9')
-    // updateEdu(text);
-    console.log(updateVal)
-  setData(updateVal)
-  })
+    var updateVal = d3.select(this).property('id');
 
+    setData(updateVal);
+    d3.select('#surveyQuest').text(questions[updateVal]);
+  })
 })

@@ -25,7 +25,7 @@ div#education .xLabels { font-style: italic;}
 /*survey chart*/
 div#surveys { width:auto; margin:35px auto; }
 
-.surveyRectGroup text { 
+.surveyRectGroup .barText { 
 		font-size: 12px; 
 		font-weight: bold; 
 		fill:white; 
@@ -38,4 +38,7 @@ div#surveyControls {
 	margin-bottom: 20px;
 	}
 
-div#surveyControls span { margin-right: 16px;}
+div#surveyControls span { margin-right: 16px; }
+span.surveyControl { cursor: pointer;}
+div#surveyQuest { margin: 0 auto; text-align: center; width:700px; font-size: 16px; }
+div#survey .legend { color: black;}
