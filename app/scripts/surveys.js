@@ -103,7 +103,7 @@ function drawData (filtered) {
     .attr("y", function(d) { return y(d.y0 + d.y); })
     .attr("height", 0);
 
-  var groupSel = d3.selectAll('.surveyRectGroup').each(function() { return d3.select(this)[20]; })
+  var groupSel = d3.selectAll('.surveyRectGroup').each(function() { return d3.select(this)[20].pop(); })
   console.log("LOG:",groupSel);
 
    var legend = groupSel.selectAll(".legend")
