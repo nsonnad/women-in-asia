@@ -4,6 +4,7 @@ div.chart { width:960px; margin: 0 auto; font-size: 12px;}
 .axis line { fill: none; stroke: #7B7B7B; shape-rendering: crispEdges;}
 .oecd line { fill: none; stroke: #7B7B7B; stroke-dasharray: 7,2; shape-rendering: crispEdges;}
 .label {font-size:14px;}
+.default { color: rgb(229, 171, 169); }
 
 /*education chart*/
 div#education { width:620px; margin: 35px auto; }
@@ -46,3 +47,6 @@ div#surveyQuest { margin: 0 auto; height:60px; width:750px; font-size: 16px; }
   stroke: #000;
   shape-rendering: crispEdges;
 }
+
+/*sex ratios*/
+div#sexRatio { width:auto; margin:35px auto; }

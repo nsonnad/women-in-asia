@@ -15,12 +15,13 @@ require.config({
 
 });
 
-var scripts = ['drawMap', 'education', 'surveys'];
+var scripts = ['drawMap', 'education', 'surveys', 'sexRatio'];
 
-require(scripts, function(drawMap, education, surveys) {
+require(scripts, function(drawMap, education, surveys, sexRatio) {
   // use app here
   drawMap;
   education;
   surveys;
+  sexRatio;
 
 });

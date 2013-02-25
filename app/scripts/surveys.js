@@ -192,5 +192,8 @@ d3.selectAll('.surveyControl').on("click", function() {
     var updateVal = d3.select(this).property('id');
     setData(updateVal);
     d3.select('#questText').text(questions[updateVal]);
+
+    d3.selectAll('.surveyControl').style('color', null)
+    d3.select(this).style('color', '#E5ABA9')
   })
 })

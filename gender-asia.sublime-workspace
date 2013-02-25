@@ -4,8 +4,28 @@
 		"selected_items":
 		[
 			[
+				"girl",
+				"girlPath"
+			],
+			[
+				"if",
+				"ife	if … else"
+			],
+			[
 				"filt",
-				"filtObj"
+				"filtered"
+			],
+			[
+				"node",
+				"nodeArray"
+			],
+			[
+				"draw",
+				"drawNodes"
+			],
+			[
+				"survey",
+				"surveyControl"
 			],
 			[
 				"surv",
@@ -58,10 +78,6 @@
 			[
 				"respon",
 				"responseNames"
-			],
-			[
-				"survey",
-				"surveyData"
 			],
 			[
 				"fun",
@@ -139,7 +155,31 @@
 			"file": "app/scripts/main.js",
 			"settings":
 			{
-				"buffer_size": 480,
+				"buffer_size": 514,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/sexRatio.js",
+			"settings":
+			{
+				"buffer_size": 3792,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/g0v/legislators/legislators.html",
+			"settings":
+			{
+				"buffer_size": 2945,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/data/sex-ratio.csv",
+			"settings":
+			{
+				"buffer_size": 767,
 				"line_ending": "Unix"
 			}
 		},
@@ -147,15 +187,7 @@
 			"file": "app/scripts/surveys.js",
 			"settings":
 			{
-				"buffer_size": 6303,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/data/asia-surveys-master.json",
-			"settings":
-			{
-				"buffer_size": 13419,
+				"buffer_size": 6673,
 				"line_ending": "Unix"
 			}
 		},
@@ -163,7 +195,23 @@
 			"file": "app/styles/charts.css",
 			"settings":
 			{
-				"buffer_size": 1173,
+				"buffer_size": 1269,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 10038,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/main.css",
+			"settings":
+			{
+				"buffer_size": 1494,
 				"line_ending": "Unix"
 			}
 		}
@@ -171,16 +219,24 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 222.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
-				"copy	",
-				"File: Copy Name"
+				"snippet",
+				"Snippet: gradient"
 			],
 			[
 				"proj",
 				"File: Copy Path From Project"
+			],
+			[
+				"renam",
+				"File: Rename"
+			],
+			[
+				"copy	",
+				"File: Copy Name"
 			],
 			[
 				"inst",
@@ -291,7 +347,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 449.0
+		"width": 467.0
 	},
 	"console":
 	{
@@ -308,6 +364,10 @@
 	},
 	"file_history":
 	[
+		"/home/nikhil/projects/women-asia/app/scripts/education.js",
+		"/home/nikhil/projects/women-asia/app/scripts/sex-ratio.js",
+		"/home/nikhil/projects/women-asia/app/data/asia-surveys-master.json",
+		"/home/nikhil/projects/women-asia/app/scripts/surveys.js",
 		"/home/nikhil/projects/gender-asia/app/index.html",
 		"/home/nikhil/projects/gender-asia/app/styles/charts.css",
 		"/var/www/d3-datavis/newsroom-diversity/newsroom-diversity.html",
@@ -397,6 +457,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"this",
+			"image",
+			"i = 0",
+			" =",
+			"filtered",
+			"Women and men equally good",
+			"Men better",
+			"Women better",
+			"Men better",
+			"Men generally better",
+			"Women generally better",
+			"Women/men equally good",
+			"Women and men equally good",
 			"kenya",
 			"y1",
 			"y0",
@@ -460,10 +533,18 @@
 		],
 		"highlight": true,
 		"in_selection": false,
-		"preserve_case": false,
+		"preserve_case": true,
 		"regex": false,
 		"replace_history":
 		[
+			"Both equally good",
+			"Men are better",
+			"Women are better",
+			"Men are better",
+			"Men better",
+			"Women better",
+			"Women/men equal",
+			"Women/men equally good",
 			"y",
 			"Women and men equally good",
 			"In general, women and men are equally good",
@@ -509,15 +590,15 @@
 					"file": "app/scripts/main.js",
 					"settings":
 					{
-						"buffer_size": 480,
+						"buffer_size": 514,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								475,
-								475
+								369,
+								369
 							]
 						],
 						"settings":
@@ -534,75 +615,128 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/scripts/surveys.js",
+					"file": "app/scripts/sexRatio.js",
 					"settings":
 					{
-						"buffer_size": 6303,
+						"buffer_size": 3792,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5375,
-								5375
+								3660,
+								3660
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": false
+							"tab_size": 3,
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1884.0,
+						"translation.y": 1134.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/data/asia-surveys-master.json",
+					"file": "/var/www/g0v/legislators/legislators.html",
 					"settings":
 					{
-						"buffer_size": 13419,
+						"buffer_size": 2945,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2314,
-								2314
+								1663,
+								1663
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2921.0,
+						"translation.y": 594.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "app/styles/charts.css",
+					"file": "app/data/sex-ratio.csv",
 					"settings":
 					{
-						"buffer_size": 1173,
+						"buffer_size": 767,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1173,
-								1173
+								58,
+								58
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/scripts/surveys.js",
+					"settings":
+					{
+						"buffer_size": 6673,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2327,
+								2327
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 918.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/styles/charts.css",
+					"settings":
+					{
+						"buffer_size": 1269,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1235,
+								1235
 							]
 						],
 						"settings":
@@ -615,13 +749,67 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/index.html",
+					"settings":
+					{
+						"buffer_size": 10038,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8595,
+								8595
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3276.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/styles/main.css",
+					"settings":
+					{
+						"buffer_size": 1494,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								270,
+								270
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 39.0
+		"height": 41.0
 	},
 	"input":
 	{
@@ -661,6 +849,34 @@
 		"selected_items":
 		[
 			[
+				"educ",
+				"scripts/education.js"
+			],
+			[
+				"sex-",
+				"data/sex-ratio.csv"
+			],
+			[
+				"surv",
+				"scripts/surveys.js"
+			],
+			[
+				"educa",
+				"scripts/education.js"
+			],
+			[
+				"char",
+				"styles/charts.css"
+			],
+			[
+				"main",
+				"styles/main.css"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
 				"charts",
 				"styles/charts.css"
 			],
@@ -675,10 +891,6 @@
 			[
 				"surveys",
 				"app/scripts/surveys.js"
-			],
-			[
-				"educ",
-				"app/scripts/education.js"
 			],
 			[
 				"mast",
@@ -773,16 +985,8 @@
 				"app/components/mustache/mustache.js"
 			],
 			[
-				"inde",
-				"app/index.html"
-			],
-			[
 				".css",
 				"app/styles/bootstrap.css"
-			],
-			[
-				"main",
-				"app/styles/main.css"
 			],
 			[
 				"stamen",

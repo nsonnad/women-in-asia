@@ -161,6 +161,4 @@ d3.selectAll('.eduControl').on("click", function() {
 		d3.select(this).style('color', '#E5ABA9')
 		updateEdu(text);
 	})
-
-d3.select('#eduDefault').style('color', '#E5ABA9')
 })
