@@ -23,9 +23,14 @@ var sexRatio = d3.select('#sexRatio').append('svg')
 		.attr("height",h + margin.t + margin.b)
 	.append("g")
 		.attr({
-			transform: "translate("+ margin.l + "," + margin.t +")",
+			transform: "translate(300," + margin.t +")",
 			class: "sexGroup"
 		});
+
+var sexControls = d3.select('#sexRatio').append('div')
+	.attr('width', 200)
+	.attr("class","sexControls")
+	.html('<h1>Select country</h1>')
 
 var force = d3.layout.force().size([forceW, h])
     .charge(-70);
@@ -33,24 +38,34 @@ var force = d3.layout.force().size([forceW, h])
 d3.csv('../data/sex-ratio.csv', function(csv) {
 	data = csv;
 
+	sexControls.append('div').attr('class', 'sexCountries')
+	.append('ul').attr("class","countries")
+	.selectAll('li')
+		.data(csv)
+	.enter().append('li')
+		.attr("class",'countryLink')
+		.append('a')
+		.style('cursor', 'pointer')
+		.text(function(d) { return d.country; })
+
 	data.map(function(d) {
 		d.node = {name: d.country, boys: 105, 
 		girls: 100 - d["missing-girls"], missing: +d["missing-girls"] };
 	});
 
-	drawNodes('South Korea');
+	sexControls.selectAll('.countryLink').on('click', update)
+
+	drawNodes('China');
 });
 
 function drawNodes(country) {
+
 // use only data from selected country
 	var filtered = data.filter(function(d, i){
 		return d.country === country;
 	});
-
-console.log("LOG:",filtered);
 // create array with entries for each boy, girl or missing girl
 	var nodeArray = [];
-
 		for (var i=0; i<filtered[0].node.boys; i++) {
 			nodeArray.push(["boy"])
 		};
@@ -61,37 +76,48 @@ console.log("LOG:",filtered);
 			nodeArray.push(["missing"])
 		};
 
-	force
+force
     .nodes(nodeArray)
     .on("tick", tick)
     .start();
 
 	var node = sexRatio.selectAll(".node")
  		.data(nodeArray)
-	.enter().append("g")
+
+ 	node.exit().remove()
+ 	console.log(node.exit())
+	nodeEnter = node.enter().append("g")
 		.attr("class", "node")
+	
+	var icons = node.selectAll('path')
+		.data(function(d) { return d; })
+	.enter().append('path')
+		.attr("class",'iconPath')
 
-	var icons = node.append('path')
-
-	icons.each(function(d) {
+	d3.selectAll('.iconPath').transition().each(function(d) {
 		 	path = d3.select(this)
-		 	if (d[0] === 'girl') {
-		 		path.attr('d', girlPath)
-		 		path.style('fill', 'orange')
-		 	} else if (d[0] === 'boy') {
-		 		path.attr('d', boyPath)
-		 		path.style('fill', '#B83834')
+		 	if (d === 'girl') {
+				path
+		 		.attr('d', girlPath)
+		 		.style('stroke', 'none')
+		 		.style('fill', 'orange')
+		 	} else if (d === 'boy') {
+		 		path
+		 		.attr('d', boyPath)
+		 		.style('stroke', 'none')
+		 		.style('fill', '#B83834')
 		 	} else { 
-		 		path.attr('d', girlPath)
-		 		path.style('fill-opacity', '0')
-		 		path.style('stroke', '#E98125')
-		 		path.style('stroke-width', '.75')
+		 		path
+		 		.attr('d', girlPath)
+		 		.style('fill-opacity', '0')
+		 		.style('stroke', '#E98125')
+		 		.style('stroke-width', '1')
 		 	}
 		 })
 
-	icons.attr("transform","scale(1.4)")
-
-	node.call(force.drag);
+	icons.attr("transform","scale(1.3)")
+	console.log(icons)
+	nodeEnter.call(force.drag);
 
 	function tick(e) {
 		var k = .1 * e.alpha;
@@ -102,7 +128,11 @@ console.log("LOG:",filtered);
 
 		node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
   	};
-
 };
+
+function update() {
+	selected = d3.select(this).datum().country
+	drawNodes(selected)
+}
 	
-})
+});

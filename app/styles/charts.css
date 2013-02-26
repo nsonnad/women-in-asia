@@ -49,4 +49,19 @@ div#surveyQuest { margin: 0 auto; height:60px; width:750px; font-size: 16px; }
 }
 
 /*sex ratios*/
-div#sexRatio { width:auto; margin:35px auto; }
+div#sexRatio { width:auto; margin:35px auto; position:relative; }
+
+div.sexControls { 
+	position: absolute; top:40px; float:left; 
+	background: white;
+   	background: rgba(255,255,255,.9);
+   	box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	padding: 10px 0px 10px 25px;
+	width:300px;
+	}
+
+ul.countries { 
+	font-size: 16px; list-style-type: none; 
+	line-height: 1.5em; margin:0; padding: 0; }
+
+ul.countries li { float:left; display:inline; width:50%; margin:0; padding: 0; }

@@ -152,18 +152,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/scripts/main.js",
-			"settings":
-			{
-				"buffer_size": 514,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/scripts/sexRatio.js",
 			"settings":
 			{
-				"buffer_size": 3792,
+				"buffer_size": 4156,
 				"line_ending": "Unix"
 			}
 		},
@@ -364,6 +356,10 @@
 	},
 	"file_history":
 	[
+		"/home/nikhil/projects/women-asia/app/scripts/main.js",
+		"/home/nikhil/projects/women-asia/app/scripts/asia.js",
+		"/home/nikhil/projects/women-asia/app/scripts/drawMap.js",
+		"/home/nikhil/projects/women-asia/app/scripts/app.js",
 		"/home/nikhil/projects/women-asia/app/scripts/education.js",
 		"/home/nikhil/projects/women-asia/app/scripts/sex-ratio.js",
 		"/home/nikhil/projects/women-asia/app/data/asia-surveys-master.json",
@@ -457,6 +453,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"width",
 			"this",
 			"image",
 			"i = 0",
@@ -582,51 +579,23 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/scripts/main.js",
-					"settings":
-					{
-						"buffer_size": 514,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								369,
-								369
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "app/scripts/sexRatio.js",
 					"settings":
 					{
-						"buffer_size": 3792,
+						"buffer_size": 4156,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3660,
-								3660
+								3806,
+								3806
 							]
 						],
 						"settings":
@@ -636,13 +605,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1134.0,
+						"translation.y": 1221.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "/var/www/g0v/legislators/legislators.html",
 					"settings":
 					{
@@ -664,13 +633,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 594.0,
+						"translation.y": 165.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "app/data/sex-ratio.csv",
 					"settings":
 					{
@@ -696,7 +665,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "app/scripts/surveys.js",
 					"settings":
 					{
@@ -718,13 +687,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 918.0,
+						"translation.y": 1653.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "app/styles/charts.css",
 					"settings":
 					{
@@ -751,7 +720,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "app/index.html",
 					"settings":
 					{
@@ -778,7 +747,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "app/styles/main.css",
 					"settings":
 					{
@@ -789,8 +758,8 @@
 						"selection":
 						[
 							[
-								270,
-								270
+								261,
+								261
 							]
 						],
 						"settings":
@@ -849,6 +818,22 @@
 		"selected_items":
 		[
 			[
+				"asia",
+				"scripts/asia.js"
+			],
+			[
+				"draw",
+				"scripts/drawMap.js"
+			],
+			[
+				"app",
+				"scripts/app.js"
+			],
+			[
+				"asia.js",
+				"scripts/asia.js"
+			],
+			[
 				"educ",
 				"scripts/education.js"
 			],
@@ -901,10 +886,6 @@
 				"app/data/asia-surveys-master.json"
 			],
 			[
-				"draw",
-				"app/scripts/drawMap.js"
-			],
-			[
 				"edu",
 				"app/data/education-ratios.json"
 			],
@@ -914,10 +895,6 @@
 			],
 			[
 				"asi",
-				"app/scripts/asia.js"
-			],
-			[
-				"asia",
 				"app/scripts/asia.js"
 			],
 			[
@@ -991,10 +968,6 @@
 			[
 				"stamen",
 				"app/scripts/vendor/tile.stamen.js"
-			],
-			[
-				"app",
-				"app/scripts/app.js"
 			],
 			[
 				"requir",
