@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"style",
+				"styleUpdate"
+			],
+			[
+				"coun",
+				"countryLi"
+			],
+			[
+				"list-",
+				"list-n	list-style-type: none;"
+			],
+			[
+				"country",
+				"countryList"
+			],
+			[
 				"girl",
 				"girlPath"
 			],
@@ -140,10 +156,6 @@
 				"countriesLayer"
 			],
 			[
-				"coun",
-				"countriesTopo"
-			],
-			[
 				"countr",
 				"countriesLayer"
 			]
@@ -155,15 +167,15 @@
 			"file": "app/scripts/sexRatio.js",
 			"settings":
 			{
-				"buffer_size": 4156,
+				"buffer_size": 4940,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/var/www/g0v/legislators/legislators.html",
+			"file": "app/styles/charts.css",
 			"settings":
 			{
-				"buffer_size": 2945,
+				"buffer_size": 1685,
 				"line_ending": "Unix"
 			}
 		},
@@ -176,6 +188,14 @@
 			}
 		},
 		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 10062,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "app/scripts/surveys.js",
 			"settings":
 			{
@@ -184,18 +204,10 @@
 			}
 		},
 		{
-			"file": "app/styles/charts.css",
+			"file": "/var/www/g0v/legislators/legislators.html",
 			"settings":
 			{
-				"buffer_size": 1269,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/index.html",
-			"settings":
-			{
-				"buffer_size": 10038,
+				"buffer_size": 2945,
 				"line_ending": "Unix"
 			}
 		},
@@ -356,6 +368,7 @@
 	},
 	"file_history":
 	[
+		"/var/www/g0v/legislators/legislators.html",
 		"/home/nikhil/projects/women-asia/app/scripts/main.js",
 		"/home/nikhil/projects/women-asia/app/scripts/asia.js",
 		"/home/nikhil/projects/women-asia/app/scripts/drawMap.js",
@@ -453,6 +466,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			")\n",
+			"resume",
+			"country",
 			"width",
 			"this",
 			"image",
@@ -587,15 +603,15 @@
 					"file": "app/scripts/sexRatio.js",
 					"settings":
 					{
-						"buffer_size": 4156,
+						"buffer_size": 4940,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3806,
-								3806
+								3699,
+								3699
 							]
 						],
 						"settings":
@@ -605,35 +621,34 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1221.0,
+						"translation.y": 1539.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/var/www/g0v/legislators/legislators.html",
+					"file": "app/styles/charts.css",
 					"settings":
 					{
-						"buffer_size": 2945,
+						"buffer_size": 1685,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1663,
-								1663
+								1428,
+								1428
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 165.0,
+						"translation.y": 456.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -666,6 +681,33 @@
 				},
 				{
 					"buffer": 3,
+					"file": "app/index.html",
+					"settings":
+					{
+						"buffer_size": 10062,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8628,
+								8628
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3751.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "app/scripts/surveys.js",
 					"settings":
 					{
@@ -687,61 +729,35 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1653.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/styles/charts.css",
-					"settings":
-					{
-						"buffer_size": 1269,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1235,
-								1235
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 486.0,
+						"translation.y": 1539.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "app/index.html",
+					"file": "/var/www/g0v/legislators/legislators.html",
 					"settings":
 					{
-						"buffer_size": 10038,
+						"buffer_size": 2945,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8595,
-								8595
+								1680,
+								1680
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3276.0,
+						"translation.y": 1482.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -758,8 +774,8 @@
 						"selection":
 						[
 							[
-								261,
-								261
+								1094,
+								1094
 							]
 						],
 						"settings":
@@ -768,7 +784,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 399.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

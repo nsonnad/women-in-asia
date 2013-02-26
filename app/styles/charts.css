@@ -56,12 +56,19 @@ div.sexControls {
 	background: white;
    	background: rgba(255,255,255,.9);
    	box-shadow: 0 0 15px rgba(0,0,0,0.2);
-	padding: 10px 0px 10px 25px;
+	padding: 10px 16px 10px 25px;
 	width:300px;
+	color: #2B2D31;
 	}
 
+div.sexCountries, div.sexLegend { float: left; width:100%; }
+path.girlPath { stroke: none; fill:orange; }
+path.boyPath { stroke: none; fill:#B83834; }
+path.missingPath { stroke: #E98125; fill-opacity:0; stroke-width:1; }
+div.sexLegend { font-size:16px; }
+div.sexLegend h3 { display: inline; margin-right:20px;}
 ul.countries { 
 	font-size: 16px; list-style-type: none; 
 	line-height: 1.5em; margin:0; padding: 0; }
-
+.legendSVG { width:15px; height: 15px;}
 ul.countries li { float:left; display:inline; width:50%; margin:0; padding: 0; }
