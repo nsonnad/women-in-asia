@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"lege",
+				"legendDiv"
+			],
+			[
 				"style",
 				"styleUpdate"
 			],
@@ -164,10 +168,13 @@
 	"buffers":
 	[
 		{
+			"contents": "require(['d3'], function () {\n\n	var margin = {t:20, r:40, b:40, l:40 },\n	 	 w = 960 - margin.l - margin.r,\n	 	 h = 580 - margin.t - margin.b,\n	 	 x = d3.scale.ordinal().rangeRoundBands([0, w], 0.07),\n	 	 y = d3.scale.linear().rangeRound([h, 0])\n	 	 color = d3.scale.category10(),\n	 	 forceW = w-300;\n\nvar	data,\n		girlPath = 'M21.022,16.349c-0.611-1.104-1.359-1.998-2.109-2.623c-0.875,0.641-1.941,1.031-3.104,1.031c-1.164,0-2.231-0.391-3.105-1.031c-0.75,0.625-1.498,1.519-2.111,2.623c-1.422,2.563-1.579,5.192-0.351,5.874c0.55,0.307,1.127,0.078,1.723-0.496c-0.105,0.582-0.167,1.213-0.167,1.873c0,2.932,1.139,5.307,2.543,5.307c0.846,0,1.265-0.865,1.466-2.189c0.201,1.324,0.62,2.189,1.464,2.189c1.406,0,2.545-2.375,2.545-5.307c0-0.66-0.061-1.291-0.168-1.873c0.598,0.574,1.174,0.803,1.725,0.496C22.603,21.541,22.444,18.912,21.022,16.349zM15.808,13.757c2.363,0,4.279-1.916,4.279-4.279s-1.916-4.279-4.279-4.279c-2.363,0-4.28,1.916-4.28,4.279S13.445,13.757,15.808,13.757zM18.731,4.974c1.235,0.455,0.492-0.725,0.492-1.531s0.762-1.792-0.492-1.391c-1.316,0.422-2.383,0.654-2.383,1.461S17.415,4.489,18.731,4.974zM15.816,4.4c0.782,0,0.345-0.396,0.345-0.884c0-0.488,0.438-0.883-0.345-0.883s-0.374,0.396-0.374,0.883C15.442,4.005,15.034,4.4,15.816,4.4zM12.884,4.974c1.316-0.484,2.383-0.654,2.383-1.461S14.2,2.474,12.884,2.052c-1.254-0.402-0.492,0.584-0.492,1.391S11.648,5.428,12.884,4.974z',\n		boyPath = 'M21.021,16.349c-0.611-1.104-1.359-1.998-2.109-2.623c-0.875,0.641-1.941,1.031-3.103,1.031c-1.164,0-2.231-0.391-3.105-1.031c-0.75,0.625-1.498,1.519-2.111,2.623c-1.422,2.563-1.578,5.192-0.35,5.874c0.55,0.307,1.127,0.078,1.723-0.496c-0.105,0.582-0.166,1.213-0.166,1.873c0,2.932,1.139,5.307,2.543,5.307c0.846,0,1.265-0.865,1.466-2.189c0.201,1.324,0.62,2.189,1.463,2.189c1.406,0,2.545-2.375,2.545-5.307c0-0.66-0.061-1.291-0.168-1.873c0.598,0.574,1.174,0.803,1.725,0.496C22.602,21.541,22.443,18.912,21.021,16.349zM15.808,13.757c2.362,0,4.278-1.916,4.278-4.279s-1.916-4.279-4.278-4.279c-2.363,0-4.28,1.916-4.28,4.279S13.445,13.757,15.808,13.757z';\n\nvar sexRatio = d3.select('#sexRatio').append('svg')\n		.attr(\"width\",w + margin.l + margin.r)\n		.attr(\"height\",h + margin.t + margin.b)\n	.append(\"g\")\n		.attr({\n			transform: \"translate(330,\" + margin.t +\")\",\n			class: \"sexGroup\"\n		});\n\nvar sexControls = d3.select('#sexRatio').append('div')\n	.attr('width', 200)\n	.attr(\"class\",\"sexControls\")\n	.html('<h2>View sex ratio data for:</h2>')\n\nvar sexLegend = sexControls.append('div').attr('class', 'sexLegend')\n\nvar force = d3.layout.force().size([forceW, h])\n    .charge(-40).alpha(0);\n\nd3.csv('../data/sex-ratio.csv', function(csv) {\n	data = csv;\n\n	sexControls.insert('div', '.sexLegend').attr('class', 'sexCountries')\n	.append('ul').attr(\"class\",\"countries\")\n	.selectAll('li')\n		.data(csv)\n	.enter().append('li')\n		.attr(\"class\",'countryLink')\n		.append('a')\n		.style('cursor', 'pointer')\n		.text(function(d) { return d.country; })\n\n	data.map(function(d) {\n		d.node = {name: d.country, boys: 105, \n		girls: 100 - d[\"missing-girls\"], missing: +d[\"missing-girls\"] };\n	});\n\n	sexControls.selectAll('.countryLink').on('click', update)\n\n});\n\nfunction drawNodes(country) {\n\n// use only data from selected country\n	var filtered = data.filter(function(d, i){\n		return d.country === country;\n	});\n\n	console.log(filtered)\n\n	d3.select('.sexLegend').html(function() {\n		var a = filtered[0];\n		return '<p>In 2010 <strong>' + a.country + '</strong> registered ' + commas(a.births) + ' births. At the natural rate of 105 boys for every 100 girls, ' + commas(a.natural) + ' girls should have been born that year. But at its ratio of '+ a['sex-ratio'] + ' girls for every 1,000 boys, only ' + commas(a.est) + ' were born. That means <strong>' + commas(a.diff) + ' girls are \"missing\"</strong> for 2010 alone. And for every 105 boys, ' +a.node.missing+ ' more girls should have been born.</p><h3>105<svg width=\"25px\" height=\"20px\"><path transform=scale(1.2) class=\"boyPath\" d=\"'+boyPath+'\" /></svg></h3><h3>' + a.node.girls + '<svg width=\"25px\" height=\"20px\"><path transform=scale(1.2) class=\"girlPath\" d=\"'+girlPath+'\" /></svg></h3><h3>' + a.node.missing + '<svg width=\"25px\" height=\"20px\"><path transform=scale(1.2) class=\"missingPath\" d=\"'+girlPath+'\" /></svg></h3><p><em>Data are from the World Bank and UN</em></p>'\n		});\n\n// create array with entries for each boy, girl or missing girl\n	var nodeArray = [];\n		for (var i=0; i<filtered[0].node.boys; i++) {\n			nodeArray.push([\"boy\"])\n		};\n		for (var i=0; i<filtered[0].node.girls; i++) {\n			nodeArray.push([\"girl\"])\n		};\n		for (var i=0; i<filtered[0].node.missing; i++) {\n			nodeArray.push([\"missing\"])\n		};\n\nforce\n    .nodes(nodeArray)\n    .on(\"tick\", tick)\n    .start();\n\n	var node = sexRatio.selectAll(\".node\")\n 		.data(nodeArray)\n\n 	node.exit().remove()\n\n	nodeEnter = node.enter().append(\"g\")\n		.attr(\"class\", \"node\")\n\n	var icons = node.selectAll('path')\n		.data(function(d) { return d; })\n	.enter().append('path')\n		.attr(\"class\",'iconPath')\n		.attr('d', girlPath)\n\n	d3.selectAll('.iconPath').transition()\n		.each(function(d) {\n		 	path = d3.select(this)\n		 	if (d === 'girl') {\n				path\n		 		.attr('d', girlPath)\n		 		.style('stroke', 'none')\n		 		.style('fill', 'orange')\n		 	} else if (d === 'boy') {\n		 		path\n		 		.attr('d', boyPath)\n		 		.style('stroke', 'none')\n		 		.style('fill', '#B83834')\n		 	} else { \n		 		path\n		 		.attr('d', girlPath)\n		 		.style('fill-opacity', '0')\n		 		.style('stroke', '#E98125')\n		 		.style('stroke-width', '1')\n		 	}\n		});\n\n	icons.attr(\"transform\",\"scale(1.2)\")\n\n	nodeEnter.call(force.drag);\n\n	function tick(e) {\n		node.attr(\"transform\", function(d) { return \"translate(\" + d.x + \",\" + d.y + \")\"; });\n  	};\n};\n\nfunction update() {\n	selected = d3.select(this).datum().country\n	drawNodes(selected)\n}\n\nfunction commas(x) {\n	    return x.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n	}\n\n});",
 			"file": "app/scripts/sexRatio.js",
+			"file_size": 5852,
+			"file_write_time": 1361934655000000,
 			"settings":
 			{
-				"buffer_size": 4940,
+				"buffer_size": 5846,
 				"line_ending": "Unix"
 			}
 		},
@@ -175,15 +182,15 @@
 			"file": "app/styles/charts.css",
 			"settings":
 			{
-				"buffer_size": 1685,
+				"buffer_size": 2053,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/data/sex-ratio.csv",
+			"file": "app/styles/main.css",
 			"settings":
 			{
-				"buffer_size": 767,
+				"buffer_size": 1494,
 				"line_ending": "Unix"
 			}
 		},
@@ -212,20 +219,40 @@
 			}
 		},
 		{
-			"file": "app/styles/main.css",
+			"file": "app/scripts/drawMap.js",
 			"settings":
 			{
-				"buffer_size": 1494,
+				"buffer_size": 3729,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/data/sex-ratio.csv",
+			"settings":
+			{
+				"buffer_size": 656,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/main.js",
+			"settings":
+			{
+				"buffer_size": 514,
 				"line_ending": "Unix"
 			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Packages/JSHint/JSHint.sublime-build",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 369.0,
 		"selected_items":
 		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
 			[
 				"snippet",
 				"Snippet: gradient"
@@ -368,6 +395,15 @@
 	},
 	"file_history":
 	[
+		"/home/nikhil/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/nikhil/.config/sublime-text-2/Packages/JSHint/Context.sublime-menu",
+		"/home/nikhil/.config/sublime-text-2/Packages/JSHint/JSHint.sublime-build",
+		"/home/nikhil/.config/sublime-text-2/Packages/JSHint/JSHint.pyc",
+		"/home/nikhil/.config/sublime-text-2/Packages/JSHint/reporter.js",
+		"/home/nikhil/.config/sublime-text-2/Packages/JSHint/package-metadata.json",
+		"/home/nikhil/.config/sublime-text-2/Packages/JSHint/Main.sublime-menu",
+		"/home/nikhil/.config/sublime-text-2/Packages/JSHint/JSHint.py",
+		"/home/nikhil/projects/women-asia/app/data/sex-ratio.csv",
 		"/var/www/g0v/legislators/legislators.html",
 		"/home/nikhil/projects/women-asia/app/scripts/main.js",
 		"/home/nikhil/projects/women-asia/app/scripts/asia.js",
@@ -436,7 +472,6 @@
 		"/var/www/gender-asia/app/scripts/test.js",
 		"/var/www/gender-asia/app/scripts/app.js",
 		"/var/www/gender-asia/app/scripts/vendor/require.js",
-		"/home/nikhil/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 		"/var/www/gender-asia/components/leaflet/dist/leaflet.js",
 		"/var/www/gender-asia/components/d3/d3.min.js",
 		"/var/www/gender-asia/index.html",
@@ -466,6 +501,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"h4",
+			"4",
+			"class",
+			"h=\"20px\"",
+			"25px",
+			"h3",
+			"cons",
 			")\n",
 			"resume",
 			"country",
@@ -603,25 +645,26 @@
 					"file": "app/scripts/sexRatio.js",
 					"settings":
 					{
-						"buffer_size": 4940,
+						"buffer_size": 5846,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3699,
-								3699
+								194,
+								194
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 3,
-							"translate_tabs_to_spaces": false
+							"translate_tabs_to_spaces": false,
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1539.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -631,15 +674,15 @@
 					"file": "app/styles/charts.css",
 					"settings":
 					{
-						"buffer_size": 1685,
+						"buffer_size": 2053,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1428,
-								1428
+								1917,
+								1917
 							]
 						],
 						"settings":
@@ -648,30 +691,31 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 456.0,
+						"translation.y": 912.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/data/sex-ratio.csv",
+					"file": "app/styles/main.css",
 					"settings":
 					{
-						"buffer_size": 767,
+						"buffer_size": 1494,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								58,
-								58
+								420,
+								420
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -764,27 +808,80 @@
 				},
 				{
 					"buffer": 6,
-					"file": "app/styles/main.css",
+					"file": "app/scripts/drawMap.js",
 					"settings":
 					{
-						"buffer_size": 1494,
+						"buffer_size": 3729,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1094,
-								1094
+								904,
+								904
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 399.0,
+						"translation.y": 2109.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/data/sex-ratio.csv",
+					"settings":
+					{
+						"buffer_size": 656,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/scripts/main.js",
+					"settings":
+					{
+						"buffer_size": 514,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								88,
+								88
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -823,6 +920,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 124.0
+	},
 	"replace":
 	{
 		"height": 64.0
@@ -833,6 +934,18 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"main.",
+				"scripts/main.js"
+			],
+			[
+				"sex",
+				"data/sex-ratio.csv"
+			],
+			[
+				"raw",
+				"scripts/drawMap.js"
+			],
 			[
 				"asia",
 				"scripts/asia.js"
@@ -996,10 +1109,6 @@
 			[
 				"d3",
 				"components/d3/d3.min.js"
-			],
-			[
-				"main.",
-				"app/scripts/main.js"
 			],
 			[
 				"gende",
