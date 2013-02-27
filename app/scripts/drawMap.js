@@ -1,131 +1,133 @@
-define(['leaflet', 'jquery', 'topojson'], function() {
-	require(['asia'], function(asia) {
+define(['leaflet', 'jquery', 'topojson'], function (L, $, topojson) {
+    'use strict';
 
-	// draw map centered on asia
-	var map = L.map('map', {
-		center: [18,107],
-		zoom: 4,
-		scrollWheelZoom: false,
-		worldCopyJump: true,
-		inertiaMaxSpeed: 600
-	});
+    require(['asia'], function (asia) {
 
-	L.tileLayer('http://d.tiles.mapbox.com/v3/nikhils.map-rrpbmuxw/{z}/{x}/{y}.png', {
-    attribution: 'Map by <a href="http://mapbox.com/">MapBox</a>; data from the World Bank'
-}).addTo(map);
+    // draw map centered on asia
+        var map = L.map('map', {
+            center: [18, 107],
+            zoom: 4,
+            scrollWheelZoom: false,
+            worldCopyJump: true,
+            inertiaMaxSpeed: 600
+        });
 
-// map info box
-var info = L.control();
+        L.tileLayer('http://d.tiles.mapbox.com/v3/nikhils.map-rrpbmuxw/{z}/{x}/{y}.png', {
+            attribution: 'Map by <a href="http://mapbox.com/">MapBox</a>; data from the World Bank'
+        })
+        .addTo(map);
 
-	info.onAdd = function(map) {
-		this._div = L.DomUtil.create('div', 'infobox');
-    this._div.innerHTML = '<p><h1>Asia at a glance</h1></p>' + '<p><h3>GDP per capita (PPP): </h3></p>' + '<p><h3>Total population: </h3></p>' + '<p><h3>Female population: </h3></p>' + '<p><h3>Area: </h3></p>';
-		return this._div;
-		};
+    // map info box
+        var info = L.control();
 
-	info.update = function (place) {
-		var lookup = locale[place];
-    this._div.innerHTML = '<p><h1>' + place + '</h1></p>' + '<p><h3>GDP per capita (PPP): </h3>' + currency(lookup.gdppc) + '</p>' + '<p><h3>Total population: </h3>' + addCommas(lookup.totalPop) + '</p>' + '<p><h3>Female population: </h3>' + percent(lookup.femalePop) + '</p>' + '<p><h3>Area: </h3>' + addCommas(lookup.area) + ' km<sup>2</sup></p>'
-	};
+        info.onAdd = function () {
+            this._div = L.DomUtil.create('div', 'infobox');
+            this._div.innerHTML = '<p><h1>Asia at a glance</h1></p>' + '<p><h3>GDP per capita (PPP): </h3></p>' + '<p><h3>Total population: </h3></p>' + '<p><h3>Female population: </h3></p>' + '<p><h3>Area: </h3></p>';
+            return this._div;
+        };
 
-info.addTo(map);
+        info.update = function (place) {
+            var lookup = locale[place];
+            this._div.innerHTML = '<p><h1>' + place + '</h1></p>' + '<p><h3>GDP per capita (PPP): </h3>' + currency(lookup.gdppc) + '</p>' + '<p><h3>Total population: </h3>' + addCommas(lookup.totalPop) + '</p>' + '<p><h3>Female population: </h3>' + percent(lookup.femalePop) + '</p>' + '<p><h3>Area: </h3>' + addCommas(lookup.area) + ' km<sup>2</sup></p>';
+        };
 
-// center on country clicked in text
-	var locale = asia.locales;
+        info.addTo(map);
 
-	var panMap = function(place) {
-		var lookup = locale[place];
-		map.panTo([lookup.lat, lookup.lon]);
-		map.setZoom(5)
-	};
+        // center on country clicked in text
+        var locale = asia.locales;
 
-// scroll to and from map on click
-	$('a[href^=#]').live("click", function(e){
+        var panMap = function (place) {
+            var lookup = locale[place];
+            map.panTo([lookup.lat, lookup.lon]);
+            map.setZoom(5);
+        };
 
-	var name = $(this).attr('href').substr(1);
-    var pos = $('[id='+name+']').offset();
-    var center = ($(window).height() - $('[id='+name+']').height()) / 2;
+        // scroll to and from map on click
+        $('a[href^=#]').live('click', function (e) {
 
-  if ($(this).attr('id') != 'map') {
-		
-		panMap($(this).html());
-	  info.update($(this).html());
-	  $('#map').append('<div id="return"><h2><a id=' + name + ' href=#' + $(this).attr('id') + '>Return to text</a></h2></<div>');
-	  $('html,body').animate({ scrollTop: pos.top - center });
-    e.preventDefault();
+            var name = $(this).attr('href').substr(1);
+            var pos = $('[id=' + name + ']').offset();
+            var center = ($(window).height() - $('[id=' + name + ']').height()) / 2;
 
-		} else {  $('div#return').remove();
-			$('html,body').animate({ scrollTop: pos.top });
-    e.preventDefault();
-		}
-	
-	});
+            if ($(this).attr('id') !== 'map') {
 
-// do fun stuff when we mouse over a country
-	function onEachFeature(feature, layer) {
-    layer.on({
-        mouseover: mapHover,
-        mouseout: styleReset
-			})
-  };
+                panMap($(this).html());
+                info.update($(this).html());
+                $('#map').append('<div id="return"><h2><a id=' + name + ' href=#' + $(this).attr('id') + '>Return to text</a></h2></<div>');
+                $('html,body').animate({ scrollTop: pos.top - center });
+                e.preventDefault();
+            } else {
+                $('div#return').remove();
+                $('html,body').animate({ scrollTop: pos.top });
+                e.preventDefault();
+            }
+        });
 
-  function mapHover(e) {
-   	layer = e.target;
-   	layer.setStyle({
-        weight: 2,
-        color: '#666',
-        fillOpacity: 0.3
-    	});
-   	info.update(layer.feature.properties.name)
-   };
+        // do fun stuff when we mouse over a country
+        function onEachFeature(feature, layer) {
+            layer.on({
+                mouseover: mapHover,
+                mouseout: styleReset
+            });
+        }
 
-   function styleReset(e) {
-    countriesLayer.resetStyle(e.target);
-   }
+        function mapHover(e) {
+            var layer = e.target;
+            layer.setStyle({
+                weight: 2,
+                color: '#666',
+                fillOpacity: 0.3
+            });
+            info.update(layer.feature.properties.name);
+        }
 
-   // draw map overlay for asian countries
-	var countriesLayer = L.geoJson(null, {
-        style: {
-            color: '#666',
-            weight: 0,
-            fillOpacity: 0.1,
-        },
-        onEachFeature: onEachFeature
-     });
+        function styleReset(e) {
+            countriesLayer.resetStyle(e.target);
+        }
 
-	$.getJSON('../data/asia-topo.json', function (data) {
-    var asia_geojson = topojson.object(data, data.objects.asia);
-   
-    var featureCollection = {
-      "type": "FeatureCollection",
-      "features": []
-    };
+        // draw map overlay for asian countries
+        var countriesLayer = L.geoJson(null, {
+            style: {
+                color: '#666',
+                weight: 0,
+                fillOpacity: 0.1,
+            },
+            onEachFeature: onEachFeature
+        });
 
-   // retain necessary properties of topojson file
-	   for (var i = 0; i < asia_geojson.geometries.length; i++) {
-	      featureCollection.features.push({
-	        "type":"Feature",
-	        "geometry": asia_geojson.geometries[i],
-	        "properties": asia_geojson.geometries[i].properties
-	      	});
-	      }	
-	     countriesLayer.addData(featureCollection)
-		});
+        $.getJSON('../data/asia-topo.json', function (data) {
+            var asiaGeojson = topojson.object(data, data.objects.asia);
 
-	map.addLayer(countriesLayer);
+            var featureCollection = {
+                'type': 'FeatureCollection',
+                'features': []
+            };
 
-	});
+           // retain necessary properties of topojson file
+            for (var i = 0; i < asiaGeojson.geometries.length; i++) {
+                featureCollection.features.push({
+                    'type' : 'Feature',
+                    'geometry' : asiaGeojson.geometries[i],
+                    'properties' : asiaGeojson.geometries[i].properties
+                });
+            }
+            countriesLayer.addData(featureCollection);
+        });
 
-// format numbers
-	function addCommas(x) {
-	    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-	}
+        map.addLayer(countriesLayer);
 
-	function currency(x) {
-	  return x === "N/A" ? "N/A" : "US$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-	}
+    });
 
-	function percent(x) {
-	  return x === "N/A" ? "N/A" : x.toString() + "%";
-	}
+    // format numbers
+    function addCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+
+    function currency(x) {
+        return x === 'N/A' ? 'N/A' : 'US$' + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+
+    function percent(x) {
+        return x === 'N/A' ? 'N/A' : x.toString() + '%';
+    }
 });

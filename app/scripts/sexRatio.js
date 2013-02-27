@@ -1,4 +1,4 @@
-require(['d3'], function () {
+define(['d3'], function (d3) {
 
     'use strict';
 

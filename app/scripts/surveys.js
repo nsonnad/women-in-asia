@@ -1,4 +1,4 @@
-require(['d3'], function () {
+define(['d3'], function (d3) {
     'use strict';
 
     var
@@ -77,7 +77,7 @@ require(['d3'], function () {
 
         var stackData =
             stack(responseNames.map(function (name) {
-                return data.map(function (d, i) {
+                return data.map(function (d) {
                     return {name: name, region: d.region, x: d.Country, y: d[name] / 100 };
                 });
             }));
@@ -106,7 +106,7 @@ require(['d3'], function () {
             bars.enter().append('g')
                 .attr('class', 'surveyRectGroup');
 
-            var barRect = bars.selectAll('rect')
+            bars.selectAll('rect')
                 .data(function (d) { return d; })
             .enter().append('rect')
                 .attr('width', x.rangeBand())
@@ -114,7 +114,7 @@ require(['d3'], function () {
                 .attr('y', function (d) { return y(d.y0 + d.y); })
                 .attr('height', 0);
 
-            var barText = bars.selectAll('.barText')
+            bars.selectAll('.barText')
                 .data(function (d) { return d; })
             .enter().append('text')
                 .attr('class', 'barText')
@@ -173,7 +173,7 @@ require(['d3'], function () {
             d3.selectAll('.barText').on('mouseover', mouseOn);
             d3.selectAll('.barText').on('mouseout', mouseOff);
         });
-    };
+    }
 
     function cleanClass(name) {
         return name.replace(/\s/g, '').replace('/', '');
@@ -198,5 +198,5 @@ require(['d3'], function () {
 
         d3.selectAll('.surveyControl').style('color', null);
         d3.select(this).style('color', '#E5ABA9');
-    })
-})
+    });
+});
