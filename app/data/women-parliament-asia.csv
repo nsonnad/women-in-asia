@@ -1,0 +1,67 @@
+country,year,value,except
+Afghanistan*,1990,3.7,null
+Australia,1990,6.1,null
+Bangladesh,1990,10.3,null
+Bhutan,1990,2,null
+Cambodia*,1990,5.8,1997
+China,1990,21.3,null
+India,1990,5,null
+Indonesia*,1990,12.4,null
+Japan,1990,1.4,null
+Lao PDR,1990,6.3,null
+Malaysia*,1990,5.1,null
+Maldives*,1990,6.3,null
+Mongolia,1990,24.9,null
+Nepal,1990,6.1,null
+New Zealand,1990,14.4,null
+Pakistan,1990,10.1,null
+Philippines,1990,9.1,null
+Singapore,1990,4.9,null
+South Korea,1990,2,null
+Sri Lanka,1990,4.9,null
+Thailand,1990,2.8,null
+Vietnam,1990,17.7,null
+Afghanistan*,2000,27.3,2006
+Australia,2000,22.4,null
+Bangladesh,2000,9.1,null
+Bhutan,2000,2,null
+Cambodia*,2000,8.2,null
+China,2000,21.8,null
+India,2000,9,null
+Indonesia*,2000,8,2001
+Japan,2000,4.6,null
+Lao PDR,2000,21.2,null
+Malaysia*,2000,10.4,2001
+Maldives*,2000,6,2001
+Mongolia,2000,7.9,null
+Nepal,2000,5.9,null
+New Zealand,2000,29.2,null
+Pakistan,2000,21.6,2003
+Philippines,2000,12.4,null
+Singapore,2000,4.3,null
+South Korea,2000,3.7,null
+Sri Lanka,2000,4.9,null
+Thailand,2000,5.6,null
+Vietnam,2000,26,null
+Afghanistan*,2010,27.7,null
+Australia,2010,24.7,null
+Bangladesh,2010,19.7,null
+Bhutan,2010,8.5,null
+Cambodia*,2010,20.3,null
+China,2010,21.3,null
+India,2010,11,null
+Indonesia*,2010,18.2,null
+Japan,2010,10.8,null
+Lao PDR,2010,25,null
+Malaysia*,2010,10.4,null
+Maldives*,2010,6.5,null
+Mongolia,2010,3.9,null
+Nepal,2010,33.2,null
+New Zealand,2010,32.2,null
+Pakistan,2010,22.5,null
+Philippines,2010,22.9,null
+Singapore,2010,22.2,null
+South Korea,2010,14.7,null
+Sri Lanka,2010,5.8,null
+Thailand,2010,15.8,null
+Vietnam,2010,24.4,null

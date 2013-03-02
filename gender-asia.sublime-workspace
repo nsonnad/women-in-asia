@@ -167,69 +167,17 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/scripts/sexRatio.js",
-			"settings":
-			{
-				"buffer_size": 6502,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/styles/charts.css",
-			"settings":
-			{
-				"buffer_size": 2053,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/scripts/surveys.js",
-			"settings":
-			{
-				"buffer_size": 7632,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/var/www/g0v/legislators/legislators.html",
-			"settings":
-			{
-				"buffer_size": 2945,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/scripts/drawMap.js",
-			"settings":
-			{
-				"buffer_size": 3729,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/data/sex-ratio.csv",
-			"settings":
-			{
-				"buffer_size": 656,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/scripts/main.js",
-			"settings":
-			{
-				"buffer_size": 514,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/JSHint/JSHint.sublime-build",
 	"command_palette":
 	{
-		"height": 369.0,
+		"height": 159.0,
 		"selected_items":
 		[
+			[
+				"projec",
+				"File: Copy Path From Project"
+			],
 			[
 				"pack",
 				"Package Control: Install Package"
@@ -303,10 +251,6 @@
 				"File: New View into File"
 			],
 			[
-				"projec",
-				"File: Copy Path From Project"
-			],
-			[
 				"prefe",
 				"Preferences: Settings - User"
 			],
@@ -359,7 +303,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 467.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -376,8 +320,28 @@
 	},
 	"file_history":
 	[
+		"/home/nikhil/projects/tester/Gruntfile.js",
+		"/home/nikhil/.bashrc",
+		"/home/nikhil/projects/women-asia/app/scripts/main.js",
+		"/home/nikhil/projects/women-asia/Gruntfile.js",
+		"/home/nikhil/projects/tester/app/scripts/app.js",
+		"/home/nikhil/projects/women-asia/node_modules/grunt-requirejs/node_modules/requirejs/bin/r.js",
+		"/home/nikhil/projects/women-asia/dist/scripts/amd-app.js",
 		"/home/nikhil/projects/women-asia/app/styles/main.css",
 		"/home/nikhil/projects/women-asia/app/index.html",
+		"/home/nikhil/projects/women-asia/app/scripts/drawMap.js",
+		"/home/nikhil/projects/women-asia/app/scripts/education.js",
+		"/home/nikhil/projects/women-asia/app/scripts/surveys.js",
+		"/home/nikhil/projects/women-asia/app/scripts/sexRatio.js",
+		"/home/nikhil/projects/women-asia/app/scripts/app.js",
+		"/home/nikhil/projects/women-asia/app/components/leaflet/dist/leaflet.css",
+		"/home/nikhil/projects/women-asia/app/styles/charts.css",
+		"/home/nikhil/projects/women-asia/.jshintrc",
+		"/home/nikhil/projects/women-asia/node_modules/grunt-contrib-jshint/.jshintrc",
+		"/home/nikhil/projects/women-asia/app/data/sex-ratio.csv",
+		"/var/www/g0v/legislators/legislators.html",
+		"/home/nikhil/projects/women-asia/app/scripts/asia.js",
+		"/home/nikhil/projects/women-asia/app/data/asia.json",
 		"/home/nikhil/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 		"/home/nikhil/.config/sublime-text-2/Packages/JSHint/Context.sublime-menu",
 		"/home/nikhil/.config/sublime-text-2/Packages/JSHint/JSHint.sublime-build",
@@ -386,16 +350,8 @@
 		"/home/nikhil/.config/sublime-text-2/Packages/JSHint/package-metadata.json",
 		"/home/nikhil/.config/sublime-text-2/Packages/JSHint/Main.sublime-menu",
 		"/home/nikhil/.config/sublime-text-2/Packages/JSHint/JSHint.py",
-		"/home/nikhil/projects/women-asia/app/data/sex-ratio.csv",
-		"/var/www/g0v/legislators/legislators.html",
-		"/home/nikhil/projects/women-asia/app/scripts/main.js",
-		"/home/nikhil/projects/women-asia/app/scripts/asia.js",
-		"/home/nikhil/projects/women-asia/app/scripts/drawMap.js",
-		"/home/nikhil/projects/women-asia/app/scripts/app.js",
-		"/home/nikhil/projects/women-asia/app/scripts/education.js",
 		"/home/nikhil/projects/women-asia/app/scripts/sex-ratio.js",
 		"/home/nikhil/projects/women-asia/app/data/asia-surveys-master.json",
-		"/home/nikhil/projects/women-asia/app/scripts/surveys.js",
 		"/home/nikhil/projects/gender-asia/app/index.html",
 		"/home/nikhil/projects/gender-asia/app/styles/charts.css",
 		"/var/www/d3-datavis/newsroom-diversity/newsroom-diversity.html",
@@ -484,6 +440,29 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"dir",
+			"pathdir",
+			"path",
+			"rjs",
+			"usemi",
+			"module",
+			"include",
+			"app",
+			"\"",
+			"      \"",
+			"immed",
+			"      \"",
+			"lat",
+			"          '",
+			"}",
+			"},\n",
+			"        },",
+			"lat",
+			"          '",
+			"'lat' : 4.4137155,\n          'lon' : 114.5653908,\n          'totalPop' : 398920,\n          'femalePop' : 49,\n          'area' : 5770,\n          'gdppc' : 50409",
+			"\"",
+			"function",
+			"\"",
 			",",
 			"function",
 			"\"",
@@ -580,6 +559,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"'",
+			"function ",
+			"'",
 			", ",
 			"function ",
 			"function",
@@ -630,201 +612,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/scripts/sexRatio.js",
-					"settings":
-					{
-						"buffer_size": 6502,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								35,
-								35
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/styles/charts.css",
-					"settings":
-					{
-						"buffer_size": 2053,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1517,
-								1517
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 912.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/scripts/surveys.js",
-					"settings":
-					{
-						"buffer_size": 7632,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7632,
-								7632
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/var/www/g0v/legislators/legislators.html",
-					"settings":
-					{
-						"buffer_size": 2945,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1680,
-								1680
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1482.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/scripts/drawMap.js",
-					"settings":
-					{
-						"buffer_size": 3729,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								904,
-								904
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2109.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/data/sex-ratio.csv",
-					"settings":
-					{
-						"buffer_size": 656,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/scripts/main.js",
-					"settings":
-					{
-						"buffer_size": 514,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								88,
-								88
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -861,7 +650,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 143.0
+		"height": 141.0
 	},
 	"replace":
 	{
@@ -874,24 +663,40 @@
 		"selected_items":
 		[
 			[
-				"main.",
+				"main",
 				"scripts/main.js"
 			],
 			[
 				"sex",
-				"data/sex-ratio.csv"
+				"scripts/sexRatio.js"
 			],
 			[
-				"raw",
-				"scripts/drawMap.js"
-			],
-			[
-				"asia",
-				"scripts/asia.js"
+				"surve",
+				"scripts/surveys.js"
 			],
 			[
 				"draw",
 				"scripts/drawMap.js"
+			],
+			[
+				"edu",
+				"scripts/education.js"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"main.js",
+				"scripts/main.js"
+			],
+			[
+				"leafle",
+				"components/leaflet/dist/leaflet.css"
+			],
+			[
+				"educa",
+				"scripts/education.js"
 			],
 			[
 				"app",
@@ -902,8 +707,24 @@
 				"scripts/asia.js"
 			],
 			[
+				"json",
+				"data/asia.json"
+			],
+			[
 				"educ",
 				"scripts/education.js"
+			],
+			[
+				"main.",
+				"scripts/main.js"
+			],
+			[
+				"raw",
+				"scripts/drawMap.js"
+			],
+			[
+				"asia",
+				"scripts/asia.js"
 			],
 			[
 				"sex-",
@@ -914,16 +735,8 @@
 				"scripts/surveys.js"
 			],
 			[
-				"educa",
-				"scripts/education.js"
-			],
-			[
 				"char",
 				"styles/charts.css"
-			],
-			[
-				"main",
-				"styles/main.css"
 			],
 			[
 				"inde",
@@ -932,10 +745,6 @@
 			[
 				"charts",
 				"styles/charts.css"
-			],
-			[
-				"index",
-				"app/index.html"
 			],
 			[
 				"chart",
@@ -952,10 +761,6 @@
 			[
 				"master",
 				"app/data/asia-surveys-master.json"
-			],
-			[
-				"edu",
-				"app/data/education-ratios.json"
 			],
 			[
 				"dra",
@@ -988,10 +793,6 @@
 			[
 				"asian-",
 				"app/data/asian-countries.json"
-			],
-			[
-				"json",
-				"app/data/asia-data.json"
 			],
 			[
 				"asia.json",
@@ -1079,7 +880,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 192.0,
 	"status_bar_visible": true
 }

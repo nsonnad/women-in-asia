@@ -1,5 +1,5 @@
 div.chart { width:960px; margin: 0 auto; font-size: 12px;}
-
+div#map { opacity:1; height:550px; width: auto; margin:0; position:relative;}
 .axis path,
 .axis line { fill: none; stroke: #7B7B7B; shape-rendering: crispEdges;}
 .oecd line { fill: none; stroke: #7B7B7B; stroke-dasharray: 7,2; shape-rendering: crispEdges;}
@@ -26,10 +26,10 @@ div#education .xLabels { font-style: italic;}
 /*survey chart*/
 div#surveys { width:auto; margin:35px auto; }
 
-.surveyRectGroup .barText { 
-		font-size: 12px; 
-		font-weight: bold; 
-		fill:white; 
+.surveyRectGroup .barText {
+		font-size: 12px;
+		font-weight: bold;
+		fill:white;
 		font-family: Arial;
 		text-shadow: 1px 1px gray;}
 
@@ -42,17 +42,13 @@ div#surveyControls {
 div#surveyControls span { margin-right: 16px; }
 span.surveyControl { cursor: pointer;}
 div#surveyQuest { margin: 0 auto; height:60px; width:750px; font-size: 16px; }
-.legendText { font: 10px sans-serif;}
-.legend line {
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
+div#surveys .legend { font-size: 14px;}
+div#surveys .surveyAttribution { font-style: italic; }
 /*sex ratios*/
 div#sexRatio { width:auto; margin:35px auto; position:relative; }
 
-div.sexControls { 
-	position: absolute; top:40px; float:left; 
+div.sexControls {
+	position: absolute; top:40px; float:left;
 	background: white;
    	background: rgba(255,255,255,.9);
    	box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -67,8 +63,8 @@ path.boyPath { stroke: none; fill:#B83834; }
 path.missingPath { stroke: #E98125; fill-opacity:0; stroke-width:1; }
 div.sexLegend { font-size:16px; }
 div.sexLegend h3 { display: inline; margin-right:20px;}
-ul.countries { 
-	font-size: 16px; list-style-type: none; 
+ul.countries {
+	font-size: 16px; list-style-type: none;
 	line-height: 1.5em; margin:0; padding: 0; }
 .legendSVG { width:15px; height: 15px;}
 ul.countries li { float:left; display:inline; width:50%; margin:0; padding: 0; }
