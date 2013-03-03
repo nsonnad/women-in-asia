@@ -124,6 +124,7 @@ define(['d3'], function (d3) {
                     .data(function (d) { return d; })
                 .enter().append('text')
                     .attr('class', 'barText')
+                    .attr('pointer-events', 'none')
                     .style('text-anchor', 'middle')
                     .style('visibility', 'hidden')
                     .text(function (d) { return formatPercent(d.y); });
@@ -181,8 +182,6 @@ define(['d3'], function (d3) {
 
                 d3.selectAll('.surveyRectGroup rect').on('mouseover', mouseOn);
                 d3.selectAll('.surveyRectGroup rect').on('mouseout', mouseOff);
-                d3.selectAll('.barText').on('mouseover', mouseOn);
-                d3.selectAll('.barText').on('mouseout', mouseOff);
             });
         }
 
@@ -200,7 +199,6 @@ define(['d3'], function (d3) {
             };
 
             d3.selectAll('text.' + thisClass).style('visibility', 'visible');
-            d3.select(this).style('visibility', 'visible');
             d3.select('#' + thisClass).style('opacity', '0.9');
         }
 

@@ -3,6 +3,7 @@ div#map { opacity:1; height:550px; width: auto; margin:0; position:relative;}
 .axis path,
 .axis line { fill: none; stroke: #7B7B7B; shape-rendering: crispEdges;}
 .oecd line { fill: none; stroke: #7B7B7B; stroke-dasharray: 7,2; shape-rendering: crispEdges;}
+.compLine { fill: none; stroke: #D1D1D1; stroke-dasharray: 7,2; shape-rendering: crispEdges;}
 .label {font-size:14px;}
 .default { color: rgb(229, 171, 169); }
 
@@ -44,6 +45,7 @@ span.surveyControl { cursor: pointer;}
 div#surveyQuest { margin: 0 auto; height:60px; width:750px; font-size: 16px; }
 div#surveys .legend { font-size: 14px;}
 div#surveys .surveyAttribution { font-style: italic; }
+
 /*sex ratios*/
 div#sexRatio { width:auto; margin:35px auto; position:relative; }
 
@@ -68,3 +70,9 @@ ul.countries {
 	line-height: 1.5em; margin:0; padding: 0; }
 .legendSVG { width:15px; height: 15px;}
 ul.countries li { float:left; display:inline; width:50%; margin:0; padding: 0; }
+
+/*women in parliaments*/
+div#parliament { width: 620px; margin: 0 auto; position:relative;}
+div.parlLegend { float:right; margin: 20px 50px 0px 0px; }
+div.parlLegend ul { font-size: 16px; list-style-type: none; line-height: 1.4em; margin: 0; padding: 0; }
+div.parlLegend li { margin: 0; padding: 0; cursor:pointer; }

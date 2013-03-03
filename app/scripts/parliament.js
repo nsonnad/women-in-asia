@@ -2,15 +2,23 @@ define(['d3'], function (d3) {
     'use strict';
     var init = function () {
         var
-        margin = { t : 20, r : 40, b : 40, l : 40 },
-        w = 450 - margin.l - margin.r,
+        margin = { t : 20, r : 50, b : 40, l : 30 },
+        w = 440 - margin.l - margin.r,
         h = 550 - margin.t - margin.b,
         x = d3.scale.ordinal().rangeRoundBands([0, w], 1),
-        y = d3.scale.linear().range([h, 0]).domain([0, .351]),
-        color = d3.scale.category20(),
+        y = d3.scale.linear().range([h, 0]).domain([0, .45]),
+        color = d3.scale.category10(),
         formatPercent = d3.format('.0%');
 
         var data;
+
+        var globalAvg = [
+            {"region":"Nordic countries","number":"42.0"},
+            {"region":"Americas","number":"24.1"},
+            {"region":"Europe^","number":"21.8"},
+            {"region":"Sub-Saharan Africa","number":"20.8"},
+            {"region":"Arab States","number":"13.3"}
+        ];
 
         var parliament = d3.select('#parliament').append('svg')
             .attr('width', w + margin.l + margin.r)
@@ -38,12 +46,6 @@ define(['d3'], function (d3) {
             .ticks(8)
             .tickSize(6, 3, 0);
 
-        // d3.selection.prototype.moveToFront = function() {
-        //     return this.each(function(){
-        //         this.parentNode.appendChild(this);
-        //   });
-        // };
-
         d3.csv('/data/women-parliament-asia.csv', function (csv) {
 
             data = csv;
@@ -51,6 +53,10 @@ define(['d3'], function (d3) {
             data.forEach(function (d) {
                 d.value = +d.value / 100;
             });
+
+            globalAvg.forEach(function (d) {
+                d.number = +d.number / 100;
+            })
 
             x.domain(data.map(function (d) { return d.year; }));
 
@@ -76,6 +82,30 @@ define(['d3'], function (d3) {
                 .attr("transform", "translate(0," + h + ")")
                 .call(xAxis);
 
+            var comparisons = parliament.selectAll('.compLine')
+                .data(globalAvg)
+
+            comparisons.enter().append('g')
+                .attr('class', '.parlComp')
+
+            comparisons.append('line')
+                .attr({
+                    class: 'compLine',
+                    y1: function (d) { return y(d.number); },
+                    y2: function (d) { return y(d.number); },
+                    x1: 0,
+                    x2: w - margin.r - 5
+                });
+
+            comparisons.append('text')
+                .attr({
+                    x: w - margin.r,
+                    y: function (d) { return y(d.number); },
+                    dy: '.35em',
+                    'text-anchor': 'start'
+                })
+                .text(function (d) { return d.region; });
+
             var parlGroup = parliament.selectAll('.dotGroup')
                 .data(transpose);
 
@@ -83,7 +113,7 @@ define(['d3'], function (d3) {
                 .attr('class', '.dotGroup')
                 .attr('transform', 'translate(0,0)')
                 .on('mouseover', function (d) { return drawPath(cleanClass(d.name)); })
-                .on('mouseout', function (d) { return removePath(cleanClass(d.name)); });;
+                .on('mouseout', function (d) { return removePath(cleanClass(d.name)); });
 
             parlGroup.selectAll('circle')
                 .data(function (d) { return d.values; })
@@ -105,14 +135,16 @@ define(['d3'], function (d3) {
                     fill: "none",
                     d: function (d) { return line(d.values); },
                     'pointer-events': 'none'
-                })
-                .style('opacity', '0.2');
+                });
 
-            var totalLength = parlPath.node().getTotalLength();
+            parlPath.each(function() {
+                var paths = d3.select(this);
+                var totalLength = paths.node().getTotalLength();
 
-            parlPath
-                .attr("stroke-dasharray", totalLength + " " + totalLength)
-                .attr("stroke-dashoffset", totalLength);
+                paths
+                    .attr("stroke-dasharray", totalLength + " " + totalLength)
+                    .attr("stroke-dashoffset", totalLength);
+            });
 
             parlGroup.selectAll('text')
                 .data(function (d) { return d.values; })
@@ -131,12 +163,24 @@ define(['d3'], function (d3) {
                 .style('visibility', 'hidden')
                 .text(function (d) { return formatPercent(d.value); });
 
+            d3.select('#parliament').append('div')
+                .attr('class', 'parlLegend')
+                .append('ul').selectAll('li')
+                .data(transpose)
+            .enter().append('li')
+                .attr('class', function (d) { return cleanClass(d.name); })
+                .style('color', function (d) { return color(d.name); })
+                .on('mouseover', function (d) { return drawPath(cleanClass(d.name)); })
+                .on('mouseout', function (d) { return removePath(cleanClass(d.name)); })
+                .text(function (d) { return d.name; });
+
         });
 
         function drawPath (country) {
 
-            var circles = d3.selectAll('circle.' + country);
-            var text = d3.selectAll('text.' + country);
+            var circles = parliament.selectAll('circle.' + country);
+            var text = parliament.selectAll('text.' + country);
+            var li = d3.selectAll('.parlLegend li').filter(function() { return d3.select(this).attr('class') !== country; });
 
             circles.each(function () {
                 this.parentNode.parentNode.appendChild(this.parentNode);
@@ -159,13 +203,18 @@ define(['d3'], function (d3) {
                 .delay(function (d, i) { return 300 + i*100; })
                 .style('visibility', 'visible');
 
+            li
+              .transition().duration(600)
+              .style('opacity', '0.2');
+
         }
 
         function removePath (country) {
 
-            var path = d3.select('path.' + country);
+            var path = parliament.select('path.' + country);
             var totalLength = path.node().getTotalLength();
-            var text = d3.selectAll('text.' + country);
+            var text = parliament.selectAll('text.' + country);
+            var li = d3.selectAll('.parlLegend li');
 
             path
                 .transition()
@@ -186,6 +235,10 @@ define(['d3'], function (d3) {
                 .transition().duration(600)
                 .delay(function (d, i) { return i*75; })
                 .style('visibility', 'hidden');
+
+            li
+              .transition().duration(600)
+              .style('opacity', '1');
         }
 
 
