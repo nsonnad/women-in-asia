@@ -1,0 +1,1 @@
+An attempt at a different kind of journalistic article that is first and foremost informative. Use data -- powered chiefly by [d3.js](http://d3js.org/) -- and well-crafted text to inform readers on the status of women in Asia.
