@@ -13,6 +13,28 @@ body,html {
     padding: 0;
 }
 
+div#navWrap {
+    background-color: hsl(122,50%,97%);
+    position: fixed;
+    -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+div#nav {
+    position:relative;
+    left:50%;
+    margin-left: -330px;
+}
+
+#nav ul {
+    list-style-type: none;
+}
+
+#nav li { display: inline; margin: 0px 12px;}
+
 #container {
     margin: 0 auto;
     width: 100%;
@@ -23,17 +45,19 @@ a {
     text-decoration: none;
 }
 
+.active { color: #2B2D31;}
+
 a:hover {
     text-decoration: underline;
 }
 
-div.sections {
+div.text {
     width: 660px;
     color: #2B2D31;
     margin: 0 auto;
 }
 
-.sections p {
+.text p {
     padding: 0px;
     font-size: 1.1em;
 }
@@ -64,23 +88,25 @@ div#headline {
     background-image: url('../images/woman-with-kids.jpg');
 }
 
-div#headline h2 {
+div#headlineWrap {
     position: absolute;
     top: 30%;
     left: 25%;
     right: 15%;
+}
+
+div#headline h2 {
     text-shadow: 2px 1px #2B2D31;
     font-size: 7em;
+    float:left;
+    margin-bottom:-30px;
     color: hsl(122,50%,97%);
 }
 
 div#headline h3 {
-    position: absolute;
-    top: 55%;
-    left: 25%;
-    right: 15%;
     text-shadow: 2px 1px #2B2D31;
     font-size: 2.5em;
+    float:left;
     color: hsl(122,50%,97%);
 }
 

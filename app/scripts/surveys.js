@@ -4,7 +4,7 @@ define(['d3'], function (d3) {
         var
         margin = { t : 20, r : 140, b : 80, l : 40 },
         w = 960 - margin.l - margin.r,
-        h = 570 - margin.t - margin.b,
+        h = 470 - margin.t - margin.b,
         x = d3.scale.ordinal().rangeRoundBands([0, w], 0.07),
         y = d3.scale.linear().rangeRound([h, 0]),
         color = d3.scale.ordinal(),
