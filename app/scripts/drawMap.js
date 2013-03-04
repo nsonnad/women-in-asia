@@ -45,7 +45,7 @@ define(['leaflet', 'jquery', 'topojson'], function (L, $, topojson) {
             };
 
             // scroll to and from map on click
-            $('a[href^=#]').on('click', function (e) {
+            $('.sections, #map').on('click', 'a[href^=#]', function (e) {
 
                 var name = $(this).attr('href').substr(1);
                 var pos = $('[id=' + name + ']').offset();
@@ -58,6 +58,7 @@ define(['leaflet', 'jquery', 'topojson'], function (L, $, topojson) {
                     $('#map').append('<div id="return"><h2><a id=' + name + ' href=#' + $(this).attr('id') + '>Return to text</a></h2></<div>');
                     $('html,body').animate({ scrollTop: pos.top - center });
                     e.preventDefault();
+
                 } else {
                     $('div#return').remove();
                     $('html,body').animate({ scrollTop: pos.top });

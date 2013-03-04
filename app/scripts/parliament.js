@@ -2,13 +2,14 @@ define(['d3'], function (d3) {
     'use strict';
     var init = function () {
         var
-        margin = { t : 20, r : 50, b : 40, l : 30 },
-        w = 440 - margin.l - margin.r,
+        margin = { t : 20, r : 50, b : 50, l : 30 },
+        w = 460 - margin.l - margin.r,
         h = 550 - margin.t - margin.b,
         x = d3.scale.ordinal().rangeRoundBands([0, w], 1),
         y = d3.scale.linear().range([h, 0]).domain([0, .45]),
         color = d3.scale.category10(),
-        formatPercent = d3.format('.0%');
+        formatPercent = d3.format('.1%'),
+        formatAxis = d3.format('.0%');
 
         var data;
 
@@ -20,6 +21,15 @@ define(['d3'], function (d3) {
             {"region":"Arab States","number":"13.3"}
         ];
 
+        var exceptions = [
+            {"nation":"Afghanistan","original":2000,"alternate":2006},
+            {"nation":"Pakistan","original":2000,"alternate":2003},
+            {"nation":"Maldives","original":2000,"alternate":2001},
+            {"nation":"Cambodia","original":1990,"alternate":1997},
+            {"nation":"Indonesia","original":2000,"alternate":2001},
+            {"nation":"Malaysia","original":2000,"alternate":2001}
+        ];
+
         var parliament = d3.select('#parliament').append('svg')
             .attr('width', w + margin.l + margin.r)
             .attr('height', h + margin.t + margin.b)
@@ -28,6 +38,15 @@ define(['d3'], function (d3) {
                 transform: "translate(" + margin.l + ',' + margin.t + ")",
                 class: "parlGroup"
             });
+
+        d3.select('#parliament').append('div')
+            .attr('class', 'parlSidebar');
+
+        parliament.append('text')
+            .attr('x', 10)
+            .attr('y', h + margin.b - 5)
+            .style('font-style', 'italic')
+            .text('Source: Asian Development Bank');
 
         var line = d3.svg.line()
             .interpolate('linear')
@@ -41,7 +60,7 @@ define(['d3'], function (d3) {
         var yAxis = d3.svg.axis()
             .scale(y)
             .orient('left')
-            .tickFormat(formatPercent)
+            .tickFormat(formatAxis)
             .tickSubdivide(1)
             .ticks(8)
             .tickSize(6, 3, 0);
@@ -104,6 +123,7 @@ define(['d3'], function (d3) {
                     dy: '.35em',
                     'text-anchor': 'start'
                 })
+                .style('fill', '#2B2D31')
                 .text(function (d) { return d.region; });
 
             var parlGroup = parliament.selectAll('.dotGroup')
@@ -123,9 +143,10 @@ define(['d3'], function (d3) {
                     r: 8,
                     cx: function (d) { return x(d.year); },
                     cy: function (d) { return y(d.value); },
-                    fill: function (d) { return color(d.country); }
+                    fill: function (d) { return color(d.country); },
                 })
                 .style('opacity', '0.7')
+                .style('cursor', 'pointer');
 
             var parlPath = parlGroup.append('path')
                 .attr({
@@ -163,7 +184,7 @@ define(['d3'], function (d3) {
                 .style('visibility', 'hidden')
                 .text(function (d) { return formatPercent(d.value); });
 
-            d3.select('#parliament').append('div')
+            d3.select('.parlSidebar').append('div')
                 .attr('class', 'parlLegend')
                 .append('ul').selectAll('li')
                 .data(transpose)
@@ -174,6 +195,13 @@ define(['d3'], function (d3) {
                 .on('mouseout', function (d) { return removePath(cleanClass(d.name)); })
                 .text(function (d) { return d.name; });
 
+            d3.select('.parlSidebar').append('div')
+                .attr('class', 'parlNotes')
+                .append('ul')
+                .attr('class', 'parlNotesUl')
+                .append('li')
+                .text('^Excluding Nordic countries');
+
         });
 
         function drawPath (country) {
@@ -181,6 +209,8 @@ define(['d3'], function (d3) {
             var circles = parliament.selectAll('circle.' + country);
             var text = parliament.selectAll('text.' + country);
             var li = d3.selectAll('.parlLegend li').filter(function() { return d3.select(this).attr('class') !== country; });
+            var remAsterisk = country.replace('*', '');
+            var currException = exceptions.filter(function (d) { return d.nation === remAsterisk; });
 
             circles.each(function () {
                 this.parentNode.parentNode.appendChild(this.parentNode);
@@ -195,7 +225,7 @@ define(['d3'], function (d3) {
             circles
                 .transition().duration(600)
                 .delay(function (d, i) { return i*100; })
-                .attr('r', 20)
+                .attr('r', 22)
                 .style('opacity', '1');
 
             text
@@ -206,6 +236,23 @@ define(['d3'], function (d3) {
             li
               .transition().duration(600)
               .style('opacity', '0.2');
+
+            function contains (d) {
+                d.country === remAsterisk;
+            }
+
+            if (exceptions.some(function (d) { return d.nation === remAsterisk; }) === true ) {
+
+                var exceptLi = d3.select('.parlNotesUl').selectAll('.exception')
+                    .data(currException)
+                .enter().append('li')
+                    .attr('class', 'exception')
+                    .style('opacity', '0.001')
+
+                d3.select('.exception').transition().duration(600)
+                    .style('opacity', '1')
+                    .text(function (d) { return '*' + d.original + ' data point recorded in ' + d.alternate; });
+            }
 
         }
 
@@ -239,8 +286,12 @@ define(['d3'], function (d3) {
             li
               .transition().duration(600)
               .style('opacity', '1');
-        }
 
+            d3.select('.exception').transition()
+                .duration(600)
+                .style('opacity', '0.001')
+                .remove();
+        }
 
         function cleanClass(name) {
             return name.replace(/\s/g, '').replace('*', '');

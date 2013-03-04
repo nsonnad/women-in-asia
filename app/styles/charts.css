@@ -1,78 +1,234 @@
-div.chart { width:960px; margin: 0 auto; font-size: 12px;}
-div#map { opacity:1; height:550px; width: auto; margin:0; position:relative;}
-.axis path,
-.axis line { fill: none; stroke: #7B7B7B; shape-rendering: crispEdges;}
-.oecd line { fill: none; stroke: #7B7B7B; stroke-dasharray: 7,2; shape-rendering: crispEdges;}
-.compLine { fill: none; stroke: #D1D1D1; stroke-dasharray: 7,2; shape-rendering: crispEdges;}
-.label {font-size:14px;}
-.default { color: rgb(229, 171, 169); }
+div.chart {
+    width: 960px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #2B2D31;
+}
+
+div#map {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    height: 550px;
+    width: auto;
+    margin: 0;
+    position: relative;
+}
+
+.axis path,.axis line {
+    fill: none;
+    stroke: #7B7B7B;
+    shape-rendering: crispEdges;
+}
+
+.oecd line {
+    fill: none;
+    stroke: #7B7B7B;
+    stroke-dasharray: 7,2;
+    shape-rendering: crispEdges;
+}
+
+.compLine {
+    fill: none;
+    stroke: #D1D1D1;
+    stroke-dasharray: 7,2;
+    shape-rendering: crispEdges;
+}
+
+.label {
+    font-size: 14px;
+}
+
+.default {
+    color: rgb(229, 171, 169);
+}
 
 /*education chart*/
-div#education { width:620px; margin: 35px auto; }
+div#education {
+    width: 620px;
+    margin: 35px auto;
+}
+
 div#eduControls {
-	text-align: center;
-	font-size: 22px;
-	margin-bottom: 20px;
-	}
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
 
-div#eduControls span { margin-right: 16px; }
+div#eduControls span {
+    margin-right: 16px;
+}
 
-span.eduControl { cursor: pointer; }
-span.active { color:orange;}
+span.eduControl {
+    cursor: pointer;
+}
 
-.oecdLabel { font-size:16px; }
+span.active {
+    color: orange;
+}
 
-div#education .xLabels { font-style: italic;}
+.oecdLabel {
+    font-size: 16px;
+    color: #2B2D31;
+}
+
+div#education .xLabels {
+    font-style: italic;
+    color: #2B2D31;
+}
 
 /*survey chart*/
-div#surveys { width:auto; margin:35px auto; }
+div#surveys {
+    width: auto;
+    margin: 35px auto;
+}
 
 .surveyRectGroup .barText {
-		font-size: 12px;
-		font-weight: bold;
-		fill:white;
-		font-family: Arial;
-		text-shadow: 1px 1px gray;}
+    font-size: 12px;
+    font-weight: bold;
+    fill: white;
+    font-family: Arial;
+    text-shadow: 1px 1px gray;
+}
 
 div#surveyControls {
-	text-align: center;
-	font-size: 20px;
-	margin-bottom: 20px;
-	}
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
 
-div#surveyControls span { margin-right: 16px; }
-span.surveyControl { cursor: pointer;}
-div#surveyQuest { margin: 0 auto; height:60px; width:750px; font-size: 16px; }
-div#surveys .legend { font-size: 14px;}
-div#surveys .surveyAttribution { font-style: italic; }
+div#surveyControls span {
+    margin-right: 16px;
+}
+
+span.surveyControl {
+    cursor: pointer;
+}
+
+div#surveyQuest {
+    margin: 0 auto;
+    height: 60px;
+    width: 750px;
+    font-size: 16px;
+}
+
+div#surveys .legend {
+    font-size: 14px;
+}
+
+div#surveys .surveyAttribution {
+    font-style: italic;
+}
 
 /*sex ratios*/
-div#sexRatio { width:auto; margin:35px auto; position:relative; }
+div#sexRatio {
+    width: auto;
+    margin: 35px auto;
+    position: relative;
+}
 
 div.sexControls {
-	position: absolute; top:40px; float:left;
-	background: white;
-   	background: rgba(255,255,255,.9);
-   	box-shadow: 0 0 15px rgba(0,0,0,0.2);
-	padding: 10px 16px 10px 25px;
-	width:300px;
-	color: #2B2D31;
-	}
+    position: absolute;
+    top: 40px;
+    float: left;
+    background: white;
+    background: rgba(255,255,255,.9);
 
-div.sexCountries, div.sexLegend { float: left; width:100%; }
-path.girlPath { stroke: none; fill:orange; }
-path.boyPath { stroke: none; fill:#B83834; }
-path.missingPath { stroke: #E98125; fill-opacity:0; stroke-width:1; }
-div.sexLegend { font-size:16px; }
-div.sexLegend h3 { display: inline; margin-right:20px;}
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    padding: 10px 16px 10px 25px;
+    width: 300px;
+    color: #2B2D31;
+}
+
+div.sexCountries,div.sexLegend {
+    float: left;
+    width: 100%;
+}
+
+path.girlPath {
+    stroke: none;
+    fill: orange;
+}
+
+path.boyPath {
+    stroke: none;
+    fill: #B83834;
+}
+
+path.missingPath {
+    stroke: #E98125;
+    fill-opacity: 0;
+    stroke-width: 1;
+}
+
+div.sexLegend {
+    font-size: 16px;
+}
+
+div.sexLegend h3 {
+    display: inline;
+    margin-right: 20px;
+}
+
 ul.countries {
-	font-size: 16px; list-style-type: none;
-	line-height: 1.5em; margin:0; padding: 0; }
-.legendSVG { width:15px; height: 15px;}
-ul.countries li { float:left; display:inline; width:50%; margin:0; padding: 0; }
+    font-size: 16px;
+    list-style-type: none;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.legendSVG {
+    width: 15px;
+    height: 15px;
+}
+
+ul.countries li {
+    float: left;
+    display: inline;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
 
 /*women in parliaments*/
-div#parliament { width: 620px; margin: 0 auto; position:relative;}
-div.parlLegend { float:right; margin: 20px 50px 0px 0px; }
-div.parlLegend ul { font-size: 16px; list-style-type: none; line-height: 1.4em; margin: 0; padding: 0; }
-div.parlLegend li { margin: 0; padding: 0; cursor:pointer; }
+div#parliament {
+    width: 680px;
+    margin: 0 auto;
+    position: relative;
+}
+
+div.parlSidebar {
+    float: right;
+    margin: 20px 50px 0px 0px;
+    width: 130px;
+}
+
+div.parlLegend ul {
+    font-size: 16px;
+    list-style-type: none;
+    line-height: 1.3em;
+    margin: 0;
+    padding: 0;
+}
+
+div.parlLegend li {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+ul.parlNotesUl {
+    color: #2B2D31;
+    list-style-type: none;
+    margin: 0px 0;
+    padding: 0;
+}
+
+ul.parlNotesUl li {
+    font-size: 12px;
+    margin: 10px 0;
+    padding: 0;
+    font-style: italic;
+}

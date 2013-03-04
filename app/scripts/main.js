@@ -1,7 +1,7 @@
 require.config({
 
     paths: {
-        'jquery': 'vendor/jquery-1.9.1',
+        'jquery': 'vendor/jquery.min',
         'd3': '/components/d3/d3',
         'leaflet': '/components/leaflet/dist/leaflet',
         'topojson': 'vendor/topojson'

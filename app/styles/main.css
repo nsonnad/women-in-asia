@@ -2,60 +2,114 @@
 @import url('charts.css');
 
 body {
-	background-color: hsl(122,50%,97%);
-	font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+    background-color: hsl(122,50%,97%);
+    font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
 }
 
-body, html { width: 100%; margin:0; padding: 0; }
-#container { margin: 0 auto; width: 100%;}
+body,html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
-a { color:#B83834; text-decoration: none; }
-a:hover { text-decoration: underline;}
+#container {
+    margin: 0 auto;
+    width: 100%;
+}
 
-div.sections { width: 620px; margin: 0 auto;}
-.sections p { padding: 0px 8px; color: #2B2D31; font-size: 1.2em;}
+a {
+    color: #B83834;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+div.sections {
+    width: 620px;
+    margin: 0 auto;
+}
+
+.sections p {
+    padding: 0px 8px;
+    color: #2B2D31;
+    font-size: 1.2em;
+}
 
 div.images {
-	width: auto;
-	background-repeat:no-repeat;
-	background-attachment: fixed;
-	height:700px;
-	background-size: cover;
-	position:relative;
+    width: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 700px;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    position: relative;
 }
 
 div.images h1 {
-		position:absolute; top:20%; left:25%; right:15%;
-		text-shadow: 2px 1px #2B2D31;
-		font-size:8em; font-style: italic;
-		color:hsl(122,50%,97%);
-	}
-
-div#image1 { background-image:url('../images/girls-in-school.jpg'); }
-div#image2 { background-image:url('../images/women-vietnam.jpg'); }
-div#image3 { background-image:url('../images/wef.jpg'); }
-
-img.wide { margin: 16px 0; max-width: 100%;}
-
-.infobox, #return {
-	position:absolute;
-	float:none;
-	margin: 0;
-	background: white;
-   background: rgba(255,255,255,.9);
-   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    right: 15%;
+    text-shadow: 2px 1px #2B2D31;
+    font-size: 8em;
+    font-style: italic;
+    color: hsl(122,50%,97%);
 }
 
-.infobox { padding: 6px 20px; width: 300px; line-height:1em; }
+div#image1 {
+    background-image: url('../images/girls-in-school.jpg');
+}
 
-div.infobox h3 { display:inline; }
-div.infobox sup { vertical-align: top; position: relative; top: -0.3em; font-size: 0.7em; }
+div#image2 {
+    background-image: url('../images/women-vietnam.jpg');
+}
+
+div#image3 {
+    background-image: url('../images/wef.jpg');
+}
+
+img.wide {
+    margin: 16px 0;
+    max-width: 100%;
+}
+
+.infobox,#return {
+    position: absolute;
+    float: none;
+    margin: 0;
+    background: white;
+    background: rgba(255,255,255,.9);
+
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.infobox {
+    padding: 6px 20px;
+    width: 300px;
+    line-height: 1em;
+}
+
+div.infobox h3 {
+    display: inline;
+}
+
+div.infobox sup {
+    vertical-align: top;
+    position: relative;
+    top: -0.3em;
+    font-size: 0.7em;
+}
 
 div#return {
-	width:auto;
-	text-align:center;
-	bottom:-4px;
-	width: 20%;
-	left: 50%;
-	margin: 0 0 0 -10%;
+    width: auto;
+    text-align: center;
+    bottom: -4px;
+    width: 20%;
+    left: 50%;
+    margin: 0 0 0 -10%;
 }
