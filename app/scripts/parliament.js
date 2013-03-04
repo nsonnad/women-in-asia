@@ -2,8 +2,8 @@ define(['d3'], function (d3) {
     'use strict';
     var init = function () {
         var
-        margin = { t : 20, r : 50, b : 50, l : 30 },
-        w = 460 - margin.l - margin.r,
+        margin = { t : 20, r : 60, b : 50, l : 30 },
+        w = 470 - margin.l - margin.r,
         h = 550 - margin.t - margin.b,
         x = d3.scale.ordinal().rangeRoundBands([0, w], 1),
         y = d3.scale.linear().range([h, 0]).domain([0, .45]),
@@ -22,12 +22,12 @@ define(['d3'], function (d3) {
         ];
 
         var exceptions = [
-            {"nation":"Afghanistan","original":2000,"alternate":2006},
-            {"nation":"Pakistan","original":2000,"alternate":2003},
-            {"nation":"Maldives","original":2000,"alternate":2001},
-            {"nation":"Cambodia","original":1990,"alternate":1997},
-            {"nation":"Indonesia","original":2000,"alternate":2001},
-            {"nation":"Malaysia","original":2000,"alternate":2001}
+            {"nation":"Afghanistan","original":"Second","alternate":2006},
+            {"nation":"Pakistan","original":"Second","alternate":2003},
+            {"nation":"Maldives","original":"Second","alternate":2001},
+            {"nation":"Cambodia","original":"First","alternate":1997},
+            {"nation":"Indonesia","original":"Second","alternate":2001},
+            {"nation":"Malaysia","original":"Second","alternate":2001}
         ];
 
         var parliament = d3.select('#parliament').append('svg')
@@ -176,8 +176,7 @@ define(['d3'], function (d3) {
                     x : function (d) { return x(d.year); },
                     y: function (d) { return y(d.value); },
                     dy: '.35em',
-                    "font-size": 12,
-                    "font-family": "Arial",
+                    "font-size": '1.2em',
                     "text-anchor": "middle",
                     'pointer-events': 'none'
                 })

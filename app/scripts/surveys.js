@@ -37,9 +37,9 @@ define(['d3'], function (d3) {
 
         surveyChart.append('text')
             .attr('class', 'surveyAttribution')
-            .attr("y", h + margin.b - margin.t)
+            .attr("y", h + margin.b - 5)
             .attr("x", 0)
-            .text('Source: Pew Global Attitudes Project. Note: "*" denotes a non-national sample.')
+            .text('Source: Pew Global Attitudes Project. *Non-national sample.')
 
         var xAxis = d3.svg.axis()
             .scale(x)

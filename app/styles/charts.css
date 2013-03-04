@@ -88,7 +88,7 @@ div#surveys {
     font-weight: bold;
     fill: white;
     font-family: Arial;
-    text-shadow: 1px 1px gray;
+    text-shadow: 1px 1px #2B2D31;
 }
 
 div#surveyControls {
@@ -109,11 +109,11 @@ div#surveyQuest {
     margin: 0 auto;
     height: 60px;
     width: 750px;
-    font-size: 16px;
+    font-size: 1.2em;
 }
 
 div#surveys .legend {
-    font-size: 14px;
+    font-size: 1.1em;
 }
 
 div#surveys .surveyAttribution {
@@ -163,7 +163,7 @@ path.missingPath {
 }
 
 div.sexLegend {
-    font-size: 16px;
+    font-size: 1.2em;
 }
 
 div.sexLegend h3 {
@@ -172,7 +172,7 @@ div.sexLegend h3 {
 }
 
 ul.countries {
-    font-size: 16px;
+    font-size: 1.2em;
     list-style-type: none;
     line-height: 1.5em;
     margin: 0;
@@ -206,7 +206,7 @@ div.parlSidebar {
 }
 
 div.parlLegend ul {
-    font-size: 16px;
+    font-size: 1.3em;
     list-style-type: none;
     line-height: 1.3em;
     margin: 0;
@@ -227,7 +227,7 @@ ul.parlNotesUl {
 }
 
 ul.parlNotesUl li {
-    font-size: 12px;
+    font-size: 1em;
     margin: 10px 0;
     padding: 0;
     font-style: italic;

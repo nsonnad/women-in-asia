@@ -1,9 +1,10 @@
 /*@import url('leaflet.css');*/
 @import url('charts.css');
+@import url(http://fonts.googleapis.com/css?family=Enriqueta:400,700);
 
 body {
     background-color: hsl(122,50%,97%);
-    font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+    font-family: 'Enriqueta', serif;
 }
 
 body,html {
@@ -27,21 +28,21 @@ a:hover {
 }
 
 div.sections {
-    width: 620px;
+    width: 660px;
+    color: #2B2D31;
     margin: 0 auto;
 }
 
 .sections p {
-    padding: 0px 8px;
-    color: #2B2D31;
-    font-size: 1.2em;
+    padding: 0px;
+    font-size: 1.1em;
 }
 
 div.images {
     width: auto;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 700px;
+    height: 800px;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -56,7 +57,30 @@ div.images h1 {
     right: 15%;
     text-shadow: 2px 1px #2B2D31;
     font-size: 8em;
-    font-style: italic;
+    color: hsl(122,50%,97%);
+}
+
+div#headline {
+    background-image: url('../images/woman-with-kids.jpg');
+}
+
+div#headline h2 {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    right: 15%;
+    text-shadow: 2px 1px #2B2D31;
+    font-size: 7em;
+    color: hsl(122,50%,97%);
+}
+
+div#headline h3 {
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    right: 15%;
+    text-shadow: 2px 1px #2B2D31;
+    font-size: 2.5em;
     color: hsl(122,50%,97%);
 }
 
@@ -65,7 +89,7 @@ div#image1 {
 }
 
 div#image2 {
-    background-image: url('../images/women-vietnam.jpg');
+    background-image: url('../images/women-nepal.jpg');
 }
 
 div#image3 {
@@ -112,4 +136,12 @@ div#return {
     width: 20%;
     left: 50%;
     margin: 0 0 0 -10%;
+}
+
+div#attribution {
+    padding: 0px;
+    color: #2B2D31;
+    font-size: 1em;
+    width: 660px;
+    margin: 0 auto;
 }
