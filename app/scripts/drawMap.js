@@ -45,7 +45,7 @@ define(['leaflet', 'jquery', 'topojson'], function (L, $, topojson) {
             };
 
             // scroll to and from map on click
-            $('.sections, #map').on('click', 'a[href^=#]', function (e) {
+            $('.text, #map').on('click', 'a[href^=#]', function (e) {
 
                 var name = $(this).attr('href').substr(1);
                 var pos = $('[id=' + name + ']').offset();
@@ -61,7 +61,7 @@ define(['leaflet', 'jquery', 'topojson'], function (L, $, topojson) {
 
                 } else {
                     $('div#return').remove();
-                    $('html,body').animate({ scrollTop: pos.top });
+                    $('html,body').animate({ scrollTop: pos.top - 60 });
                     e.preventDefault();
                 }
             });

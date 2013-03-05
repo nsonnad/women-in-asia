@@ -6,48 +6,52 @@ define(['d3'], function (d3) {
         w = 470 - margin.l - margin.r,
         h = 550 - margin.t - margin.b,
         x = d3.scale.ordinal().rangeRoundBands([0, w], 1),
-        y = d3.scale.linear().range([h, 0]).domain([0, .45]),
+        y = d3.scale.linear().range([h, 0]).domain([0, 0.45]),
         color = d3.scale.category10(),
         formatPercent = d3.format('.1%'),
         formatAxis = d3.format('.0%');
 
         var data;
 
+        // dataset for comparison lines
         var globalAvg = [
-            {"region":"Nordic countries","number":"42.0"},
-            {"region":"Americas","number":"24.1"},
-            {"region":"Europe^","number":"21.8"},
-            {"region":"Sub-Saharan Africa","number":"20.8"},
-            {"region":"Arab States","number":"13.3"}
+            {'region' : 'Nordic countries', 'number' : '42.0'},
+            {'region' : 'Americas', 'number' : '24.1'},
+            {'region' : 'Europe^', 'number' : '21.8'},
+            {'region' : 'Sub-Saharan Africa', 'number' : '20.8'},
+            {'region' : 'Arab States', 'number' : '13.3'}
         ];
 
+        // dataset for asterisk footnotes
         var exceptions = [
-            {"nation":"Afghanistan","original":"Second","alternate":2006},
-            {"nation":"Pakistan","original":"Second","alternate":2003},
-            {"nation":"Maldives","original":"Second","alternate":2001},
-            {"nation":"Cambodia","original":"First","alternate":1997},
-            {"nation":"Indonesia","original":"Second","alternate":2001},
-            {"nation":"Malaysia","original":"Second","alternate":2001}
+            {'nation' : 'Afghanistan', 'original' : 'Second', 'alternate' : 2006},
+            {'nation' : 'Pakistan', 'original' : 'Second', 'alternate' : 2003},
+            {'nation' : 'Maldives', 'original' : 'Second', 'alternate' : 2001},
+            {'nation' : 'Cambodia', 'original' : 'First', 'alternate' : 1997},
+            {'nation' : 'Indonesia', 'original' : 'Second', 'alternate' : 2001},
+            {'nation' : 'Malaysia', 'original' : 'Second', 'alternate' : 2001}
         ];
 
         var parliament = d3.select('#parliament').append('svg')
             .attr('width', w + margin.l + margin.r)
             .attr('height', h + margin.t + margin.b)
-        .append("g")
+        .append('g')
             .attr({
-                transform: "translate(" + margin.l + ',' + margin.t + ")",
-                class: "parlGroup"
+                transform: 'translate(' + margin.l + ',' + margin.t + ')',
+                class: 'parlGroup'
             });
 
         d3.select('#parliament').append('div')
             .attr('class', 'parlSidebar');
 
+        // source attribution
         parliament.append('text')
             .attr('x', 10)
             .attr('y', h + margin.b - 5)
             .style('font-style', 'italic')
             .text('Source: Asian Development Bank');
 
+        // line for connecting the dots
         var line = d3.svg.line()
             .interpolate('linear')
            .x(function (d) { return x(d.year); })
@@ -55,7 +59,7 @@ define(['d3'], function (d3) {
 
         var xAxis = d3.svg.axis()
             .scale(x)
-            .orient("bottom");
+            .orient('bottom');
 
         var yAxis = d3.svg.axis()
             .scale(y)
@@ -65,47 +69,52 @@ define(['d3'], function (d3) {
             .ticks(8)
             .tickSize(6, 3, 0);
 
-        d3.csv('/data/women-parliament-asia.csv', function (csv) {
+        d3.csv('./data/women-parliament-asia.csv', function (csv) {
 
             data = csv;
 
+            // convert strings to numbers; divide by 100 for % formatting
             data.forEach(function (d) {
                 d.value = +d.value / 100;
             });
 
             globalAvg.forEach(function (d) {
                 d.number = +d.number / 100;
-            })
+            });
 
             x.domain(data.map(function (d) { return d.year; }));
 
-            var countries = d3.keys(data[0]).filter(function(key) {
-                return (key !== "year" && key !== 'value');
+            var countries = d3.keys(data[0]).filter(function (key) {
+                return (key !== 'year' && key !== 'value');
             });
 
-            var transpose = countries.map(function(name) {
+            // D3 needs a single array of values for each line
+            // Create a dataset where values for each country are in
+            // individual objects
+            var transpose = countries.map(function (name) {
                     return {
-                      name: name,
-                      values: data.map(function(d) {
-                        return {country: name, year: d.year, value: +d[name]/100};
-                      })
+                        name: name,
+                        values: data.map(function (d) {
+                            return {country: name, year: d.year, value: +d[name] / 100 };
+                        })
                     };
                 });
 
-            parliament.append("g")
-                .attr("class", "y axis")
+            parliament.append('g')
+                .attr('class', 'y axis')
                 .call(yAxis);
 
-            parliament.append("g")
-                .attr("class", "x axis")
-                .attr("transform", "translate(0," + h + ")")
+            parliament.append('g')
+                .attr('class', 'x axis')
+                .attr('transform', 'translate(0,' + h + ')')
                 .call(xAxis);
 
+            // comparison lines
             var comparisons = parliament.selectAll('.compLine')
-                .data(globalAvg)
+                .data(globalAvg);
 
             comparisons.enter().append('g')
-                .attr('class', '.parlComp')
+                .attr('class', '.parlComp');
 
             comparisons.append('line')
                 .attr({
@@ -126,10 +135,11 @@ define(['d3'], function (d3) {
                 .style('fill', '#2B2D31')
                 .text(function (d) { return d.region; });
 
+            // parliament scatterplot dots
             var parlGroup = parliament.selectAll('.dotGroup')
                 .data(transpose);
 
-            parlGroup.enter().append("g")
+            parlGroup.enter().append('g')
                 .attr('class', '.dotGroup')
                 .attr('transform', 'translate(0,0)')
                 .on('mouseover', function (d) { return drawPath(cleanClass(d.name)); })
@@ -148,46 +158,51 @@ define(['d3'], function (d3) {
                 .style('opacity', '0.7')
                 .style('cursor', 'pointer');
 
+            // parliament underlying line graph
             var parlPath = parlGroup.append('path')
                 .attr({
                     class: function (d) { return cleanClass(d.name); },
                     stroke: function (d) { return color(d.name); },
-                    "stroke-width": 2,
-                    fill: "none",
+                    'stroke-width': 2,
+                    fill: 'none',
                     d: function (d) { return line(d.values); },
                     'pointer-events': 'none'
                 });
 
-            parlPath.each(function() {
+            // set stroke-dasharray to length of total line to
+            // allow for "drawing" animation
+            parlPath.each(function () {
                 var paths = d3.select(this);
                 var totalLength = paths.node().getTotalLength();
 
                 paths
-                    .attr("stroke-dasharray", totalLength + " " + totalLength)
-                    .attr("stroke-dashoffset", totalLength);
+                    .attr('stroke-dasharray', totalLength + ' ' + totalLength)
+                    .attr('stroke-dashoffset', totalLength);
             });
 
+            // labels inside circles
             parlGroup.selectAll('text')
                 .data(function (d) { return d.values; })
             .enter().append('text')
                 .attr({
-                    fill: "white",
+                    fill: 'white',
                     class: function (d) { return cleanClass(d.country); },
                     x : function (d) { return x(d.year); },
                     y: function (d) { return y(d.value); },
                     dy: '.35em',
-                    "font-size": '1.2em',
-                    "text-anchor": "middle",
+                    'font-size': '1.2em',
+                    'text-anchor': 'middle',
                     'pointer-events': 'none'
                 })
                 .style('visibility', 'hidden')
                 .text(function (d) { return formatPercent(d.value); });
 
+            // country list on right
             d3.select('.parlSidebar').append('div')
                 .attr('class', 'parlLegend')
                 .append('ul').selectAll('li')
                 .data(transpose)
-            .enter().append('li')
+            .enter().append('li').append('a')
                 .attr('class', function (d) { return cleanClass(d.name); })
                 .style('color', function (d) { return color(d.name); })
                 .on('mouseover', function (d) { return drawPath(cleanClass(d.name)); })
@@ -203,12 +218,15 @@ define(['d3'], function (d3) {
 
         });
 
-        function drawPath (country) {
+        function drawPath(country) {
 
+            // mouseover animation
             var circles = parliament.selectAll('circle.' + country);
             var text = parliament.selectAll('text.' + country);
-            var li = d3.selectAll('.parlLegend li').filter(function() { return d3.select(this).attr('class') !== country; });
+            var a = d3.selectAll('.parlLegend a').filter(function () { return d3.select(this).attr('class') !== country; });
             var remAsterisk = country.replace('*', '');
+
+            // data point in var exception in case selected country requires a footnote
             var currException = exceptions.filter(function (d) { return d.nation === remAsterisk; });
 
             circles.each(function () {
@@ -217,72 +235,67 @@ define(['d3'], function (d3) {
 
             d3.select('path.' + country)
                 .transition().duration(600)
-                .ease("sin")
-                .attr("stroke-dashoffset", 0)
+                .ease('sin')
+                .attr('stroke-dashoffset', 0)
                 .style('opacity', '1');
 
             circles
                 .transition().duration(600)
-                .delay(function (d, i) { return i*100; })
+                .delay(function (d, i) { return i * 100; })
                 .attr('r', 22)
                 .style('opacity', '1');
 
             text
                 .transition().duration(600)
-                .delay(function (d, i) { return 300 + i*100; })
+                .delay(function (d, i) { return 300 + i * 100; })
                 .style('visibility', 'visible');
 
-            li
+            a
               .transition().duration(600)
               .style('opacity', '0.2');
 
-            function contains (d) {
-                d.country === remAsterisk;
-            }
+            if (exceptions.some(function (d) { return d.nation === remAsterisk; }) === true) {
 
-            if (exceptions.some(function (d) { return d.nation === remAsterisk; }) === true ) {
-
-                var exceptLi = d3.select('.parlNotesUl').selectAll('.exception')
+                d3.select('.parlNotesUl').selectAll('.exception')
                     .data(currException)
                 .enter().append('li')
                     .attr('class', 'exception')
-                    .style('opacity', '0.001')
+                    .style('opacity', '0.001');
 
                 d3.select('.exception').transition().duration(600)
                     .style('opacity', '1')
                     .text(function (d) { return '*' + d.original + ' data point recorded in ' + d.alternate; });
             }
-
         }
 
-        function removePath (country) {
-
+        function removePath(country) {
+            // mouseout animation
             var path = parliament.select('path.' + country);
             var totalLength = path.node().getTotalLength();
             var text = parliament.selectAll('text.' + country);
-            var li = d3.selectAll('.parlLegend li');
+            var a = d3.selectAll('.parlLegend a');
 
             path
                 .transition()
                 .duration(400)
-                .ease("sin")
-                .attr("stroke-dasharray", totalLength + " " + totalLength)
-                .attr("stroke-dashoffset", totalLength)
+                .ease('sin')
+                .attr('stroke-dasharray', totalLength + ' ' + totalLength)
+                .attr('stroke-dashoffset', totalLength)
                 .style('opacity', '0.2');
 
             d3.selectAll('circle.' + country)
                 .transition()
                 .duration(400)
-                .delay(function (d, i) { return i*75; })
+                .delay(function (d, i) { return i * 75; })
                 .attr('r', 8)
                 .style('opacity', '0.7');
 
             text
                 .transition().duration(600)
-                .delay(function (d, i) { return i*75; })
+                .delay(function (d, i) { return i * 75; })
                 .style('visibility', 'hidden');
 
-            li
+            a
               .transition().duration(600)
               .style('opacity', '1');
 
@@ -295,7 +308,7 @@ define(['d3'], function (d3) {
         function cleanClass(name) {
             return name.replace(/\s/g, '').replace('*', '');
         }
-    }
+    };
     return {
         init: init
     };

@@ -7,12 +7,14 @@ define(['d3'], function (d3) {
         w = 600 - margin.l - margin.r,
         h = 620 - margin.t - margin.b,
         x = d3.scale.linear().range([0, w]).domain([0, 2.2]),
-        y = d3.scale.ordinal().rangeRoundBands([0, h], 0.5);
+        y = d3.scale.ordinal().rangeRoundBands([0, h], 0.5),
+        formatDecimal = d3.format('.2f');
 
         var colorScale = d3.scale.linear()
                 .domain([0.3, 2]).interpolate(d3.interpolateHsl)
                 .range(['#A8322E', '#EDC5C4']);
 
+        // object used to draw comparison OECD average line
         var oecd = [{'Primary': 0.99, 'Secondary': 1.01, 'Tertiary': 1.29}];
 
         var eduData;
@@ -67,10 +69,7 @@ define(['d3'], function (d3) {
 
         function drawEdu(dataset) {
 
-            eduData.filter(function (d) {
-                return d[dataset].ratio !== 'null';
-            });
-
+            // sort data based on girl:boy ratios
             var ySort = y.domain(eduData.sort(function (a, b) {
                     return d3.ascending(b[dataset].ratio, a[dataset].ratio);
                 })
@@ -81,26 +80,39 @@ define(['d3'], function (d3) {
 
             var rectEnter = rect.enter().append('g')
                 .attr('transform', function (d) { return 'translate(0,' + ySort(d.country) + ')'; })
-                .attr('class', 'rectGroup');
+                .attr('class', 'rectGroup')
+                .on('mouseover', mouseOn)
+                .on('mouseout', mouseOff);
 
             rectEnter.append('rect')
                 .attr({
                     width: function (d) { return x(d[dataset].ratio); },
-                    height: 12,
+                    height: 15,
                     fill: function (d) {
                         return colorScale(d[dataset].ratio);
                     },
                     class: 'rects'
                 });
 
+            // append country labels and mouseover labels
             rectEnter.append('text')
                 .attr('class', 'label')
-                    .attr('x', -3)
-                    .attr('y', y.rangeBand() / 2)
-                    .attr('dy', '.35em')
-                    .attr('text-anchor', 'end')
-                    .text(function (d) { return d.country; });
+                .attr('x', -3)
+                .attr('y', y.rangeBand() / 2)
+                .attr('dy', '.45em')
+                .attr('text-anchor', 'end')
+                .text(function (d) { return d.country; });
 
+            rectEnter.append('text')
+                .attr('class', 'eduHover')
+                .attr('x', function (d) { return x(d[dataset].ratio) / 2; })
+                .attr('dy', '.45em')
+                .attr('y', y.rangeBand() / 2)
+                .style('opacity', '0.001')
+                .style('fill', 'white')
+                .text(function (d) { return formatDecimal(d[dataset].ratio); })
+
+            // line for comparison to OECD
             var oecdLine = eduChart.selectAll('.oecdLine')
                 .data(oecd);
 
@@ -126,10 +138,8 @@ define(['d3'], function (d3) {
         }
 
         function updateEdu(dataset) {
-            eduData.filter(function (d) {
-                return d[dataset].ratio !== 'null';
-            });
 
+        // update everything
             var ySort = y.domain(eduData.sort(function (a, b) {
                     return d3.ascending(b[dataset].ratio, a[dataset].ratio);
                 })
@@ -150,7 +160,7 @@ define(['d3'], function (d3) {
                 .delay(delay)
                 .attr('transform', function (d) {
                     return 'translate(0,' + ySort(d.country) + ')';
-                });
+                })
 
             rectUpdate.selectAll('.oecdLine')
                 .attr({
@@ -160,13 +170,36 @@ define(['d3'], function (d3) {
                     x2: function (d) { return x(d[dataset]); }
                 });
 
+            rectUpdate.selectAll('.eduHover')
+                .attr('x', function (d) { return x(d[dataset].ratio) / 2; })
+                .text(function (d) { return formatDecimal(d[dataset].ratio); })
+
             rectUpdate.selectAll('.oecdLabel')
                 .attr('x', function (d) { return x(d[dataset]) + 10; });
 
         }
 
-        d3.selectAll('.eduControl').on('click', function () {
+        function mouseOn () {
+            // fade out everything but selected
+            var selected = this;
+            d3.selectAll('.rectGroup').transition().style('opacity',function () {
+                return (this === selected) ? 1.0 : 0.5;
+            });
 
+            d3.select(this).select('.eduHover').transition()
+                .style('opacity', '1.0')
+        }
+
+        function mouseOff () {
+            // revert to normal
+            d3.selectAll('.rectGroup').transition().style('opacity', '1.0');
+
+            d3.select(this).select('.eduHover').transition()
+                .style('opacity', '1e-6')
+        }
+
+        d3.selectAll('.eduControl').on('click', function () {
+            // update chart on click
                 var text = this.innerHTML;
 
                 d3.selectAll('.eduControl').style('color', null);

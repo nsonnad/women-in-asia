@@ -63,14 +63,12 @@ span.eduControl {
     cursor: pointer;
 }
 
-span.active {
-    color: orange;
-}
-
 .oecdLabel {
     font-size: 16px;
     color: #2B2D31;
 }
+
+text.eduHover { text-shadow: 1px 1px #6B707B; }
 
 div#education .xLabels {
     font-style: italic;
@@ -216,8 +214,9 @@ div.parlLegend ul {
 div.parlLegend li {
     margin: 0;
     padding: 0;
-    cursor: pointer;
 }
+
+div.parlLegend a:hover { cursor: pointer; text-decoration: none; }
 
 ul.parlNotesUl {
     color: #2B2D31;
