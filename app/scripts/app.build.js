@@ -18,7 +18,7 @@
         propertyParser: 'vendor/requirejs-plugins/src/propertyParser'
     },
     shim: {
-        'jquery': { exports: '$' },
+        'jquery': { exoprts: '$' },
         'd3': { exports: 'd3' },
         'leaflet': { exports: 'L' },
         'topojson': { exports: 'topojson' }

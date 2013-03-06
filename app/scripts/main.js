@@ -20,7 +20,10 @@ require.config({
 
 });
 
-require(['jquery', 'd3', 'leaflet', 'topojson', 'app'], function ($, d3, L, topojson, app) {
+require(['font!google,families:[Enriqueta:400,700]', 'jquery', 'd3', 'leaflet', 'topojson', 'app'], function (font, $, d3, L, topojson, app) {
     'use strict';
+    $('#loader').remove();
+    // $('#headline').hide().fadeIn(2500);
+    // $('#container').removeClass('loading').addClass('loaded');
     app.init();
 });

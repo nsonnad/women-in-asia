@@ -1,10 +1,16 @@
 /*@import url('leaflet.css');*/
 @import url('charts.css');
 
+#loader { font-family: sans-serif; text-align: center; width: auto; margin-top: 100px; }
+
+.loading { visibility: hidden; }
+.loaded { visibility: visible;}
+
 body {
     background-color: hsl(122,50%,97%);
-    font-family: 'Enriqueta', serif;
 }
+
+blockquote { margin:15px 40px; font-style: italic;}
 
 body,html {
     width: 100%;
@@ -37,6 +43,7 @@ div#nav {
 #container {
     margin: 0 auto;
     width: 100%;
+    font-family: 'Enriqueta', serif;
 }
 
 a {
@@ -89,14 +96,14 @@ div#headline {
 
 div#headlineWrap {
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 25%;
     right: 15%;
 }
 
 div#headline h2 {
     text-shadow: 2px 1px #2B2D31;
-    font-size: 7em;
+    font-size: 6em;
     float:left;
     margin-bottom:-30px;
     color: hsl(122,50%,97%);
@@ -104,7 +111,7 @@ div#headline h2 {
 
 div#headline h3 {
     text-shadow: 2px 1px #2B2D31;
-    font-size: 2.5em;
+    font-size: 2em;
     float:left;
     color: hsl(122,50%,97%);
 }
