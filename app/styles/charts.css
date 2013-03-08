@@ -5,6 +5,17 @@ div.chart {
     color: #2B2D31;
 }
 
+div.chart ul {
+    list-style-type: none;
+    margin: 0px 0;
+    padding: 0;
+}
+
+div.chart li {
+    margin: 10px 0;
+    padding: 0;
+}
+
 div#map {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100);
@@ -91,7 +102,7 @@ div#surveys {
 
 div#surveyControls {
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 20px;
 }
 
@@ -125,21 +136,19 @@ div#sexRatio {
     position: relative;
 }
 
-div.sexControls {
+div.sexControls, div.boardControls {
     position: absolute;
-    top: 40px;
-    float: left;
+    top: 30px;
     background: white;
     background: rgba(255,255,255,.9);
-
     -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.2);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    padding: 10px 16px 10px 25px;
-    width: 300px;
     color: #2B2D31;
 }
 
-div.sexCountries,div.sexLegend {
+div.sexControls { float:left; width: 300px; padding: 10px 16px 10px 25px; }
+
+div.sexCountries, div.sexLegend {
     float: left;
     width: 100%;
 }
@@ -169,7 +178,7 @@ div.sexLegend h3 {
     margin-right: 20px;
 }
 
-ul.countries {
+ul.countries, ul.boardChoices {
     font-size: 1.2em;
     list-style-type: none;
     line-height: 1.5em;
@@ -227,7 +236,42 @@ ul.parlNotesUl {
 
 ul.parlNotesUl li {
     font-size: 1em;
-    margin: 10px 0;
-    padding: 0;
     font-style: italic;
+}
+
+/* board chart */
+div#board {
+    position:relative;
+}
+
+div.boardControls {
+    left: 50%;
+    margin-left: -300px;
+    width: 600px;
+    padding: 10px 20px;
+}
+
+ul.boardChoices li {
+    float: left;
+    display: inline;
+    width: 50%;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+div.boardLegend {
+    /*margin-top: 25px;*/
+    float:left;
+}
+
+div.boardLegend h3 {
+    /*margin-top: 25px;*/
+    margin: 8px 0px 2px 0px;
+}
+
+div.boardLegend li {
+    font-size: 14px;
+    display:inline;
+    margin-right: 20px;
 }

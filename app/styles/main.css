@@ -1,10 +1,30 @@
 /*@import url('leaflet.css');*/
 @import url('charts.css');
+@import url('tipsy.css');
 
-#loader { font-family: sans-serif; text-align: center; width: auto; margin-top: 100px; }
+#loader {
+    font-family: sans-serif;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    padding: 15px 0;
+    opacity: 0.8;
+    background-color: hsl(122,50%,97%);
+    position:absolute;
+}
 
-.loading { visibility: hidden; }
-.loaded { visibility: visible;}
+#loader p {
+    font-size:1.3em;
+    line-height: 1.4em; }
+
+.loading {
+    display: none;
+}
+
+.loaded {
+    display: inline;
+}
+
 
 body {
     background-color: hsl(122,50%,97%);
@@ -26,6 +46,7 @@ div#navWrap {
     width: 100%;
     z-index: 1;
     top: 0;
+    display:none;
 }
 
 div#nav {
@@ -40,7 +61,13 @@ div#nav {
 
 #nav li { display: inline; margin: 0px 12px;}
 
-#container {
+#container1 {
+    margin: 0 auto;
+    width: 100%;
+    font-family: 'Enriqueta', serif;
+}
+
+#container2 {
     margin: 0 auto;
     width: 100%;
     font-family: 'Enriqueta', serif;
@@ -92,6 +119,7 @@ div.images h1 {
 
 div#headline {
     background-image: url('../images/woman-with-kids.jpg');
+    visibility: visible;
 }
 
 div#headlineWrap {
@@ -99,6 +127,8 @@ div#headlineWrap {
     top: 35%;
     left: 25%;
     right: 15%;
+    font-family: 'Enriqueta', serif;
+    display:none;
 }
 
 div#headline h2 {
@@ -175,5 +205,6 @@ div#attribution {
     color: #2B2D31;
     font-size: 1em;
     width: 660px;
-    margin: 0 auto;
+    margin: 100px auto;
+    clear:both;
 }

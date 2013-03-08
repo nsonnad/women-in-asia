@@ -1,4 +1,4 @@
-define(['drawMap', 'education', 'surveys', 'sexRatio', 'parliament', 'scroll'], function (drawMap, education, surveys, sexRatio, parliament, scroll) {
+define(['drawMap', 'education', 'surveys', 'sexRatio', 'parliament', 'boards', 'scroll'], function (drawMap, education, surveys, sexRatio, parliament, boards, scroll) {
     'use strict';
     var init = function () {
         drawMap.init();
@@ -6,6 +6,7 @@ define(['drawMap', 'education', 'surveys', 'sexRatio', 'parliament', 'scroll'], 
         surveys.init();
         sexRatio.init();
         parliament.init();
+        boards.init();
         scroll;
     };
 

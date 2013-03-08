@@ -170,14 +170,15 @@ define(['d3'], function (d3) {
                 });
 
             // set stroke-dasharray to length of total line to
-            // allow for "drawing" animation
+            // for "drawing" animation
             parlPath.each(function () {
                 var paths = d3.select(this);
                 var totalLength = paths.node().getTotalLength();
 
                 paths
                     .attr('stroke-dasharray', totalLength + ' ' + totalLength)
-                    .attr('stroke-dashoffset', totalLength);
+                    .attr('stroke-dashoffset', totalLength)
+                    .style('opacity', '1e-6');
             });
 
             // labels inside circles
@@ -281,7 +282,7 @@ define(['d3'], function (d3) {
                 .ease('sin')
                 .attr('stroke-dasharray', totalLength + ' ' + totalLength)
                 .attr('stroke-dashoffset', totalLength)
-                .style('opacity', '0.2');
+                .style('opacity', '1e-6');
 
             d3.selectAll('circle.' + country)
                 .transition()

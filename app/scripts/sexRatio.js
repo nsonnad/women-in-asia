@@ -28,7 +28,7 @@ define(['d3'], function (d3) {
             });
 
         var sexControls = d3.select('#sexRatio').append('div')
-            .attr('width', 200)
+            .attr('width', 300)
             .attr('class', 'sexControls')
             .html('<h2>View sex ratio data for:</h2>');
 
@@ -50,6 +50,11 @@ define(['d3'], function (d3) {
                 .attr('class', 'countryLink')
                 .append('a')
                 .style('cursor', 'pointer')
+                .on('click', function (d) {
+                    d3.selectAll('.countryLink a').style('color', null);
+                    d3.select(this).style('color', '#E5ABA9');
+                    return drawNodes(d.country);
+                })
                 .text(function (d) { return d.country; });
 
             // determine number of 'missing' girls
@@ -57,9 +62,6 @@ define(['d3'], function (d3) {
                 d.node = {name: d.country, boys: 105,
                 girls: 100 - d['missing-girls'], missing: +d['missing-girls'] };
             });
-
-            sexControls.selectAll('.countryLink')
-                .on('click', function (d) { return drawNodes(d.country); });
 
         });
 

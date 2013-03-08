@@ -197,24 +197,28 @@ define(['d3'], function (d3) {
         }
 
         function mouseOn() {
+            var thisClass;
+
             if (d3.select(this).attr('class') === 'legend') {
-                var thisClass = d3.select(this).attr('id');
+                thisClass = d3.select(this).attr('id');
                 d3.selectAll('text.' + thisClass).style('visibility', 'visible');
                 d3.select('#' + thisClass).style('opacity', '0.9');
             } else {
-                var thisClass = d3.select(this).attr('class');
+                thisClass = d3.select(this).attr('class');
                 d3.selectAll('text.' + thisClass).style('visibility', 'visible');
                 d3.select('#' + thisClass).style('opacity', '0.9');
             }
         }
 
         function mouseOff() {
+            var thisClass;
+
             if (d3.select(this).attr('class') === 'legend') {
-                var thisClass = d3.select(this).attr('id');
+                thisClass = d3.select(this).attr('id');
                 d3.selectAll('.barText').style('visibility', 'hidden');
                 d3.select('#' + thisClass).style('opacity', '0.2');
             } else {
-                var thisClass = d3.select(this).attr('class');
+                thisClass = d3.select(this).attr('class');
                 d3.selectAll('.barText').style('visibility', 'hidden');
                 d3.select('#' + thisClass).style('opacity', '0.2');
             }

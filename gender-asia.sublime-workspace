@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"fsi",
+				"font-size"
+			],
+			[
+				"color",
+				"colorScales"
+			],
+			[
+				"sexC",
+				"sexControls"
+			],
+			[
+				"line",
+				"line-height"
+			],
+			[
+				"rect",
+				"rectGroup"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
 				"lege",
 				"legendDiv"
 			],
@@ -84,10 +108,6 @@
 				"font-family"
 			],
 			[
-				"color",
-				"colorBlends"
-			],
-			[
 				"fu",
 				"fun	Function"
 			],
@@ -132,10 +152,6 @@
 				"rectUpdate1"
 			],
 			[
-				"rect",
-				"rectUpdate"
-			],
-			[
 				"format",
 				"formatTime"
 			],
@@ -167,13 +183,76 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 26438,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/main.js",
+			"settings":
+			{
+				"buffer_size": 1078,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/charts.css",
+			"settings":
+			{
+				"buffer_size": 4128,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/main.css",
+			"settings":
+			{
+				"buffer_size": 3324,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/app.js",
+			"settings":
+			{
+				"buffer_size": 419,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "To succeed in western business or politics today, one need only mention the word \"Asia\" as frequently as possible. If unsure what to say about the region, accusing rivals of being too slow to adapt to the eastward shift is a good way to stay ahead.\n\nEconomic figures seem to legitimate the obsession with Asia. China is poised to [overtake the US](http://www.bloomberg.com/news/2012-02-21/china-to-overtake-u-s-as-largest-trading-nation-hsbc-says.html) as the world's largest trading nation in 2016. Asian countries sit atop rankings of everything from [consumer confidence](http://www.nielsen.com/us/en/insights/reports-downloads/2012/global-consumer-confidence-q2-2012.html) to [educational performance](http://www.oecd.org/pisa/46643496.pdf) (PDF).\n\nYet even as Asian countries catch up to the dominant powers of yesterday across a host of national-level statistics, one group has been left behind. Making up at least half the population, this group is, needless to say, women.\n\nWhat follows is an in-depth look at the status of women across Asia, with an emphasis on looking at important statistics. The map below serves as a convenient geographical and statistical reference for readers. Throughout the article, clicking on the name of a country will bring you back to the map, giving you a nation's location and essential figures.\n\n<!-- map -->\n\nMany will contend that attempting to say anything meaningful about \"Asia\" -- home to well over half of the earth's population -- is a hopeless endeavor. The same goes for \"women\", an equally diverse and therefore meaningless category. I agree. And the diversity of the statistics presented here points to the error of having a discussion in such sweeping terms. Nevertheless, only through applying these abstract concepts are we able to see that the meteoric economic rise of Asia has been unequal.\n\n##Education\n\nFirst, the good news. Education has long been viewed as a means of reducing unequal development within or across countries, and Asian girls have largely caught up to boys in this vital area. The task set to developing countries by the UN's Millennium Development Goals (MDGs) is to \"eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education not later than 2015\".\n\nThis has been achieved outright in East Asia, where the number of girls for every 10 boys in primary and secondary school has risen from just under 8.5 to almost 10.3 in the 20 years since 1983, according to the World Bank. There is more work to be done in South Asia, but the figure there has leapt from 6.24 to 9.5. On this indicator many Asian nations now perform alongside or above their counterparts in the OECD, a group of mostly developed countries, despite the former group's relatively low incomes. In China, the ratio was measured at 9.1 girls for every 10 boys in 1991, compared to 10.3 today. The Indian rate was more dramatic in that time period, expanding from 7.6 girls to 10.\n\n##Chasing the OECD\n\nClicking between \"Primary\" and \"Secondary\" on the following chart -- which measures the most recent data on the ratio of girls to boys in school -- shows that the median level for Asian countries falls around the OECD average.\n<!-- edu chart -->\n\nBut select \"Tertiary\" and a different picture emerges. In Bangladesh there are just 61% as many women as men in college-level education, as of 2009. This statistic also reveals the fact that high levels of economic growth do not translate to equal status for women at the top of society: two of the worst performers are extremely wealthy South Korea (72%) and Japan (89%), while relatively poor Sri Lanka does well (192%). Sri Lanka's success in this area is in part the result of there being fewer jobs available for women in the first place, leading them to study indefinitely. But if anything this points to the amount of work that needs to be done in countries like Laos (77%), Cambodia (53%) and Nepal (40%), and indeed Japan and South Korea, where women neither make up a majority of the workforce nor of students in higher education.\n\nThat the laudable goal of achieving equality in education has largely been met is inspiring. Yet disturbingly, and to the chagrin of economists that saw democratizing access to education as a development panacea, this trend has had little impact on other measures of gender equality. And while performance has been good for primary and secondary school, variation increases dramatically at the tertiary level, with many countries falling far below the OECD average of just under 1.3 girls for each boy for the highest level. While Asian women are learning more, they are not on a level playing field.\n\nAs we will see in the next section, attitudes about women in many parts of Asia remain a stubborn obstacle to their being able to apply the skills and knowledge they have acquired through equalization of early education.\n\n<!-- attitudes section photo/title -->\n\nGirls in Asia are learning more than ever and have seen firsthand the fastest economic growth in human history. Despite these gains, they remain disproportionately out of positions of influence (see \"Influence\" section below) and are in general less able to become empowered, capable agents. In his book *Development as Freedom*, Amartya Sen called poverty \"a deprivation of basic capabilities\". According to this logic, women in Asia are \"poorer\" than men, facing institutional and social barriers to exercising their capabilities. How to explain this fact, given the rapid growth of Asia?\n\nOne explanation is attitudes. Compared to other regions of the world -- parts of the Middle East being an exception -- Asian society puts women on unequal footing with men.\n\n## Perceptions: Better, but bad\n\nThe chart below shows the results of three separate surveys on views of women, carried out by the [Pew Global Attitudes Project](http://www.pewglobal.org/) in 2010. While only 20 countries were included in the survey, the largest and most influential nations from each part of the world are represented. (Those from Asia -- China, India, Indonesia, Japan, Pakistan and South Korea -- together account for three-quarters of the continent's total population.)\n\nPew asked random population samples from each country about women's capability to serve as politicians, whether they have a right to work when jobs are scarce, and whether they should be able to work outside the home at all. The Asian countries are highlighted below in red. (Please note that survey results do not always add up exactly to 100%, hence the uneven bars.)\n\n<!-- Pew chart -->\n\nSome of the discrepancies here are quite dramatic, especially when Asian countries are compared to their western counterparts. In [India](#map) and [Pakistan](#map) over half of those surveyed said they \"completely agree\" that \"men should have more right to a job than women\" when jobs are scarce. It was around or above a quarter of respondents for [China](#map), [Indonesia](#map) and [South Korea](#map). On this question, \"completely agree\" only made up 4% of responses in Britain, Germany and the US. The gap grows even wider when \"completely agree\" and \"mostly agree\" are taken together.\n\nThe trends are less clear for the other two questions. When asked about women's ability to serve as political leaders, [India](#map) registered the *highest* figure for of those saying that women are in fact better politicians, following its tradition of strong female leaders, including Sonia Gandhi and Mamata Banerjee. The story is different for [China](#map). While Mao Zedong famously announced that \"women hold up half the sky\", they hold up only 23% of the Chinese Communist Party, [according to the Council on Foreign Relations](http://www.cfr.org/china/chinese-communist-party/p29443). And only 4% of Chinese respondents said women make better political leaders than men, with 28% saying the opposite. Western and Latin American countries are more likely than Asian ones ([Japan](#map) excepted) to say that men and women make equally good politicians.\n\nFinally, the results for the question about women working outside the home appear to implicate everyone. Shockingly, Brazil, Britain and the US were the only nations in which 80% or more respondents said they \"completely agree\" that women should work outside the home (Germany is close). As in the other surveys, East Asian countries and [India](#map) perform worse than counterparts in Latin America and the west, but better than those in the Middle East. This is not true of [Pakistan](#map) and [Indonesia](#map) -- presumably for religions reasons -- which look more like Egypt and Jordan.\n\n## Sex ratios: Asia's 'missing girls' ##\n\nMara Hvistendahl called it \"unnatural selection\" in [her book](http://www.goodreads.com/book/show/11467568-unnatural-selection) of that title. The subtitle is more revealing: \"Choosing Boys over Girls and the Consequences of a World Full of Men\". What Hvistendahl's book and a number of other reports describe is the wildly distorted proportions of men to women, or sex ratios, in Asia.\n\nBiologically, the figure should be 105 boys for every 100 girls at the time of birth. (Women live longer, so this ratio leads to a more or less 50:50 breakdown of a population's sex.) But in Asia, these figures are dramatically skewed in favor of more boys.\n\nGiven what we have just seen on attitudes toward women in society, it is not surprising that Asian families would prefer sons to daughters. It might come as a surprise, however, that this preference manifests itself in such horrors as sex-selective abortion and the killing of female babies. [Over 100m girls](http://www.economist.com/node/15606229) are thought to have \"disappeared\" this way. Even baby girls that make it into adolescence are not likely to be given the same care as their brothers: all evidence suggests that nursing mothers breastfeed sons much more than daughters.\n\nThe interactive chart on sex ratio data below represents data on 12 Asian countries with \"unnatural\" sex ratios, extrapolating from 2010 World Bank figures to estimate the number of girls that went \"missing\" that year. It also shows an image of the number of girls each country is away from the biological ratio of 105 boys for every 100 girls.\n\n<!-- sex ratio interactive -->\n\nKeep in mind that the data here are from a single year, 2010, so the conclusions drawn by the chart may well be above or below long-term trends. Nevertheless, it is worth reducing the timespan in order to wrap our minds around a back-of-the-envelope estimate of how many girls are \"missing\" from one year to another. These numbers are most horrifying in [China](#map) and [India](#map), which is not a surprise given their enormous populations. The skewed ratios put the number of missing Indian women at over 190,000 for 2010, while that figure is an inconceivable 507,000 in China.\n\nThe one-child policy deserves a lot of blame for the distortions in China, but the fact that male-child preference is so strong in other countries as well shows that it is not the only culprit. Even in rich [South Korea](#map), there were only 96 girls for every 105 boys in 2010. So the problem is deeper than government policy.\n\nTo see how more education for Asian girls has been impeded by attitudes toward them, we will need to look at the far lesser degree of influence women have in the region today.\n\n<!-- Influence -->\nCivil rights advocates have always faced a catch-22: people without power are always the most in need of help from people in power. Even with higher levels of education, the attitudes toward and capabilities of women in Asia are not likely to change unless they are able to throw their weight around at the very top of the social ladder.\n\n##From homemaker to lawmaker\nParliaments and congresses often look like talking shops with more emphasis on spectacle than lawmaking. But the representation of women in a country's legislative process is in most countries shamefully low.\n\nWhat follows here is a chart mapping out women as a proportion of parliaments in Asian countries (including, not very appropriately, New Zealand and Australia) for 1990, 2000 and 2010. Roll over a country name or circle to see how that place's figure has changed over time. Also note the lines comparing these figures to the averages for other regions.\n\n<!-- parliament chart -->\n\nTwo things stand out immediately. First, gains appear to have been made since 1990. Second, the Nordic countries are living in the future.\n\nFor many, the solution to this lack of representation has been to implement national parliamentary quotas. The effect of such a change can be seen if you roll the mouse over [Afghanistan](#map) and watch the figure leap from under 4% to over 27%; a law passed in 2005 guaranteed a quarter of seats for women. (Note the footnote that the second data point for Afghanistan was recorded in 2006.)\n\nBut quotas can often be seen as an upper limit as opposed to a minimum. A [2011 report](http://www.ipu.org/pdf/publications/wmnpersp11-e.pdf) from the Inter-Parliamentary Union shows how this can go wrong:\n\n>>An unintentional side effect of quotas became apparent in Uganda in 2011, where women predominantly ran for those seats reserved for women. A total of 443 women ran for 112 seats.\n\nAdding to the incrimination of quotas is the fact that none of the Nordic countries has a national minimum.\n\nThe chart also shows that progress has been slow and at times flat or even negative. In [Malaysia](#map), often touted by western countries as a stable and inclusive democracy, the number of women in parliament has remained unchanged since 2001. It has barely moved in [Sri Lanka](#map) and the [Maldives](#map). Note that the massive drop-off in the [Mongolian](#map) number is outdated: a quota [was passed last year](http://asiafoundation.org/in-asia/2012/08/22/number-of-seats-held-by-women-in-mongolias-parliament-triples/). Countries that appear to be on the right path include [Cambodia](#map), [Indonesia](#map), [South Korea](#map) and [Singapore](#map), among others.\n\n## The corporate ladder\n\nThe corridors of power lie not only in houses of parliament. Any good Occupy Wall Streeter will tell you that corporations now exert all the influence. If Asian women are mostly sidelined from government, are they more able to push an agenda through the business world? Not exactly. As we have seen with other measures, in the world of business Asian women are on the whole ahead of their peers in Latin America and the Middle East when it comes to equality, and approaching a par with many European countries.\n\nThe final chart in this report demonstrates the varying levels of corporate influence women have across the world. Drawing from data released by GMI Ratings for its [2012 Women on Boards Survey](http://library.constantcontact.com/download/get/file/1102561686275-86/GMIRatings_WOB_032012.pdf) (PDF), it shows percentages for four important but distinct indicators: (1) women as a percentage of total board members in the country; (2) companies with at least one female director; (3) companies with at least three female directors; and (4) companies with a female chair. Click on one of these four options below to launch the chart.\n\n<!-- boards chart -->\n\nThe several donut chart design here makes it a bit difficult to compare regions in detail, but it does allow for a broad understanding. The first thing to note is that Nordics are again in a league of their own, and as such, we can safely ignore them in our analysis.\n\nTaking out [New Zealand](#map) and [Australia](#map) -- which arguably don't belong in this discussion of \"Asia\" -- the blue Asian countries perform slightly worse than those in Europe. Don't be fooled, though, as Europe is not without its stubborn old boys' clubs. In Italy and Portugal, women account for a dreadfully low 4.5% and 2.3% of board members, respectively.\n\nOne trend we have seen throughout this report manifests itself again, namely that women in [Japan](#map) and [South Korea](#map), while living in two of the biggest Asian success stories, have little say. In those countries, women make up only 1.1% and 1.9% of boards. Asian countries do notably better here than those in Latin America: none of the four nations from the latter region have any companies with more than three female board members.[Thailand](#map) is perhaps Asia's best performer, with nearly three-quarters of its companies having one or more board members and 27.8% with three or more.\n\nAnd another theme returns. While women in Asia have a lot of ground to gain, things are not necessarily much better elsewhere. No country, not even the Nordics, can boast having women at the top of the corporate ladder in more than 12.5% of its companies. In most countries listed here the percentage of female chairs at companies is an unforgiving zero.\n\n## What now?\n\nThe aim of this report is to inform on the status of Asian women as they are today and have been in the recent past. It is beyond its scope to make any attempts at solving problems or calling out culprits.\n\nWhat I believe should be concluded, however, is that the \"Asian growth miracle\" needs to be viewed with much more scrutiny than it has been so far. Many of the region's developing countries have reached the point at which economic growth can no longer be justified as an end in itself. China is the assumed future leader of the world despite deep social tension. Samsung et al have spread wealth across South Korea, even as women there hold almost no power (except for [the daughters of former dictators](http://en.wikipedia.org/wiki/Park_Geun-hye)). India's recent gang rape case caused an outcry not because of the incident's rarity but because it is a common occurrence. \n\nAs my first heading suggested, the economic tide of the Pacific has risen for men more than it has for women. If they are to hold up half the sky, they should be given half the sea.\n\n## Attributions and Acknowledgments\n\nJust about everything you see on this page was designed, written, developed or researched by me, [Nikhil Sonnad](https://twitter.com/nsonnad). But it's no longer possible to do anything totally on one's own. Here are some projects and people I must tip my digital hat to:\n\n### Photos:\n1. \"A woman and her children in a rural area of the northern Indian subcontinent\", by [Pragya](http://en.wikipedia.org/wiki/File:10-pragya-5295.jpg)\n2. \"International Women's Day\", by [Asian Development Bank](http://www.flickr.com/photos/asiandevelopmentbank/6861301274/)\n3. \"Women from a community in Nepal that benefits from UK aid\", by [UK Department for International Development](http://www.flickr.com/photos/14214150@N02/6966758171)\n4. \"Women as China's Way Forward\", by [World Economic Forum](http://www.flickr.com/photos/15237218@N00/7981947606)\n\n### Technological debts owed to:\n1. [D3js](http://d3js.org/)\n2. [Leaflet.js](http://leafletjs.com/)\n3. [MapBox](http://mapbox.com/)\n4. [Topojson](https://github.com/mbostock/topojson/)\n5. [Yeoman](http://yeoman.io/)\n6. [Google Web Fonts Enriqueta](http://www.google.com/webfonts/specimen/Enriqueta)\n7. [Requirejs plugins by millermedeiros](https://github.com/millermedeiros/requirejs-plugins)\n8. [Open Refine](http://openrefine.org/)\n\n###Data:\n\nAll data sources used are openly available and specified on individual charts. If you'd like me to share details on any of the data I've collected for this project, or how to access it, feel free to [contact me](mailto:nikhil@theoldbeggar.com).",
+			"file": "app/text.md",
+			"file_size": 15657,
+			"file_write_time": 1362627922000000,
+			"settings":
+			{
+				"buffer_size": 19529,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/app.build.js",
+			"settings":
+			{
+				"buffer_size": 695,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/JSHint/JSHint.sublime-build",
 	"command_palette":
 	{
-		"height": 159.0,
+		"height": 222.0,
 		"selected_items":
 		[
+			[
+				"gist",
+				"Gist: Open Gist"
+			],
 			[
 				"projec",
 				"File: Copy Path From Project"
@@ -209,10 +288,6 @@
 			[
 				"color",
 				"Color picker"
-			],
-			[
-				"gist",
-				"Gist: Open Gist"
 			],
 			[
 				"copy",
@@ -303,7 +378,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 449.0
+		"width": 467.0
 	},
 	"console":
 	{
@@ -320,22 +395,34 @@
 	},
 	"file_history":
 	[
+		"/home/nikhil/projects/women-asia/dist/index.html",
+		"/home/nikhil/projects/women-asia/app/scripts/boards.js",
+		"/home/nikhil/projects/women-asia/app/data/women-on-boards.csv",
+		"/home/nikhil/projects/women-asia/app/scripts/education.js",
+		"/home/nikhil/projects/women-asia/app/scripts/sexRatio.js",
+		"/var/www/d3-datavis/us-energy-use/us-historical-energy.html",
+		"/var/www/d3-datavis/trust-business/trust-business.html",
+		"/home/nikhil/projects/women-asia/app/styles/tipsy.css",
+		"/home/nikhil/projects/women-asia/app/styles/charts.css",
+		"/home/nikhil/projects/women-asia/app/scripts/parliament.js",
+		"/var/www/gists/3888852/index.html",
+		"/home/nikhil/projects/women-asia/app/scripts/app.js",
+		"/home/nikhil/projects/women-asia/app/scripts/main.js",
+		"/home/nikhil/projects/women-asia/app/scripts/surveys.js",
+		"/home/nikhil/projects/women-asia/app/styles/main.css",
+		"/home/nikhil/projects/women-asia/app/scripts/app.build.js",
+		"/home/nikhil/projects/women-asia/app/index.html",
+		"/home/nikhil/projects/women-asia/app/scripts/scroll.js",
+		"/home/nikhil/projects/women-asia/app/text.md",
+		"/var/www/tob-new/public/docs/css/screen.css",
 		"/home/nikhil/projects/tester/Gruntfile.js",
 		"/home/nikhil/.bashrc",
-		"/home/nikhil/projects/women-asia/app/scripts/main.js",
 		"/home/nikhil/projects/women-asia/Gruntfile.js",
 		"/home/nikhil/projects/tester/app/scripts/app.js",
 		"/home/nikhil/projects/women-asia/node_modules/grunt-requirejs/node_modules/requirejs/bin/r.js",
 		"/home/nikhil/projects/women-asia/dist/scripts/amd-app.js",
-		"/home/nikhil/projects/women-asia/app/styles/main.css",
-		"/home/nikhil/projects/women-asia/app/index.html",
 		"/home/nikhil/projects/women-asia/app/scripts/drawMap.js",
-		"/home/nikhil/projects/women-asia/app/scripts/education.js",
-		"/home/nikhil/projects/women-asia/app/scripts/surveys.js",
-		"/home/nikhil/projects/women-asia/app/scripts/sexRatio.js",
-		"/home/nikhil/projects/women-asia/app/scripts/app.js",
 		"/home/nikhil/projects/women-asia/app/components/leaflet/dist/leaflet.css",
-		"/home/nikhil/projects/women-asia/app/styles/charts.css",
 		"/home/nikhil/projects/women-asia/.jshintrc",
 		"/home/nikhil/projects/women-asia/node_modules/grunt-contrib-jshint/.jshintrc",
 		"/home/nikhil/projects/women-asia/app/data/sex-ratio.csv",
@@ -361,7 +448,6 @@
 		"/var/www/d3-datavis/brics-mist/brics-mist.html",
 		"/home/nikhil/projects/gender-asia/app/scripts/survey.js",
 		"/home/nikhil/projects/gender-asia/app/scripts/surveys.js",
-		"/var/www/d3-datavis/us-energy-use/us-historical-energy.html",
 		"/home/nikhil/projects/gender-asia/app/scripts/education.js",
 		"/home/nikhil/projects/gender-asia/app/data/asia-surveys-master.json",
 		"/home/nikhil/projects/gender-asia/app/data/education-ratios.json",
@@ -440,6 +526,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"container",
+			"tipsy",
+			"move",
+			"front",
+			"30A354",
+			"(@damper",
+			"@",
+			"damper",
+			"(@damper",
+			"@",
+			"r",
+			"pie",
+			"var",
+			"delay",
 			"dir",
 			"pathdir",
 			"path",
@@ -607,19 +707,203 @@
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
-		"wrap": true
+		"wrap": false
 	},
 	"groups":
 	[
 		{
+			"selected": 6,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/index.html",
+					"settings":
+					{
+						"buffer_size": 26438,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20744,
+								20744
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 6636.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/scripts/main.js",
+					"settings":
+					{
+						"buffer_size": 1078,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								652,
+								652
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/styles/charts.css",
+					"settings":
+					{
+						"buffer_size": 4128,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49,
+								49
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/styles/main.css",
+					"settings":
+					{
+						"buffer_size": 3324,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								457,
+								457
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/scripts/app.js",
+					"settings":
+					{
+						"buffer_size": 419,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								380,
+								380
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/text.md",
+					"settings":
+					{
+						"buffer_size": 19529,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16883,
+								16883
+							]
+						],
+						"settings":
+						{
+							"spell_check": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4222.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/scripts/app.build.js",
+					"settings":
+					{
+						"buffer_size": 695,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								602,
+								602
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 41.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -663,12 +947,92 @@
 		"selected_items":
 		[
 			[
-				"main",
-				"scripts/main.js"
+				"app.b",
+				"scripts/app.build.js"
 			],
 			[
 				"sex",
 				"scripts/sexRatio.js"
+			],
+			[
+				"tex",
+				"text.md"
+			],
+			[
+				"women",
+				"data/women-on-boards.csv"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"app",
+				"scripts/app.js"
+			],
+			[
+				"char",
+				"styles/charts.css"
+			],
+			[
+				"educa",
+				"scripts/education.js"
+			],
+			[
+				"tipsy",
+				"styles/tipsy.css"
+			],
+			[
+				"main.css",
+				"styles/main.css"
+			],
+			[
+				"main",
+				"scripts/main.js"
+			],
+			[
+				"parli",
+				"scripts/parliament.js"
+			],
+			[
+				"chart",
+				"styles/charts.css"
+			],
+			[
+				"sexr",
+				"scripts/sexRatio.js"
+			],
+			[
+				"survey",
+				"scripts/surveys.js"
+			],
+			[
+				"womn",
+				"data/women-on-boards.csv"
+			],
+			[
+				"parl",
+				"scripts/parliament.js"
+			],
+			[
+				"sur",
+				"scripts/surveys.js"
+			],
+			[
+				"text",
+				"text.md"
+			],
+			[
+				"scroll",
+				"scripts/scroll.js"
+			],
+			[
+				"main.c",
+				"styles/main.css"
+			],
+			[
+				"educ",
+				"scripts/education.js"
 			],
 			[
 				"surve",
@@ -695,24 +1059,12 @@
 				"components/leaflet/dist/leaflet.css"
 			],
 			[
-				"educa",
-				"scripts/education.js"
-			],
-			[
-				"app",
-				"scripts/app.js"
-			],
-			[
 				"asia.js",
 				"scripts/asia.js"
 			],
 			[
 				"json",
 				"data/asia.json"
-			],
-			[
-				"educ",
-				"scripts/education.js"
 			],
 			[
 				"main.",
@@ -735,20 +1087,8 @@
 				"scripts/surveys.js"
 			],
 			[
-				"char",
-				"styles/charts.css"
-			],
-			[
-				"inde",
-				"index.html"
-			],
-			[
 				"charts",
 				"styles/charts.css"
-			],
-			[
-				"chart",
-				"app/styles/charts.css"
 			],
 			[
 				"surveys",
@@ -797,10 +1137,6 @@
 			[
 				"asia.json",
 				"app/data/asia.json"
-			],
-			[
-				"main.c",
-				"app/styles/main.css"
 			],
 			[
 				"map",
@@ -880,7 +1216,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 192.0,
 	"status_bar_visible": true
 }

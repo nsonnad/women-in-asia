@@ -8,22 +8,24 @@ require.config({
         'font': 'vendor/requirejs-plugins/src/font',
         'async': 'vendor/requirejs-plugins/src/async',
         'goog': 'vendor/requirejs-plugins/src/goog',
-        'propertyParser': 'vendor/requirejs-plugins/src/propertyParser'
+        'propertyParser': 'vendor/requirejs-plugins/src/propertyParser',
+        'tipsy' : 'vendor/jquery.tipsy'
     },
 
     shim: {
         'jquery': { exports: '$' },
         'd3': { exports: 'd3' },
         'leaflet': { exports: 'L' },
-        'topojson': { exports: 'topojson' }
+        'topojson': { exports: 'topojson' },
+        'tipsy' : { deps: ['jquery'] }
     },
 
 });
 
-require(['font!google,families:[Enriqueta:400,700]', 'jquery', 'd3', 'leaflet', 'topojson', 'app'], function (font, $, d3, L, topojson, app) {
+require(['font!google,families:[Enriqueta:400,700]', 'jquery', 'd3', 'leaflet', 'topojson', 'tipsy', 'app'], function (font, $, d3, L, topojson, tipsy, app) {
     'use strict';
     $('#loader').remove();
-    // $('#headline').hide().fadeIn(2500);
-    // $('#container').removeClass('loading').addClass('loaded');
+    $('#headlineWrap').fadeIn(2500, function () { $('#navWrap').fadeIn(1000); });
+    $('#container1, #container2').removeClass('loading').addClass('loaded');
     app.init();
 });
