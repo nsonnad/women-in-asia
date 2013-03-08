@@ -1,1 +1,3 @@
-An attempt at a different kind of journalistic article that is first and foremost informative. Use data -- powered chiefly by [d3.js](http://d3js.org/) -- and well-crafted text to inform readers on the status of women in Asia.
+## Women in Asia: A data-driven report
+
+An attempt at a different kind of journalistic article that aims first and foremost to inform using engaging data visualisation. Lots of charts and data, visualised with the help of [d3.js](http://d3js.org/), alongside well-crafted text aims to give people a general overview of the status of women in Asia. The live version can be viewed [here](womeninasia.theoldbeggar.com).
