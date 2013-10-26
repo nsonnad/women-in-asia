@@ -11,7 +11,7 @@ require.config({
         'async': '../bower_components/requirejs-plugins/src/async',
         'goog': '../bower_components/requirejs-plugins/src/goog',
         'propertyParser': '../bower_components/requirejs-plugins/src/propertyParser',
-        'tipsy' : '../bower_components/tipsy/src/javascripts/jquery.tipsy'
+        'd3-tip' : '../bower_components/d3-tip/index'
     },
 
     shim: {
@@ -19,7 +19,7 @@ require.config({
         'd3': { exports: 'd3' },
         'leaflet': { exports: 'L' },
         'topojson': { exports: 'topojson' },
-        'tipsy' : { deps: ['jquery'] }
+        'd3-tip' : { deps: ['d3'] }
     },
 
 });

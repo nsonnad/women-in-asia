@@ -8,8 +8,8 @@
     "d3": "~3.3.9",
     "requirejs-plugins": "~1.0.2",
     "topojson": "~1.4.3",
-    "tipsy": "~0.1.7",
-    "leaflet-dist": "~0.6.4"
+    "leaflet-dist": "~0.6.4",
+    "d3-tip": "~0.6.1"
   },
   "devDependencies": {}
 }

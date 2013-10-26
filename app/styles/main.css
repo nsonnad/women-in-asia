@@ -200,3 +200,33 @@ div#attribution {
     clear:both;
 }
 
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #383838;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 0px 7px rgba(30, 30, 30, 0.2);
+    -moz-box-shadow:    0px 0px 7px rgba(30, 30, 30, 0.2);
+    box-shadow:         0px 0px 7px rgba(30, 30, 30, 0.2);
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+}
+
+/* Eastward tooltips */
+.d3-tip.e:after {
+    content: "\25C0";
+    margin: -4px 0 0 0;
+    top: 30%;
+    left: -8px;
+}

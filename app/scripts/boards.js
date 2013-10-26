@@ -1,4 +1,4 @@
-define(['d3', 'jquery', 'tipsy'], function (d3, $) {
+define(['d3', 'jquery', 'd3-tip'], function (d3, $) {
     'use strict';
     var init = function () {
         var
@@ -21,6 +21,10 @@ define(['d3', 'jquery', 'tipsy'], function (d3, $) {
         var data,
             sexes = ['women', 'men'];
 
+        var tip = d3.tip().attr('class', 'd3-tip')
+            .direction('e')
+            .html(function (d) { return '<strong>' + percent(d.women) + '</strong> in <strong>' + d.name + '</strong>'; })
+
         var boards = d3.select('#board').append('svg')
             .attr('width', w + margin.r + margin.l)
             .attr('height', h + margin.t + margin.b)
@@ -29,6 +33,8 @@ define(['d3', 'jquery', 'tipsy'], function (d3, $) {
                 transform: 'translate(' + margin.l + ',' + margin.t + ')',
                 class: 'boardGroup'
             });
+
+        boards.call(tip);
 
         // legend and clickable options
         var boardControls = d3.select('#board')
@@ -113,8 +119,8 @@ define(['d3', 'jquery', 'tipsy'], function (d3, $) {
 
             pieGroup.enter().append('g')
                 .attr('class', 'pie')
-                .on('mouseover', mouseOn)
-                .on('mouseout', mouseOff)
+                .on('mouseover', function (d) { mouseOn(this, d); })
+                .on('mouseout', function (d) { mouseOff(this, d); })
                 .call(force.drag);
 
             pieGroup.selectAll('.arc')
@@ -130,15 +136,6 @@ define(['d3', 'jquery', 'tipsy'], function (d3, $) {
             // tooltips
             pieGroup.append('title')
                 .text(function (d) { return percent(d.women) + ' in ' + d.name; });
-
-            $('.pie').tipsy({
-                gravity: 'w',
-                html: true,
-                title: function () {
-                    var d = this.__data__;
-                    return '<strong>' + percent(d.women) + '</strong> in <strong>' + d.name + '</strong>';
-                }
-            });
 
             function tick(e) {
                 // collision detection for pies
@@ -168,8 +165,9 @@ define(['d3', 'jquery', 'tipsy'], function (d3, $) {
         }
 
         // mouseover animation
-        function mouseOn() {
-            var circle = d3.select(this);
+        function mouseOn(self, d) {
+            var circle = d3.select(self);
+            tip.show(d);
 
             circle.insert('circle', '.arc').attr('class', 'outline')
                 .attr('r', radius)
@@ -178,8 +176,9 @@ define(['d3', 'jquery', 'tipsy'], function (d3, $) {
                 .attr('stroke-width', '6');
         }
 
-        function mouseOff() {
-            var circle = d3.select(this);
+        function mouseOff(self, d) {
+            var circle = d3.select(self);
+            tip.hide(d);
 
             circle.select('.outline').remove();
             d3.select('.boardTooltip').remove();
