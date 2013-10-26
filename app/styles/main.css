@@ -98,19 +98,18 @@ div.text {
     font-size: 1.1em;
 }
 
-div.images {
+div.bg-images {
+    position: relative;
     width: auto;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     height: 800px;
-
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    position: relative;
+    background-attachment: fixed;
 }
 
-div.images h1 {
+div.bg-images h1 {
     position: absolute;
     top: 20%;
     left: 25%;
@@ -149,17 +148,9 @@ div#headline h3 {
     color: hsl(122,50%,97%);
 }
 
-div#image1 {
-    background-image: url('../images/girls-in-school.jpg');
-}
-
-div#image2 {
-    background-image: url('../images/women-nepal.jpg');
-}
-
-div#image3 {
-    background-image: url('../images/wef.jpg');
-}
+div#bg-image1 { background-image: url('/images/girls-in-school.jpg'); }
+div#bg-image2 { background-image: url('/images/women-nepal.jpg'); }
+div#bg-image3 { background-image: url('/images/wef.jpg'); }
 
 img.wide {
     margin: 16px 0;

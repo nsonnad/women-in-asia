@@ -5,7 +5,7 @@ define(['leaflet', 'jquery', 'topojson'], function (L, $, topojson) {
 
         require(['asia'], function (asia) {
 
-        // draw map centered on asia
+            // draw map centered on asia
             var map = L.map('map', {
                 center: [18, 107],
                 zoom: 4,
@@ -19,7 +19,7 @@ define(['leaflet', 'jquery', 'topojson'], function (L, $, topojson) {
             })
             .addTo(map);
 
-        // map info box
+            // map info box
             var info = L.control();
 
             info.onAdd = function () {
@@ -33,32 +33,28 @@ define(['leaflet', 'jquery', 'topojson'], function (L, $, topojson) {
                 this._div.innerHTML = '<p><h1>' + place + '</h1></p>' + '<p><h3>GDP per capita (PPP): </h3>' + currency(lookup.gdppc) + '</p>' + '<p><h3>Total population: </h3>' + addCommas(lookup.totalPop) + '</p>' + '<p><h3>Female population: </h3>' + percent(lookup.femalePop) + '</p>' + '<p><h3>Area: </h3>' + addCommas(lookup.area) + ' km<sup>2</sup></p>';
             };
 
-
-
             // center on country clicked in text
             var locale = asia.locales;
 
             var panMap = function (place) {
-                var lookup = locale[place];
-                map.panTo([lookup.lat, lookup.lon]);
-                map.setZoom(5);
+                var lookup = locale[place],
+                    center = [lookup.lat, lookup.lon];
+
+                map.setView(center, 5)
             };
 
             // scroll to and from map on click
             $('.text, #map').on('click', 'a[href^=#]', function (e) {
-
                 var name = $(this).attr('href').substr(1);
                 var pos = $('[id=' + name + ']').offset();
                 var center = ($(window).height() - $('[id=' + name + ']').height()) / 2;
 
                 if ($(this).attr('id') !== 'map') {
-
                     panMap($(this).html());
                     info.update($(this).html());
                     $('#map').append('<div id="return"><h2><a id=' + name + ' href=#' + $(this).attr('id') + '>Return to text</a></h2></<div>');
                     $('html,body').animate({ scrollTop: pos.top - center });
                     e.preventDefault();
-
                 } else {
                     $('div#return').remove();
                     $('html,body').animate({ scrollTop: pos.top - 60 });
@@ -99,23 +95,8 @@ define(['leaflet', 'jquery', 'topojson'], function (L, $, topojson) {
             });
 
             $.getJSON('./data/asia-topo.json', function (data) {
-                var asiaGeojson = topojson.object(data, data.objects.asia);
-
-                var featureCollection = {
-                    'type': 'FeatureCollection',
-                    'features': []
-                };
-
-               // retain necessary properties of topojson file
-                for (var i = 0; i < asiaGeojson.geometries.length; i++) {
-                    featureCollection.features.push({
-                        'type' : 'Feature',
-                        'geometry' : asiaGeojson.geometries[i],
-                        'properties' : asiaGeojson.geometries[i].properties
-                    });
-                }
-                countriesLayer.addData(featureCollection);
-
+                var asiaGeoJson = topojson.feature(data, data.objects.asia);
+                countriesLayer.addData(asiaGeoJson);
                 info.addTo(map);
             });
 
@@ -125,15 +106,12 @@ define(['leaflet', 'jquery', 'topojson'], function (L, $, topojson) {
             function addCommas(x) {
                 return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
             }
-
             function currency(x) {
                 return x === 'N/A' ? 'N/A' : 'US$' + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
             }
-
             function percent(x) {
                 return x === 'N/A' ? 'N/A' : x.toString() + '%';
             }
-
         });
     };
     return {init: init};

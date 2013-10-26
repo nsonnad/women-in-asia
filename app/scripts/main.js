@@ -1,15 +1,15 @@
 require.config({
 
     paths: {
-        'jquery': 'vendor/jquery.min',
-        'd3': '/components/d3/d3',
-        'leaflet': '/components/leaflet/dist/leaflet',
-        'topojson': 'vendor/topojson',
-        'font': 'vendor/requirejs-plugins/src/font',
-        'async': 'vendor/requirejs-plugins/src/async',
-        'goog': 'vendor/requirejs-plugins/src/goog',
-        'propertyParser': 'vendor/requirejs-plugins/src/propertyParser',
-        'tipsy' : 'vendor/jquery.tipsy'
+        'jquery': '../bower_components/jquery/jquery.min',
+        'd3': '../bower_components/d3/d3',
+        'leaflet': '../bower_components/leaflet-dist/leaflet',
+        'topojson': '../bower_components/topojson/topojson',
+        'font': '../bower_components/requirejs-plugins/src/font',
+        'async': '../bower_components/requirejs-plugins/src/async',
+        'goog': '../bower_components/requirejs-plugins/src/goog',
+        'propertyParser': '../bower_components/requirejs-plugins/src/propertyParser',
+        'tipsy' : '../bower_components/tipsy/src/javascripts/jquery.tipsy'
     },
 
     shim: {

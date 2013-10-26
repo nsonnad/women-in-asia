@@ -1,0 +1,15 @@
+{
+  "name": "yo",
+  "version": "0.0.0",
+  "dependencies": {
+    "sass-bootstrap": "~3.0.0",
+    "requirejs": "~2.1.8",
+    "jquery": "~1.10.2",
+    "leaflet": "~0.6.4",
+    "d3": "~3.3.9",
+    "requirejs-plugins": "~1.0.2",
+    "topojson": "~1.4.3",
+    "tipsy": "~0.1.7"
+  },
+  "devDependencies": {}
+}
