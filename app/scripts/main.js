@@ -6,6 +6,8 @@ require.config({
         'leaflet': '../bower_components/leaflet-dist/leaflet',
         'topojson': '../bower_components/topojson/topojson',
         'font': '../bower_components/requirejs-plugins/src/font',
+        'text': '../bower_components/requirejs-plugins/lib/text',
+        'json': '../bower_components/requirejs-plugins/src/json',
         'async': '../bower_components/requirejs-plugins/src/async',
         'goog': '../bower_components/requirejs-plugins/src/goog',
         'propertyParser': '../bower_components/requirejs-plugins/src/propertyParser',
@@ -22,10 +24,7 @@ require.config({
 
 });
 
-require(['font!google,families:[Enriqueta:400,700]', 'jquery', 'd3', 'leaflet', 'topojson', 'tipsy', 'app'], function (font, $, d3, L, topojson, tipsy, app) {
+require(['font!google,families:[Enriqueta:400,700]', 'jquery', 'd3', 'leaflet', 'app'], function (font, $, d3, L, app) {
     'use strict';
-    $('#loader').remove();
-    $('#headlineWrap').fadeIn(2500, function () { $('#navWrap').fadeIn(1000); });
-    $('#container1, #container2').removeClass('loading').addClass('loaded');
     app.init();
 });

@@ -13,8 +13,12 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
+        <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/tipsy.css">
+        <link rel="stylesheet" href="styles/charts.css">
         <link rel="stylesheet" href="styles/leaflet.css">
+        <!-- endbuild -->
     </head>
 
     <body>
@@ -25,7 +29,7 @@
         <div id="loader"><p>Loading data, charts, fonts and images...</p></div>
         <div id="headlineWrap">
             <h2>Women in Asia</h2>
-            <h3>A data-driven report by Nikhil Sonnad</h3>
+            <h3>A data-driven report by <a href="https://twitter.com/nsonnad">Nikhil Sonnad</a></h3>
         </div>
     </div>
 
@@ -308,7 +312,7 @@
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
 
-    <!-- build:js scripts/amd-app.js -->
+    <!-- build:js scripts/script.js -->
     <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
     <!-- endbuild -->
 </body>

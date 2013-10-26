@@ -1,4 +1,4 @@
-define(['d3'], function (d3) {
+define(['d3', 'json!../data/asia-surveys-master.json'], function (d3, data) {
     'use strict';
     var init = function () {
         var
@@ -10,9 +10,6 @@ define(['d3'], function (d3) {
         color = d3.scale.ordinal(), // range to be determined based on data
         stack = d3.layout.stack(),
         formatPercent = d3.format('.0%');
-
-        var surveyData,
-            data;
 
         var colorBlends = {
             'blue': ['#ADCDE1', '#96BFD9', '#6baed6', '#3182bd', '#08519c'],
@@ -55,40 +52,34 @@ define(['d3'], function (d3) {
               .attr('class', 'y axis')
               .call(yAxis);
 
-        d3.json('./data/asia-surveys-master.json', function (error, json) {
-            surveyData = json;
+        // change text of survey question
+        d3.select('#questText').text(questions.jobs);
 
-            // change text of survey question
-            d3.select('#questText').text(questions.jobs);
+        // x-domain contains one entry for each country
+        x.domain(data.jobs.map(function (d) { return d.Country; }));
 
-            // x-domain contains one entry for each country
-            x.domain(json.jobs.map(function (d) { return d.Country; }));
+        surveyChart.append('g')
+            .attr('class', 'x axis')
+            .attr('transform', 'translate(0,' + h + ')')
+            .call(xAxis);
 
-            surveyChart.append('g')
-                .attr('class', 'x axis')
-                .attr('transform', 'translate(0,' + h + ')')
-                .call(xAxis);
+        d3.selectAll('#surveys .x.axis text')
+            .attr('transform', 'translate(' + x.rangeBand() / 2 + ',15) rotate(45)');
 
-            d3.selectAll('#surveys .x.axis text')
-                .attr('transform', 'translate(' + x.rangeBand() / 2 + ',15) rotate(45)');
-
-            // draw first chart
-            setData('jobs');
-        });
 
         function setData(dataset) {
 
             // filter data based on chosen dataset
-            data = surveyData[dataset];
+            var filtered = data[dataset];
 
             // create arrays of values for each response choice
-            var responseNames = d3.keys(data[0]).filter(function (key) {
+            var responseNames = d3.keys(filtered[0]).filter(function (key) {
                 return key !== 'Country' && key !== 'region' && key !== 'responses';
             });
 
             var stackData =
                 stack(responseNames.map(function (name) {
-                    return data.map(function (d) {
+                    return filtered.map(function (d) {
                         return {name: name, region: d.region, x: d.Country, y: d[name] / 100 };
                     });
                 }));
@@ -233,6 +224,10 @@ define(['d3'], function (d3) {
             d3.selectAll('.surveyControl').style('color', null);
             d3.select(this).style('color', '#E5ABA9');
         });
+
+        // draw first chart
+        setData('jobs');
+
     };
     return {
         init: init

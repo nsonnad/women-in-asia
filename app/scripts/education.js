@@ -1,4 +1,4 @@
-define(['d3'], function (d3) {
+define(['d3', 'json!../data/education-ratios.json'], function (d3, data) {
 
     'use strict';
     var init = function () {
@@ -16,8 +16,6 @@ define(['d3'], function (d3) {
 
         // object used to draw comparison OECD average line
         var oecd = [{'Primary': 0.99, 'Secondary': 1.01, 'Tertiary': 1.29}];
-
-        var eduData;
 
         var eduChart = d3.select('#education').append('svg')
             .attr('width', w + margin.l + margin.r)
@@ -62,21 +60,17 @@ define(['d3'], function (d3) {
             .attr('class', 'domain')
             .attr('y2', h);
 
-        d3.json('./data/education-ratios.json', function (json) {
-            eduData = json;
-            drawEdu('Primary');
-        });
 
         function drawEdu(dataset) {
 
             // sort data based on girl:boy ratios
-            var ySort = y.domain(eduData.sort(function (a, b) {
+            var ySort = y.domain(data.sort(function (a, b) {
                     return d3.ascending(b[dataset].ratio, a[dataset].ratio);
                 })
                 .map(function (d) { return d.country; }));
 
             var rect = eduChart.selectAll('.rect')
-                .data(eduData, function (d) { return d.country; });
+                .data(data, function (d) { return d.country; });
 
             var rectEnter = rect.enter().append('g')
                 .attr('transform', function (d) { return 'translate(0,' + ySort(d.country) + ')'; })
@@ -140,7 +134,7 @@ define(['d3'], function (d3) {
         function updateEdu(dataset) {
 
         // update everything
-            var ySort = y.domain(eduData.sort(function (a, b) {
+            var ySort = y.domain(data.sort(function (a, b) {
                     return d3.ascending(b[dataset].ratio, a[dataset].ratio);
                 })
                 .map(function (d) { return d.country; }));
@@ -212,6 +206,8 @@ define(['d3'], function (d3) {
                 d3.select(this).style('color', '#E5ABA9');
                 updateEdu(text);
             });
+
+        drawEdu('Primary');
     };
     return {
         init: init
