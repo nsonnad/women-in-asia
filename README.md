@@ -4,7 +4,7 @@ An attempt at a different kind of journalistic article that aims first and forem
 
 If you'd like to install or hack on this project locally, do the following:
 
-1. Make sure you have recent versions of [node][http://nodejs.org/] and [npm](https://npmjs.org/)
+1. Make sure you have recent versions of [node](http://nodejs.org/) and [npm](https://npmjs.org/)
 2. Clone this repo
 3. In the project directory, run `npm install && bower install` from a terminal
 4. Run `grunt server` to view it on a local server
