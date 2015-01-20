@@ -1,0 +1,45 @@
+country,Women as % of total board members,Companies with 1+ female director,Companies with 3+ female directors,Companies with female chair,region
+Australia,13.8,68.5,4.1,3,Asia
+China,8.5,57.4,9.3,3.7,Asia
+Hong Kong,9.4,60,12,1.3,Asia
+India,5.2,40.3,3.2,1.6,Asia
+Indonesia,4.6,30.4,0,4.3,Asia
+Japan,1.1,11,0,0,Asia
+Malaysia,7.3,53.3,0,0,Asia
+New Zealand,13.7,80,0,0,Asia
+Philippines,12.2,61.5,15.4,7.7,Asia
+Singapore,7,50.9,1.9,1.9,Asia
+South Korea,1.9,15.2,0,3.3,Asia
+Taiwan,5.8,39.6,2.1,1,Asia
+Thailand,10.8,72.2,27.8,0,Asia
+Austria,10.8,65.2,4.3,0,Europe
+Belgium,9.4,58.3,16.7,4.2,Europe
+Czech Republic,8.6,66.7,0,0,Europe
+France,16.6,89.1,32.7,2,Europe
+Germany,12.9,77.8,25.9,1.2,Europe
+Greece,7.3,63.6,0,0,Europe
+Hungary,5.9,50,0,0,Europe
+Ireland,8.5,77.8,5.6,0,Europe
+Italy,4.5,41.8,5.5,3.6,Europe
+Netherlands,13.1,55.9,5.9,0,Europe
+Poland,13,75,0,12.5,Europe
+Portugal,2.3,36.4,0,0,Europe
+Russia,4.6,26.1,4.3,0,Europe
+Spain,10.2,82.5,12.5,0,Europe
+Switzerland,9.1,62.5,3.6,1.8,Europe
+UK,10.7,57.9,7,2.5,Europe
+Egypt,7,62.5,0,12.5,Middle East
+Israel,14.2,100,12.5,0,Middle East
+Morocco,0,0,0,0,Middle East
+Turkey,11.2,61.1,11.1,11.1,Middle East
+Denmark,15.6,82.6,17.4,0,Nordic Countries
+Finland,26.4,100,28.6,3.6,Nordic Countries
+Norway,36.3,92.9,60.7,10.7,Nordic Countries
+Sweden,26.4,100,53.7,2.4,Nordic Countries
+Canada,13.1,70.9,19.4,2.2,North America
+Mexico,6.4,52.2,8.7,4.3,North America
+USA,12.6,71.1,10.4,2,North America
+Brazil,4.5,30.3,0,2.6,South America
+Chile,3.5,23.5,0,0,South America
+Colombia,6.8,25,0,0,South America
+Peru,0,0,0,0,South America
